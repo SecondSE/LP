@@ -21,12 +21,26 @@ export const StyledH1 = styled.h1`
   font-family: ${({ theme }) => theme.headFont};
 
   ${mq("tiny", "min")} {
+    display: none;
+  }
+  ${mq("custom1", "min")} {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  } ;
+`;
+
+export const StyledMQTitle = styled.h1`
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-family: ${({ theme }) => theme.headFont};
+
+  ${mq("tiny", "min")} {
+    display: block;
     text-align: center;
     margin: 0 1rem;
   }
   ${mq("custom1", "min")} {
-    text-align: center;
-    margin: 0 auto;
+    display: none;
   } ;
 `;
 
