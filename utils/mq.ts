@@ -4,7 +4,9 @@ const breakpoints = {
   small: "375",
   phoneMed: "487",
   phoneLg: "530",
+  custom1: "590",
   tablet: "768",
+  custom2: "890",
   tabletLg: "992",
   iPadPro: "1024",
   desktopS: "1200",
@@ -14,10 +16,7 @@ const breakpoints = {
 };
 
 function mq(device: string, bounds: string, mode = "portrait") {
-  const bpArray: string[][] = Object.keys(breakpoints).map(function bpValues(
-    bpKey
-  ) {
-    //@ts-ignore
+  const bpArray = Object.keys(breakpoints).map(function bpValues(bpKey) {
     return [bpKey, breakpoints[bpKey]];
   });
 
