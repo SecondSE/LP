@@ -17,7 +17,9 @@ export const StyledUpperDiv = styled.div`
 `;
 
 export const StyledH1 = styled.h1`
-  font-size: 3rem;
+  font-size: clamp(3rem, 6vw, 10rem);
+  font-family: ${({ theme }) => theme.headFont};
+
   ${mq("tiny", "min")} {
     text-align: center;
     margin: auto;
@@ -29,20 +31,19 @@ export const StyledH1 = styled.h1`
 `;
 
 export const StyledP = styled.p`
-  font-size: clamp(14px, 4vw, 2rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(16px, 4vw, 1.5rem);
 
   ${mq("tiny", "min")} {
     text-align: center;
     margin: 20px 1rem 30px 1rem;
-  }
-  ${mq("custom2", "min")} {
-    margin: 40px 1rem;
+    word-spacing: 0.25rem;
   }
   ${mq("custom1", "min")} {
     text-align: center;
     max-width: 700px;
     margin: 40px auto;
-  } ;
+  }
 `;
 
 export const StyledLogoDiv = styled.div`
