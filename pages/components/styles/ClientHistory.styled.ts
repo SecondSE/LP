@@ -17,16 +17,16 @@ export const StyledUpperDiv = styled.div`
 `;
 
 export const StyledH1 = styled.h1`
-  font-size: clamp(3rem, 6vw, 10rem);
+  font-size: clamp(3.5rem, 6vw, 6rem);
   font-family: ${({ theme }) => theme.headFont};
 
   ${mq("tiny", "min")} {
+    margin: 0 auto;
     text-align: center;
-    margin: auto;
   }
   ${mq("custom1", "min")} {
     text-align: left;
-    margin: none;
+    margin: 0 3rem;
   } ;
 `;
 
@@ -41,8 +41,9 @@ export const StyledP = styled.p`
   }
   ${mq("custom1", "min")} {
     text-align: center;
-    max-width: 700px;
+    max-width: 750px;
     margin: 40px auto;
+    padding: 0 3rem;
   }
 `;
 

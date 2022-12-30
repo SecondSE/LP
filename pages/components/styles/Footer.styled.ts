@@ -111,25 +111,31 @@ export const FacebookIcon = styled(FaFacebook)`
 `;
 
 export const StyledCopyright = styled.span`
+  font-family: ${({ theme }) => theme.thinFont};
   display: inline-block;
   margin: 10px 0;
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 `;
 
 export const StyledCopyrightDiv = styled.div`
   display: flex;
+  margin-top: 10px;
   justify-content: center;
-`
+`;
 
 export const StyledParagraph = styled.p`
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: 1.1rem;
   max-width: 285px;
-  min-width: 160px;
+  min-width: 200px;
   margin-bottom: 15px;
   color: white;
 `;
 
 export const StyledSpan = styled.span`
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: 1.1rem;
   display: inline-block;
   margin-top: 20px;
 `;
@@ -141,12 +147,15 @@ export const StyledInputSubmit = styled.input`
   border: none;
   background-color: transparent;
   font-weight: bold;
+  font-size: 1rem;
   ${mq("custom1", "min")} {
     margin-left: 10px;
   } ;
 `;
 
 export const StyledInputEmail = styled.input`
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(16px, 4vw, 1rem);
   border: none;
   height: 30px;
   justify-content: start;

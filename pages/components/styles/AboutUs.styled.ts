@@ -13,8 +13,16 @@ export const StyledMainDiv = styled.div`
 `;
 
 export const StyledH1 = styled.h1`
-  font-size: 3rem;
-  margin: 30px 0 30px 20px;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-family: ${({ theme }) => theme.headFont};
+  ${mq("tiny", "min")} {
+    text-align: center;
+    margin: 30px 1rem 30px 1rem;
+  }
+  ${mq("custom1", "min")} {
+    margin: 30px 3rem 30px 3rem;
+    text-align: left;
+  } ;
 `;
 
 export const StyledUpperDiv = styled.div``;
@@ -76,12 +84,23 @@ export const StyledBigImage = styled(Image)`
 `;
 
 export const StyledP = styled.p`
+  font-size: clamp(16px, 4vw, 1.5rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  word-spacing: 0.25rem;
   width: 100%;
 `;
 
 export const StyledH3 = styled.h3`
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-family: ${({ theme }) => theme.headFont};
+
   margin-bottom: 0.5rem;
+  ${mq("tiny", "min")} {
+    text-align: center;
+  }
+  ${mq("custom1", "min")} {
+    text-align: left;
+  } ;
 `;
 
 export const StyledSubTextDiv = styled.div`
@@ -89,19 +108,20 @@ export const StyledSubTextDiv = styled.div`
     margin-top: 2rem;
     width: 100%;
   }
-  ${mq("custom1", "min")} {
+  ${mq("tablet", "min")} {
     width: 29%;
   } ;
 `;
 
 export const StyledTextDiv = styled.div`
   display: flex;
-  margin: 0 20px 40px 20px;
 
   ${mq("tiny", "min")} {
     flex-direction: column;
+    margin: 0 1rem 40px 1rem;
   }
-  ${mq("custom1", "min")} {
+  ${mq("tablet", "min")} {
+    margin: 0 3rem 40px 3rem;
     flex-direction: row;
     justify-content: space-between;
   } ;
