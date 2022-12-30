@@ -83,9 +83,14 @@ export const StyledInputAndLabelSection = styled.section`
 `;
 export const StyledForm = styled.form`
   width: 600px;
-  margin: 0 1.5rem;
   font-family: ${({ theme }) => theme.thinFont};
   font-size: clamp(12px, 4vw, 1.4rem);
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
+  }
+  ${mq("custom1", "min")} {
+    margin: 0 3rem;
+  } ;
 `;
 export const StyledInputName = styled(StyledInput)`
   margin-right: 20px;

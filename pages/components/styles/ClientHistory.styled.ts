@@ -23,6 +23,7 @@ export const StyledH1 = styled.h1`
   ${mq("tiny", "min")} {
     margin: 0 auto;
     text-align: center;
+    margin: 0 1rem;
   }
   ${mq("custom1", "min")} {
     text-align: left;
