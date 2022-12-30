@@ -3,7 +3,7 @@ import Image from "next/image";
 import mq from "../../../utils/mq";
 
 export const StyledMain = styled.main`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
   position: relative;
