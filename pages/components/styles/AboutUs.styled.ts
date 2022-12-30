@@ -48,11 +48,12 @@ export const StyledSmallImageB = styled(Image)`
 `;
 
 export const StyledImagesDiv = styled.div`
-  display: flex;
   flex-direction: column;
   ${mq("tiny", "min")} {
+    display: none;
   }
   ${mq("custom1", "min")} {
+    display: flex;
     width: 30%;
     max-height: 33vw;
   } ;
