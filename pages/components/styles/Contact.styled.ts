@@ -83,7 +83,7 @@ export const StyledInputAndLabelSection = styled.section`
 `;
 export const StyledForm = styled.form`
   width: 600px;
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(12px, 4vw, 1.4rem);
   ${mq("tiny", "min")} {
     margin: 0 1rem;

@@ -85,7 +85,7 @@ export const StyledBigImage = styled(Image)`
 
 export const StyledP = styled.p`
   font-size: clamp(16px, 4vw, 1.5rem);
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   word-spacing: 0.25rem;
   width: 100%;
 `;
@@ -108,7 +108,7 @@ export const StyledSubTextDiv = styled.div`
     margin-top: 2rem;
     width: 100%;
   }
-  ${mq("tablet", "min")} {
+  ${mq("custom3", "min")} {
     width: 29%;
   } ;
 `;
@@ -120,7 +120,7 @@ export const StyledTextDiv = styled.div`
     flex-direction: column;
     margin: 0 1rem 40px 1rem;
   }
-  ${mq("tablet", "min")} {
+  ${mq("custom3", "min")} {
     margin: 0 3rem 40px 3rem;
     flex-direction: row;
     justify-content: space-between;

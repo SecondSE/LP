@@ -21,18 +21,17 @@ export const StyledH1 = styled.h1`
   font-family: ${({ theme }) => theme.headFont};
 
   ${mq("tiny", "min")} {
-    margin: 0 auto;
     text-align: center;
     margin: 0 1rem;
   }
   ${mq("custom1", "min")} {
-    text-align: left;
-    margin: 0 3rem;
+    text-align: center;
+    margin: 0 auto;
   } ;
 `;
 
 export const StyledP = styled.p`
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(16px, 4vw, 1.5rem);
 
   ${mq("tiny", "min")} {

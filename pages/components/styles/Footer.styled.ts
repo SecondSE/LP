@@ -111,7 +111,7 @@ export const FacebookIcon = styled(FaFacebook)`
 `;
 
 export const StyledCopyright = styled.span`
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   display: inline-block;
   margin: 10px 0;
   color: white;
@@ -125,7 +125,7 @@ export const StyledCopyrightDiv = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   font-size: 1.1rem;
   max-width: 285px;
   min-width: 200px;
@@ -134,7 +134,7 @@ export const StyledParagraph = styled.p`
 `;
 
 export const StyledSpan = styled.span`
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   font-size: 1.1rem;
   display: inline-block;
   margin-top: 20px;
@@ -154,7 +154,7 @@ export const StyledInputSubmit = styled.input`
 `;
 
 export const StyledInputEmail = styled.input`
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(16px, 4vw, 1rem);
   border: none;
   height: 30px;
