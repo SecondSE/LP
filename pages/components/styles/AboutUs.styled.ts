@@ -88,17 +88,24 @@ export const StyledP = styled.p`
   font-family: ${({ theme }) => theme.mainFont};
   word-spacing: 0.25rem;
   width: 100%;
+  ${mq("tiny", "min")} {
+    text-align: center;
+  }
+  ${mq("custom1", "min")} {
+    text-align: left;
+  } ;
 `;
 
 export const StyledH3 = styled.h3`
   font-size: clamp(1.5rem, 2vw, 2rem);
   font-family: ${({ theme }) => theme.headFont};
 
-  margin-bottom: 0.5rem;
   ${mq("tiny", "min")} {
+    margin-bottom: 1rem;
     text-align: center;
   }
   ${mq("custom1", "min")} {
+    margin-bottom: 1.5rem;
     text-align: left;
   } ;
 `;
