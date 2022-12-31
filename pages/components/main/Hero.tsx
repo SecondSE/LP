@@ -26,7 +26,9 @@ export default function Hero() {
               <span className="experience">
                 brand experience agency connecting
               </span>
-              <span className="row bold">PEOPLE, CULTURE, & YOUR BRAND</span>
+              <span className="row bold">
+                PEOPLE, CULTURE, <span className="ampersand">&</span> YOUR BRAND
+              </span>
             </StyledHero__Intro>
             <StyledHero__Middle>
               <h1 className="title">
@@ -38,7 +40,9 @@ export default function Hero() {
             </StyledHero__Middle>
             <StyledHero__End>
               <span className="title">We specialize in</span>
-              <span className="bold">BRAND STRATEGY &</span>
+              <span className="bold">
+                BRAND STRATEGY <span className="ampersand">&</span>
+              </span>
               <span className="bold">EXPERENTIAL MARKETING</span>
             </StyledHero__End>
           </HeroTextContainer>

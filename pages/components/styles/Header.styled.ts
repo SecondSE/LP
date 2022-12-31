@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   position: fixed;
   height: 70px;
   z-index: 1;
-  font-family: ${({ theme }) => theme.headFont};
+  font-family: ${({ theme }) => theme.headFont3};
 `;
 
 export const StyledImage = styled(Image)`

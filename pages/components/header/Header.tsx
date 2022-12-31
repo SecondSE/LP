@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { StyledImage, StyledHeader } from "../styles/Header.styled";
 import {
-  MaxWrapper,
+  MaxHeaderWrapper,
   HeaderWrapper,
   LogoWrapper,
 } from "../styles/Wrappers.styled";
@@ -13,7 +13,7 @@ import DesktopNav from "./DesktopNav";
 export default function Header() {
   return (
     <StyledHeader>
-      <MaxWrapper></MaxWrapper>
+      <MaxHeaderWrapper />
       <HeaderWrapper>
         <LogoWrapper>
           <Link href={"/"}></Link>

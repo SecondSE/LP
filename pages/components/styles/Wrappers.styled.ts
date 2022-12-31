@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-export const MaxWrapper = styled.div`
+export const MaxHeaderWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -60,7 +60,7 @@ export const HeroWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: rgb(255, 255, 255);
   background: linear-gradient(
