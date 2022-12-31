@@ -21,30 +21,27 @@ export default function AboutUs() {
               <StyledH3>WHO WE ARE</StyledH3>
               <StyledP>
                 {" "}
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
-                a voluptatibus praesentium sint non. Quam, ad iure explicabo
-                nesciunt nostrum nisi consequuntur harum beatae temporibus eum
-                reprehenderit vitae, commodi enim.
+                As creators at heart, we are your partner in bringing fresh
+                ideas to the table, and even more importantly, in bringing your
+                brand to life.
               </StyledP>
             </StyledSubTextDiv>
             <StyledSubTextDiv>
               <StyledH3>OUR PHILOSOPHY</StyledH3>
               <StyledP>
                 {" "}
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
-                a voluptatibus praesentium sint non. Quam, ad iure explicabo
-                nesciunt nostrum nisi consequuntur harum beatae temporibus eum
-                reprehenderit vitae, commodi enim.
+                Each project is a fresh start. We’re constantly inspired by the
+                possibilites of a blank page. Let’s create something entirely
+                unique, together.
               </StyledP>
             </StyledSubTextDiv>
             <StyledSubTextDiv>
               <StyledH3>HOW WE WORK</StyledH3>
               <StyledP>
                 {" "}
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
-                a voluptatibus praesentium sint non. Quam, ad iure explicabo
-                nesciunt nostrum nisi consequuntur harum beatae temporibus eum
-                reprehenderit vitae, commodi enim.
+                We work with a founder-first mentality, taking the long-term
+                approach to every project. We’re here to transform your brand
+                from an idea into a household name.
               </StyledP>
             </StyledSubTextDiv>
           </StyledTextDiv>
