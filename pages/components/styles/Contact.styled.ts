@@ -88,6 +88,7 @@ export const StyledForm = styled.form`
   & :: placeholder {
     font-family: ${({ theme }) => theme.mainFont};
     font-size: clamp(1rem, 5vw, 1.5rem);
+    padding-top: 0.5rem;
   }
   ${mq("tiny", "min")} {
     margin: 0 1rem;
