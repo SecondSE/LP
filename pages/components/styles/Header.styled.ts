@@ -48,7 +48,7 @@ export const MobileNavList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: darkgray;
+  background-color: ${({ theme }) => theme.bgColor};
 `;
 
 export const MobileNavListItem = styled.li`

@@ -9,9 +9,20 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
+export const StyledLayer = styled.div`
+  position: absolute;
+  height: 111vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 29, 29, 27%) 89%,
+    rgba(29, 29, 29, 98%) 98%
+  );
+`;
+
 export const StyledImage = styled(Image)`
   width: 100vw;
-  height: 100%;
+  height: 110vh;
   object-fit: cover;
 `;
 export const HeroTextContainer = styled.div`
@@ -96,8 +107,7 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
   }

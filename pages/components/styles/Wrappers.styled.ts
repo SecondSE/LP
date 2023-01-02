@@ -62,12 +62,6 @@ export const HeroWrapper = styled.div`
 export const ImageWrapper = styled.div`
   height: 100vh;
   width: 100%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(29, 29, 29, 1) 59%
-  );
 `;
 
 export const ActionTextWrapper = styled.div`
@@ -80,6 +74,8 @@ export const ActionTextWrapper = styled.div`
     flex-direction: row;
     margin: 0 auto;
     padding: 0 3rem;
+    z-index: 2;
+    border-top: 1px solid white;
   }
 `;
 

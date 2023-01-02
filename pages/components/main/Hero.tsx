@@ -1,5 +1,6 @@
 import {
   StyledHero,
+  StyledLayer,
   StyledImage,
   HeroTextContainer,
   StyledHero__Intro,
@@ -12,6 +13,7 @@ export default function Hero() {
   return (
     <>
       <ImageWrapper>
+        <StyledLayer></StyledLayer>
         <StyledImage
           src={sanHolo}
           alt="DJ San Holo performing at the SoundMint NFT event in New York City"
