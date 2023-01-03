@@ -1,6 +1,7 @@
 import { StyledMain, StyledImage } from "../styles/Main.styled";
 import Hero from "../main/Hero";
 import Action from "../main/Action";
+import Work from "../main/Work";
 import Contact from "../contact/Contact";
 import ClientHistory from "../clientHistory/ClientHistory";
 import AboutUs from "../aboutUs/AboutUs";
@@ -11,6 +12,7 @@ export default function Main() {
     <StyledMain>
       <Hero />
       <Action />
+      <Work />
       <AboutUs />
       <ClientHistory />
       <Contact />

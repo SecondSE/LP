@@ -1,21 +1,27 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-export const MaxHeaderWrapper = styled.div`
+interface WrapperProps {
+  bg: boolean;
+}
+
+export const MaxHeaderWrapper = styled.div<WrapperProps>`
   width: 100%;
   height: 100%;
   position: absolute;
-  margin-top: 1rem;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: ${({ bg }) => (bg ? "0" : "1px solid white")};
+  border-bottom: ${({ bg }) => (bg ? "0" : "1px solid white")};
   z-index: -1;
 `;
+
+/* background-color: ${({ bg }) => (bg ? "black" : "transparent")}; */
+// background: rgb(29,29,29);
+// background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(29,29,29,1) 98%); */
 
 export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto 0 auto;
   height: 100%;
   max-width: 1600px;
   ${mq("tablet", "min")} {
@@ -111,4 +117,14 @@ export const ActionImageWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
+`;
+
+export const WorkWrapper = styled.section`
+  width: 100%;
+  border-top: 1px solid white;
+`;
+
+export const WorkImageWrapper = styled.div`
+  width: 100%;
+  height: 500px;
 `;

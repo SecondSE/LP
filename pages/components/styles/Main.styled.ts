@@ -198,3 +198,22 @@ export const TraitsContainer = styled.div`
     justify-content: center;
   }
 `;
+
+export const StyledWorkContainer = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+`;
+
+export const StyledWorkTitle = styled.div`
+  width: 100%;
+`;
+
+export const StyledWorkDescrip = styled.div`
+  width: 100%;
+`;
+
+export const StyledWorkImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;

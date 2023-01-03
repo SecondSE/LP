@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { StyledImage, StyledHeader } from "../styles/Header.styled";
 import {
@@ -11,9 +12,25 @@ import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 
 export default function Header() {
+  const [colorChange, setColorChange] = useState(false);
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorChange(true);
+    } else {
+      setColorChange(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarColor);
+    return () => {
+      window.removeEventListener("scroll", changeNavbarColor);
+    };
+  }, []);
   return (
-    <StyledHeader>
-      <MaxHeaderWrapper />
+    <StyledHeader bg={colorChange}>
+      <MaxHeaderWrapper bg={colorChange} />
       <HeaderWrapper>
         <LogoWrapper>
           <Link href={"/"}></Link>

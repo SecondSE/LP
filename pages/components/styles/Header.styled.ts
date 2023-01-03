@@ -4,12 +4,20 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../../utils/mq";
 
-export const StyledHeader = styled.header`
+interface WrapperProps {
+  bg: boolean;
+}
+
+export const StyledHeader = styled.header<WrapperProps>`
   width: 100%;
   position: fixed;
-  height: 70px;
+  height: 80px;
   z-index: 1;
+  margin-top: ${({ bg }) => (bg ? "0" : "1rem")};
   font-family: ${({ theme }) => theme.headFont3};
+  background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
+  backdrop-filter: blur(5px);
+  z-index: 3;
 `;
 
 export const StyledImage = styled(Image)`
