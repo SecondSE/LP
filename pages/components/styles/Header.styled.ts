@@ -13,11 +13,13 @@ export const StyledHeader = styled.header<WrapperProps>`
   position: fixed;
   height: 80px;
   z-index: 1;
-  margin-top: ${({ bg }) => (bg ? "0" : "1rem")};
+  margin-top: 1rem;
   font-family: ${({ theme }) => theme.headFont3};
   background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
   backdrop-filter: blur(5px);
   z-index: 3;
+  transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
+  transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
 `;
 
 export const StyledImage = styled(Image)`
