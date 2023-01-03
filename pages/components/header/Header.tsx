@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { StyledImage, StyledHeader } from "../styles/Header.styled";
-import {
-  MaxHeaderWrapper,
-  HeaderWrapper,
-  LogoWrapper,
-} from "../styles/Wrappers.styled";
+import { StyledHeader, StyledImage } from "../styles/Header.styled";
+import { MaxHeaderWrapper, LogoWrapper } from "../styles/Wrappers.styled";
 //@ts-ignore
 import LogoImg from "../../../assets/sse-logo.png";
 import MobileNav from "./MobileNav";
@@ -29,16 +25,15 @@ export default function Header() {
     };
   }, []);
   return (
-    <StyledHeader bg={colorChange}>
-      <MaxHeaderWrapper bg={colorChange} />
-      <HeaderWrapper>
+    <MaxHeaderWrapper bg={colorChange}>
+      <StyledHeader bg={colorChange}>
         <LogoWrapper>
           <Link href={"/"}></Link>
           <StyledImage src={LogoImg} alt="This is the Logo of the site" />
         </LogoWrapper>
         <MobileNav />
         <DesktopNav />
-      </HeaderWrapper>
-    </StyledHeader>
+      </StyledHeader>
+    </MaxHeaderWrapper>
   );
 }

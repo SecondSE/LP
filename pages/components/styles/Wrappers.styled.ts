@@ -5,29 +5,19 @@ interface WrapperProps {
   bg: boolean;
 }
 
-export const MaxHeaderWrapper = styled.div<WrapperProps>`
+export const MaxHeaderWrapper = styled.header<WrapperProps>`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: auto;
+  margin-top: 1rem;
+  position: fixed;
   border-top: ${({ bg }) => (bg ? "0" : "1px solid white")};
   border-bottom: ${({ bg }) => (bg ? "0" : "1px solid white")};
-  z-index: -1;
-`;
-
-/* background-color: ${({ bg }) => (bg ? "black" : "transparent")}; */
-// background: rgb(29,29,29);
-// background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(29,29,29,1) 98%); */
-
-export const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 1600px;
-  ${mq("tablet", "min")} {
-    justify-content: flex-start;
-    padding: 0 3rem;
-  }
+  font-family: ${({ theme }) => theme.headFont3};
+  background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
+  backdrop-filter: blur(5px);
+  z-index: 3;
+  transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
+  transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
 `;
 
 export const LogoWrapper = styled.div`
@@ -51,9 +41,9 @@ export const HamburgerWrapper = styled.div`
 
 export const MenuWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(3rem + 100vh);
   position: absolute;
-  top: 0;
+  top: -1.5rem;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
 `;
