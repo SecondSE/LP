@@ -5,7 +5,6 @@ import Work from "../main/Work";
 import Contact from "../contact/Contact";
 import ClientHistory from "../clientHistory/ClientHistory";
 import AboutUs from "../aboutUs/AboutUs";
-import sanHolo from "../../../assets/san-holo.png";
 
 export default function Main() {
   return (

@@ -152,6 +152,13 @@ export const StyledDescrip = styled.div`
   font-family: ${({ theme }) => theme.thinFont};
 `;
 
+export const ColorLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(29, 29, 29, 0.5);
+  position: absolute;
+`;
+
 export const ImageContainer = styled.div`
   position: relative;
   display: flex;

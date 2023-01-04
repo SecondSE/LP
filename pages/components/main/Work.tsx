@@ -6,7 +6,7 @@ import {
   StyledWorkDescrip,
   StyledWorkImage,
 } from "../styles/Main.styled";
-import soundMintCrowd from "../../../assets/soundmint-crowd.webp";
+import soundMintCrowd from "../../../assets/soundmint-crowd.png";
 
 export default function Work() {
   return (
