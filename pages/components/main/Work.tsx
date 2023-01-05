@@ -8,6 +8,11 @@ import {
 } from "../styles/Main.styled";
 import soundMintCrowd from "../../../assets/soundmint-crowd.png";
 
+import Carousel from "../carousel/Carousel";
+import { SlideOne } from "../carousel/SlideOne";
+import { SlideTwo } from "../carousel/SlideTwo";
+import { SlideThree } from "../carousel/SlideThree";
+
 export default function Work() {
   return (
     <WorkWrapper>
@@ -27,10 +32,11 @@ export default function Work() {
           </p>
         </StyledWorkDescrip>
         <WorkImageWrapper>
-          <StyledWorkImage
-            src={soundMintCrowd}
-            alt="A photo of the crowd gathered at the Soundmint event"
-          ></StyledWorkImage>
+          <Carousel>
+            <SlideOne />
+            <SlideTwo />
+            <SlideThree />
+          </Carousel>
         </WorkImageWrapper>
       </StyledWorkContainer>
     </WorkWrapper>

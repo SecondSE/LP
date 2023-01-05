@@ -176,9 +176,14 @@ export const ImageContainer = styled.div`
   }
   & h3 {
     position: absolute;
-    font-size: clamp(13px, 3vw, 2rem);
-    padding: 0.7rem 0 0.3rem 0.7rem;
+    padding: 0.7rem 0 0.3rem 0.5rem;
     font-family: ${({ theme }) => theme.headFont2};
+    & :nth-child() {
+      font-size: clamp(3rem, 1.5vw + 1rem, 3rem);
+    }
+    ${mq("tiny", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.1rem);
+    }
   }
 `;
 
@@ -190,19 +195,15 @@ export const TraitsContainer = styled.div`
   width: 100%;
   top: 25px;
   justify-content: flex-end;
-  padding: 0.7rem;
+  padding: 0 0.6rem;
   font-family: ${({ theme }) => theme.thinFont};
   /* display: none; */
   & span {
     border-bottom: 1px solid white;
     margin-bottom: 0.7rem;
-    font-size: clamp(13px, 6vw, 18px);
-  }
-  ${mq("desktopS", "min")} {
-    justify-content: flex-end;
-  }
-  ${mq("customX", "min")} {
-    justify-content: center;
+    ${mq("tiny", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+    }
   }
 `;
 
