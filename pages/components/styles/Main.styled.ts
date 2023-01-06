@@ -3,25 +3,28 @@ import Image from "next/image";
 import mq from "../../../utils/mq";
 
 export const StyledMain = styled.main`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
   position: relative;
 `;
 
+export const StyledLayer = styled.div`
+  position: absolute;
+  height: 111vh;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 29, 29, 27%) 89%,
+    rgba(29, 29, 29, 98%) 98%
+  );
+`;
+
 export const StyledImage = styled(Image)`
   width: 100vw;
-  height: 100%;
+  height: 110vh;
   object-fit: cover;
 `;
-
-export const StyledHero = styled.section`
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100%;
-`;
-
 export const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,7 +34,17 @@ export const HeroTextContainer = styled.div`
   height: 50%;
   width: 100%;
   gap: 10%;
-  padding: 0 3rem;
+  padding: 0 1rem;
+  ${mq("desktopS", "min")} {
+    padding: 0 3rem;
+  }
+`;
+
+export const StyledHero = styled.section`
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
 `;
 
 export const StyledHero__Intro = styled.div`
@@ -39,14 +52,18 @@ export const StyledHero__Intro = styled.div`
   flex-direction: column;
   width: 100%;
   font-family: ${({ theme }) => theme.thinFont};
+  font-weight: 100;
   & .row {
-    font-size: clamp(0.8rem, 4.9vw, 5.5rem);
+    font-size: clamp(0.8rem, 4.9vw, 4.5rem);
   }
   & .experience {
-    font-size: clamp(0.8rem, 4.9vw, 5.5rem);
+    font-size: clamp(0.8rem, 4.9vw, 4.5rem);
   }
   & .bold {
     font-family: ${({ theme }) => theme.headFont};
+  }
+  & .ampersand {
+    font-family: ${({ theme }) => theme.thinFont};
   }
 `;
 
@@ -56,7 +73,7 @@ export const StyledHero__Middle = styled.div`
   width: 66%;
   & .title {
     font-size: clamp(1rem, 3.5vw, 2.5rem);
-    font-family: ${({ theme }) => theme.mainFont};
+    font-family: ${({ theme }) => theme.thinFont};
     font-weight: 400;
   }
   & .bold {
@@ -67,17 +84,20 @@ export const StyledHero__Middle = styled.div`
 export const StyledHero__End = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 35%;
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
   & .title {
     font-size: clamp(1rem, 3.5vw, 3.5rem);
-    font-family: ${({ theme }) => theme.mainFont};
+    font-family: ${({ theme }) => theme.thinFont};
   }
   & .bold {
     font-size: clamp(1rem, 3.5vw, 3.5rem);
     font-family: ${({ theme }) => theme.headFont};
+  }
+  & .ampersand {
+    font-family: ${({ theme }) => theme.thinFont};
   }
 `;
 
@@ -87,8 +107,7 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
   }
@@ -101,6 +120,7 @@ export const StyledTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
     width: 95%;
     align-items: flex-start;
@@ -115,7 +135,6 @@ export const StyledTitle = styled.div`
       position: absolute;
       bottom: 0;
       align-self: flex-end;
-
       border-top: 1px solid white;
       border-left: 1px solid white;
       font-size: 1.3rem;
@@ -130,6 +149,14 @@ export const StyledDescrip = styled.div`
   margin: 0 auto;
   font-size: clamp(1rem, 3vw, 2.5rem);
   margin-bottom: 1rem;
+  font-family: ${({ theme }) => theme.thinFont};
+`;
+
+export const ColorLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(29, 29, 29, 0.5);
+  position: absolute;
 `;
 
 export const ImageContainer = styled.div`
@@ -149,14 +176,14 @@ export const ImageContainer = styled.div`
   }
   & h3 {
     position: absolute;
-    font-size: clamp(13px, 4vw, 1rem);
-    padding: 0.6rem;
-    font-family: ${({ theme }) => theme.headFont};
-  }
-  & span {
-    border-bottom: 1px solid white;
-    margin-bottom: 0.7rem;
-    font-size: clamp(13px, 6vw, 18px);
+    padding: 0.7rem 0 0.3rem 0.5rem;
+    font-family: ${({ theme }) => theme.headFont2};
+    & :nth-child() {
+      font-size: clamp(3rem, 1.5vw + 1rem, 3rem);
+    }
+    ${mq("tiny", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.1rem);
+    }
   }
 `;
 
@@ -167,6 +194,34 @@ export const TraitsContainer = styled.div`
   height: 91%;
   width: 100%;
   top: 25px;
-  justify-content: center;
-  padding: 0.7rem;
+  justify-content: flex-end;
+  padding: 0 0.6rem;
+  font-family: ${({ theme }) => theme.thinFont};
+  /* display: none; */
+  & span {
+    border-bottom: 1px solid white;
+    margin-bottom: 0.7rem;
+    ${mq("tiny", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+    }
+  }
+`;
+
+export const StyledWorkContainer = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+`;
+
+export const StyledWorkTitle = styled.div`
+  width: 100%;
+`;
+
+export const StyledWorkDescrip = styled.div`
+  width: 100%;
+`;
+
+export const StyledWorkImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

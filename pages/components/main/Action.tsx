@@ -4,6 +4,7 @@ import {
   StyledDescrip,
   ImageContainer,
   TraitsContainer,
+  ColorLayer,
 } from "../styles/Main.styled";
 import {
   DescriptionWrapper,
@@ -11,7 +12,7 @@ import {
   ActionImageWrapper,
 } from "../styles/Wrappers.styled";
 import Image from "next/image";
-import SMSign from "../../../assets/soundmint-sign.svg";
+import SMSign from "../../../assets/soundmint-sign.webp";
 
 export default function Action() {
   return (
@@ -34,6 +35,7 @@ export default function Action() {
       </ActionTextWrapper>
       <ActionImageWrapper>
         <ImageContainer>
+          <ColorLayer />
           <h3>BRANDING</h3>
           <TraitsContainer>
             <span>Brand Strategy</span>
@@ -46,6 +48,7 @@ export default function Action() {
           <Image src={SMSign} alt="SoundMint Sign" />
         </ImageContainer>
         <ImageContainer>
+          <ColorLayer />
           <h3>EXPERENTIAL MARKETING</h3>
           <TraitsContainer>
             <span>Brand Strategy</span>
@@ -58,6 +61,7 @@ export default function Action() {
           <Image src={SMSign} alt="SoundMint Sign" />
         </ImageContainer>
         <ImageContainer>
+          <ColorLayer />
           <h3>INTEGRATED MARKETING</h3>
           <TraitsContainer>
             <span>Brand Strategy</span>
@@ -70,6 +74,7 @@ export default function Action() {
           <Image src={SMSign} alt="SoundMint Sign" />
         </ImageContainer>
         <ImageContainer>
+          <ColorLayer />
           <h3>WEB DESIGN / DEVELOPMENT</h3>
           <TraitsContainer>
             <span>Brand Strategy</span>

@@ -4,12 +4,35 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../../utils/mq";
 
-export const StyledHeader = styled.header`
-  width: 100%;
-  position: fixed;
+interface WrapperProps {
+  bg: boolean;
+}
+
+// export const StyledHeader = styled.header<WrapperProps>`
+//   width: 100%;
+//   position: fixed;
+//   height: 80px;
+//   z-index: 1;
+//   margin-top: 1rem;
+//   font-family: ${({ theme }) => theme.headFont3};
+//   background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
+//   backdrop-filter: blur(5px);
+//   z-index: 3;
+//   transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
+//   transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
+// `;
+
+export const StyledHeader = styled.div<WrapperProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 70px;
-  z-index: 1;
-  font-family: ${({ theme }) => theme.headFont};
+  max-width: 1600px;
+
+  ${mq("tablet", "min")} {
+    justify-content: flex-start;
+    padding: 0 3rem;
+  }
 `;
 
 export const StyledImage = styled(Image)`
@@ -38,17 +61,17 @@ export const StyledDesktopNav = styled.nav`
 export const MobileNavList = styled.ul`
   font-size: 2rem;
   list-style-type: none;
-  height: 100vh;
+  height: calc(3rem + 100vh);
   width: 50%;
   position: absolute;
-  top: 0;
+  top: -1.5rem;
   right: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: darkgray;
+  background-color: ${({ theme }) => theme.bgColor};
 `;
 
 export const MobileNavListItem = styled.li`
