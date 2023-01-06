@@ -6,6 +6,7 @@ const breakpoints = {
   phoneLg: "530",
   custom1: "590",
   tablet: "768",
+  custom3: "860",
   custom2: "890",
   tabletLg: "992",
   iPadPro: "1024",

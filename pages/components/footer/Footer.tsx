@@ -51,7 +51,7 @@ export default function Footer() {
         <StyledRightSection>
           <section>
             <StyledSpanSection>
-              <span>EMAIL@secondsight.com</span>
+              <StyledSpan>EMAIL@secondsight.com</StyledSpan>
               <StyledSpan>Connect with us on Social Media!</StyledSpan>
             </StyledSpanSection>
 
@@ -80,7 +80,9 @@ export default function Footer() {
         </StyledRightSection>
       </StyledFooterSection>
       <StyledCopyrightDiv>
-        <StyledCopyright>&copy; Copyright 2022 SecondSight LLC.</StyledCopyright>
+        <StyledCopyright>
+          &copy; Copyright 2022 SecondSight LLC.
+        </StyledCopyright>
       </StyledCopyrightDiv>
     </StyledFooter>
   );
