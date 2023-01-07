@@ -17,6 +17,7 @@ export const MaxHeaderWrapper = styled.header<WrapperProps>`
   backdrop-filter: blur(5px);
   z-index: 3;
   transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
+  transition-property: transform;
   transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
 `;
 
