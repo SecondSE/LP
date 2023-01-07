@@ -75,7 +75,7 @@ export default function Action() {
         </ImageContainer>
         <ImageContainer>
           <ColorLayer />
-          <h3>WEB DESIGN / DEVELOPMENT</h3>
+          <h3 className="trait">WEB DESIGN / DEVELOPMENT</h3>
           <TraitsContainer>
             <span>Brand Strategy</span>
             <span>Postioning & Pillars</span>

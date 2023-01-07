@@ -178,11 +178,20 @@ export const ImageContainer = styled.div`
     position: absolute;
     padding: 0.7rem 0 0.3rem 0.5rem;
     font-family: ${({ theme }) => theme.headFont2};
-    & :nth-child() {
-      font-size: clamp(3rem, 1.5vw + 1rem, 3rem);
-    }
     ${mq("tiny", "min")} {
+      width: 100%;
       font-size: clamp(1rem, 1.5vw + 1rem, 1.1rem);
+    }
+    ${mq("tablet", "min")} {
+      width: 200px;
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.6rem);
+      padding: 1.5rem 0 0 1.5rem;
+    }
+    &.trait {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
+      ${mq("tablet", "min")} {
+        font-size: clamp(1rem, 1.5vw + 1rem, 1.6rem);
+      }
     }
   }
 `;
@@ -194,8 +203,8 @@ export const TraitsContainer = styled.div`
   height: 91%;
   width: 100%;
   top: 25px;
-  justify-content: flex-end;
   padding: 0 0.6rem;
+  justify-content: flex-end;
   font-family: ${({ theme }) => theme.thinFont};
   /* display: none; */
   & span {
@@ -204,6 +213,19 @@ export const TraitsContainer = styled.div`
     ${mq("tiny", "min")} {
       font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
     }
+    ${mq("tablet", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
+    }
+    ${mq("desktopS", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.3rem);
+    }
+    ${mq("customX", "min")} {
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+    }
+  }
+  ${mq("customX", "min")} {
+    justify-content: center;
+    top: 45px;
   }
 `;
 

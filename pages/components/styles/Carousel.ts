@@ -12,6 +12,7 @@ interface ICarouselProps {
 export const SCarouselWrapper = styled.div`
   display: flex;
   position: relative;
+  overflow-x: hidden;
   & button {
     position: absolute;
     bottom: 0;
