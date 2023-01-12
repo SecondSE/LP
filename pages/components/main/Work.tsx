@@ -15,7 +15,7 @@ import { SlideThree } from "../carousel/SlideThree";
 
 import Case from "../caseStudies/Case";
 import { StyledCaseContainer } from "../styles/CaseStudies";
-import { CaseContext } from "../caseStudies/Case";
+import CaseProvider from "../../../context/case/CaseProvider";
 
 export default function Work() {
   return (
@@ -35,23 +35,16 @@ export default function Work() {
             sees, creating shared moments with the people you're after.
           </p>
         </StyledWorkDescrip>
-        <CaseContext.Provider>
+        <CaseProvider>
           <WorkImageWrapper>
             <Carousel>
               <SlideOne />
               <SlideTwo />
               <SlideThree />
             </Carousel>
-            <StyledCaseContainer>
-              {/* <Case
-              title={props.title}
-              description={props.description}
-              results={props.resuls}
-              resultList={props.resultList}
-            /> */}
-            </StyledCaseContainer>
+            <StyledCaseContainer></StyledCaseContainer>
           </WorkImageWrapper>
-        </CaseContext.Provider>
+        </CaseProvider>
       </StyledWorkContainer>
     </WorkWrapper>
   );
