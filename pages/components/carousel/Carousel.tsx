@@ -1,9 +1,6 @@
 import { useState } from "react";
-import {
-  SCarouselSlide,
-  SCarouselSlides,
-  SCarouselWrapper,
-} from "../styles/Carousel";
+import { SCarouselSlides, SCarouselWrapper } from "../styles/Carousel";
+import CarouselList from "./CarouselList";
 
 interface IProps {
   children: JSX.Element[];
@@ -31,16 +28,11 @@ const Carousel = ({ children }: IProps) => {
     return setCurrentSlide(sum);
   }
 
-  const activeSlide = children.map((slide, index) => (
-    <SCarouselSlide active={currentSlide === index} key={index}>
-      {slide}
-    </SCarouselSlide>
-  ));
   return (
     <>
       <SCarouselWrapper>
         <SCarouselSlides currentSlide={currentSlide}>
-          {activeSlide}
+          <CarouselList currSlide={currentSlide}>{children}</CarouselList>
         </SCarouselSlides>
         <button onClick={() => handleClick("l")}>Left</button>
         <button onClick={() => handleClick("r")}>Right</button>
