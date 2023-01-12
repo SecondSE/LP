@@ -1,5 +1,5 @@
 import { SContainer, STextWrapper, CarouselImage } from "../styles/Carousel";
-import soundMintCrowd from "../../../assets/soundmint-crowd.png";
+import soundMintCrowd from "../../../assets/natehunt-roof.webp";
 
 export const SlideThree = () => (
   <SContainer>

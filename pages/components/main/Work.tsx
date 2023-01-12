@@ -13,6 +13,10 @@ import { SlideOne } from "../carousel/SlideOne";
 import { SlideTwo } from "../carousel/SlideTwo";
 import { SlideThree } from "../carousel/SlideThree";
 
+import Case from "../caseStudies/Case";
+import { StyledCaseContainer } from "../styles/CaseStudies";
+import { CaseContext } from "../caseStudies/Case";
+
 export default function Work() {
   return (
     <WorkWrapper>
@@ -31,13 +35,23 @@ export default function Work() {
             sees, creating shared moments with the people you're after.
           </p>
         </StyledWorkDescrip>
-        <WorkImageWrapper>
-          <Carousel>
-            <SlideOne />
-            <SlideTwo />
-            <SlideThree />
-          </Carousel>
-        </WorkImageWrapper>
+        <CaseContext.Provider>
+          <WorkImageWrapper>
+            <Carousel>
+              <SlideOne />
+              <SlideTwo />
+              <SlideThree />
+            </Carousel>
+            <StyledCaseContainer>
+              {/* <Case
+              title={props.title}
+              description={props.description}
+              results={props.resuls}
+              resultList={props.resultList}
+            /> */}
+            </StyledCaseContainer>
+          </WorkImageWrapper>
+        </CaseContext.Provider>
       </StyledWorkContainer>
     </WorkWrapper>
   );
