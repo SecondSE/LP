@@ -1,17 +1,17 @@
 import { Action, CaseTypes } from "../../customTypes";
 import { ACTIVE_IND } from "./types";
 
-function caseReducer(state: CaseTypes, { type, data }: Action): CaseTypes {
+function caseReducer(prevState: CaseTypes, { type, data }: Action): CaseTypes {
   switch (type) {
     case ACTIVE_IND:
       return {
-        ...state,
-        ...data,
+        ...prevState,
+        caseStudy: data,
       };
 
     default:
       return {
-        ...state,
+        ...prevState,
       };
   }
 }

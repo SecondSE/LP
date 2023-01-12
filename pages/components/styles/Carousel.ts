@@ -13,6 +13,8 @@ export const SCarouselWrapper = styled.div`
   display: flex;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
   & button {
     position: absolute;
     bottom: 0;
@@ -25,6 +27,7 @@ export const SCarouselSlide = styled.div<ICarouselSlide>`
   opacity: ${(props) => (props.active ? 1 : 0)};
   transition: all 0.5s ease;
   width: 100%;
+  height: 100%;
 `;
 
 export const SCarouselSlides = styled.div<ICarouselProps>`
@@ -35,6 +38,8 @@ export const SCarouselSlides = styled.div<ICarouselProps>`
       transform: translateX(-${props.currentSlide * 100}%);
     `};
   transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
 `;
 
 export const SContainer = styled.div`

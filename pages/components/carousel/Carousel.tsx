@@ -32,7 +32,7 @@ const Carousel = ({ children }: IProps) => {
     <>
       <SCarouselWrapper>
         <SCarouselSlides currentSlide={currentSlide}>
-          <CarouselList currSlide={currentSlide}>{children}</CarouselList>
+          <CarouselList currSlide={currentSlide} />
         </SCarouselSlides>
         <button onClick={() => handleClick("l")}>Left</button>
         <button onClick={() => handleClick("r")}>Right</button>
