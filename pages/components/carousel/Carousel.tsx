@@ -12,6 +12,24 @@ interface IProps {
 const Carousel = ({ children }: IProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  function handleClick(dir: string) {
+    let sum;
+    if (dir === "r") {
+      sum = currentSlide + 1;
+    } else {
+      sum = currentSlide - 1;
+    }
+
+    if (sum === children.length) {
+      return setCurrentSlide(0);
+    }
+
+    if (sum === -1) {
+      return setCurrentSlide(children.length - 1);
+    }
+    return setCurrentSlide(sum);
+  }
+
   const activeSlide = children.map((slide, index) => (
     <SCarouselSlide active={currentSlide === index} key={index}>
       {slide}
@@ -23,22 +41,8 @@ const Carousel = ({ children }: IProps) => {
         <SCarouselSlides currentSlide={currentSlide}>
           {activeSlide}
         </SCarouselSlides>
-        <button
-          onClick={() => {
-            setCurrentSlide(
-              (currentSlide - 1 + activeSlide.length) % activeSlide.length
-            );
-          }}
-        >
-          Left
-        </button>
-        <button
-          onClick={() => {
-            setCurrentSlide((currentSlide + 1) % activeSlide.length);
-          }}
-        >
-          Right
-        </button>
+        <button onClick={() => handleClick("l")}>Left</button>
+        <button onClick={() => handleClick("r")}>Right</button>
       </SCarouselWrapper>
     </>
   );
