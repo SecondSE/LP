@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { SCarouselSlide } from "../styles/Carousel";
+import CaseContext from "../../../context/case/CaseContext";
 
 interface ListProps {
   children: JSX.Element[];
@@ -6,6 +8,10 @@ interface ListProps {
 }
 
 const CarouselList = ({ children, currSlide }: ListProps) => {
+  const caseContext = useContext(CaseContext);
+
+  const { caseStudy, setActive } = caseContext;
+
   return (
     <>
       {children.map((slide, i) => (

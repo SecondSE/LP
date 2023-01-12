@@ -12,11 +12,27 @@ const CaseProvider = function ({ children }: ProviderProps) {
   const [state, dispatch] = useReducer<CaseReducer<CaseTypes, Action>>(
     caseReducer,
     {
-      case: 0,
+      caseStudy: 0,
     }
   );
 
-  return <CaseContext.Provider value={state}>{children}</CaseContext.Provider>;
+  function setActive(ind: number) {
+    return dispatch({
+      type: "ACTIVE_IND",
+      data: ind,
+    });
+  }
+
+  return (
+    <CaseContext.Provider
+      value={{
+        ...state,
+        setActive: setActive,
+      }}
+    >
+      {children}
+    </CaseContext.Provider>
+  );
 };
 
 export default CaseProvider;
