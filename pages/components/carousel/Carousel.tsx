@@ -10,6 +10,7 @@ interface IProps {
 }
 
 const Carousel = ({ children }: IProps) => {
+  // if useState is 0, activeSlide is [0] and Case is also [0]. then onClick on activeSlide[0] shows Case[0]
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleClick(dir: string) {
