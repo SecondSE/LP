@@ -4,16 +4,9 @@ import {
   StyledWorkContainer,
   StyledWorkTitle,
   StyledWorkDescrip,
-  StyledWorkImage,
 } from "../styles/Main.styled";
-import soundMintCrowd from "../../../assets/soundmint-crowd.png";
 
 import Carousel from "../carousel/Carousel";
-import { SlideOne } from "../carousel/SlideOne";
-import { SlideTwo } from "../carousel/SlideTwo";
-import { SlideThree } from "../carousel/SlideThree";
-
-import Case from "../caseStudies/Case";
 import { StyledCaseContainer } from "../styles/CaseStudies";
 import CaseProvider from "../../../context/case/CaseProvider";
 
@@ -37,11 +30,7 @@ export default function Work() {
         </StyledWorkDescrip>
         <CaseProvider>
           <WorkImageWrapper>
-            <Carousel>
-              <SlideOne />
-              <SlideTwo />
-              <SlideThree />
-            </Carousel>
+            <Carousel />
             <StyledCaseContainer></StyledCaseContainer>
           </WorkImageWrapper>
         </CaseProvider>

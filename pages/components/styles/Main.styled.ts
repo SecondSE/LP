@@ -9,6 +9,16 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
+export const StyledSectionBorder = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+export const SectionBorderLeft = styled.div`
+  position: absolute;
+`;
+
 export const StyledLayer = styled.div`
   position: absolute;
   height: 111vh;

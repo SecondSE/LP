@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import Image from "next/image";
 
 interface ICarouselSlide {
-  active?: boolean;
+  active: boolean;
 }
 
 interface ICarouselProps {
@@ -24,7 +24,7 @@ export const SCarouselWrapper = styled.div`
 
 export const SCarouselSlide = styled.div<ICarouselSlide>`
   flex: 0 0 auto;
-  opacity: ${(props) => (props.active ? 1 : 0)};
+  opacity: ${(props) => (props.active ? 0.5 : 0)};
   transition: all 0.5s ease;
   width: 100%;
   height: 100%;
@@ -37,7 +37,6 @@ export const SCarouselSlides = styled.div<ICarouselProps>`
     css`
       transform: translateX(-${props.currentSlide * 100}%);
     `};
-  transition: all 0.5s ease;
   width: 100%;
   height: 100%;
 `;
@@ -59,3 +58,17 @@ export const CarouselImage = styled(Image)`
   width: 100%;
   object-fit: cover;
 `;
+
+export const SlideImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`;
+
+export const SlideImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
+
+export const SlideText = styled.h3``;

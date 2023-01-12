@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { SCarouselSlides, SCarouselWrapper } from "../styles/Carousel";
 import CarouselList from "./CarouselList";
+import carouselArr from "./carouselArr";
 
-interface IProps {
-  children: JSX.Element[];
-}
-
-const Carousel = ({ children }: IProps) => {
-  // if useState is 0, activeSlide is [0] and Case is also [0]. then onClick on activeSlide[0] shows Case[0]
+const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleClick(dir: string) {
@@ -18,12 +14,12 @@ const Carousel = ({ children }: IProps) => {
       sum = currentSlide - 1;
     }
 
-    if (sum === children.length) {
+    if (sum === carouselArr.length) {
       return setCurrentSlide(0);
     }
 
     if (sum === -1) {
-      return setCurrentSlide(children.length - 1);
+      return setCurrentSlide(carouselArr.length - 1);
     }
     return setCurrentSlide(sum);
   }
@@ -32,7 +28,7 @@ const Carousel = ({ children }: IProps) => {
     <>
       <SCarouselWrapper>
         <SCarouselSlides currentSlide={currentSlide}>
-          <CarouselList currSlide={currentSlide} />
+          <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
         <button onClick={() => handleClick("l")}>Left</button>
         <button onClick={() => handleClick("r")}>Right</button>
