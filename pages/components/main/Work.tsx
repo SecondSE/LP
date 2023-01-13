@@ -19,7 +19,7 @@ import CaseProvider from "../../../context/case/CaseProvider";
 
 export default function Work() {
   return (
-    <WorkWrapper>
+    <WorkWrapper id="Work">
       <StyledWorkContainer>
         <StyledWorkTitle>
           <h2>WHAT'S BEEN</h2>

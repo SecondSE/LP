@@ -108,9 +108,13 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-top: 1px solid white;
+  z-index: 2;
+  position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
+  }
+  ${mq("desktopS", "min")} {
+    border-top: 1px solid white;
   }
 `;
 

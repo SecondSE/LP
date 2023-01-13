@@ -12,7 +12,7 @@ import Images from "./Images";
 
 export default function AboutUs() {
   return (
-    <AboutUsSection>
+    <AboutUsSection id="About">
       <StyledMainDiv>
         <StyledUpperDiv>
           <StyledH1>ABOUT US</StyledH1>
