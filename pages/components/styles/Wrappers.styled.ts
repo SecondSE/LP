@@ -72,24 +72,33 @@ export const ActionTextWrapper = styled.div`
     margin: 0 auto;
     padding: 0 3rem;
     z-index: 2;
-    border-top: 1px solid white;
   }
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
+  padding: 0 1rem;
   align-items: center;
+  text-align: center;
   font-family: ${({ theme }) => theme.mainFont};
+  ${mq("tablet", "min")} {
+    padding: 0 3rem;
+  }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
     width: 45%;
     padding: 2rem 0 2rem 2rem;
+    text-align: left;
   }
 `;
 
+export const MaxActionImageWrapper = styled.div`
+  ${mq("desktopS", "min")} {
+    width: 100%;
+    border-top: 1px solid white;
+  }
+`;
 export const ActionImageWrapper = styled.div`
   height: auto;
   display: flex;
@@ -100,9 +109,9 @@ export const ActionImageWrapper = styled.div`
   gap: 1rem;
   ${mq("desktopS", "min")} {
     gap: 0;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 3rem;
-    max-width: 100%;
+    max-width: 1600px;
   }
   & img {
     width: 100%;

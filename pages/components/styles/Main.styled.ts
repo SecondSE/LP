@@ -30,12 +30,12 @@ export const HeroTextContainer = styled.div`
   flex-direction: column;
   max-width: 1600px;
   position: absolute;
-  top: 25%;
-  height: 50%;
+  top: 26%;
+  height: 46%;
   width: 100%;
-  gap: 10%;
-  padding: 0 1rem;
-  ${mq("desktopS", "min")} {
+  gap: 17%;
+  padding: 0 0.8rem;
+  ${mq("tablet", "min")} {
     padding: 0 3rem;
   }
 `;
@@ -54,12 +54,13 @@ export const StyledHero__Intro = styled.div`
   font-family: ${({ theme }) => theme.thinFont};
   font-weight: 100;
   & .row {
-    font-size: clamp(0.8rem, 4.9vw, 4.5rem);
+    font-size: clamp(1.1rem, 5.5vw, 4.5rem);
   }
   & .experience {
-    font-size: clamp(0.8rem, 4.9vw, 4.5rem);
+    font-size: clamp(0.98rem, 5.5vw, 4.5rem);
   }
   & .bold {
+    font-size: clamp(0.95rem, 5.2vw, 4.5rem);
     font-family: ${({ theme }) => theme.headFont};
   }
   & .ampersand {
@@ -70,9 +71,9 @@ export const StyledHero__Intro = styled.div`
 export const StyledHero__Middle = styled.div`
   display: flex;
   flex-direction: column;
-  width: 66%;
+  width: 100%;
   & .title {
-    font-size: clamp(1rem, 3.5vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 3.5rem);
     font-family: ${({ theme }) => theme.thinFont};
     font-weight: 400;
   }
@@ -89,11 +90,11 @@ export const StyledHero__End = styled.div`
   align-items: flex-end;
   width: 100%;
   & .title {
-    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    font-size: clamp(1rem, 4vw, 3.5rem);
     font-family: ${({ theme }) => theme.thinFont};
   }
   & .bold {
-    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    font-size: clamp(1.1rem, 4vw, 3.5rem);
     font-family: ${({ theme }) => theme.headFont};
   }
   & .ampersand {
@@ -107,9 +108,13 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-top: 1px solid white;
+  z-index: 2;
+  position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
+  }
+  ${mq("desktopS", "min")} {
+    border-top: 1px solid white;
   }
 `;
 
@@ -126,7 +131,7 @@ export const StyledTitle = styled.div`
     align-items: flex-start;
   }
   & h3 {
-    font-size: clamp(3.22rem, 17vw, 8rem);
+    font-size: clamp(4.22rem, 17vw, 8rem);
   }
   & span {
     display: none;
@@ -147,7 +152,7 @@ export const StyledDescrip = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin-bottom: 1rem;
   font-family: ${({ theme }) => theme.thinFont};
 `;
