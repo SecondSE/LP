@@ -13,8 +13,22 @@ import { useForm, ValidationError } from "@formspree/react";
 
 export default function Form() {
   const [state, handleSubmit] = useForm("xlekdrav");
+
+  const handleContactRedirect = () => {
+    setTimeout(() => {
+      let homeURL = window.location.origin;
+      window.location.href = `${homeURL}/#Contact`;
+    }, 2000);
+  };
+
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    handleContactRedirect();
+    return (
+      <>
+        <Form />
+        <p>Thank you for submitting</p>
+      </>
+    );
   }
 
   return (
