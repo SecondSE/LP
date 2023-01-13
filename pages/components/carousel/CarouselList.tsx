@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { SCarouselSlide } from "../styles/Carousel";
+import { SCarouselSlide, CarouselTitle } from "../styles/Carousel";
 import CaseContext from "../../../context/case/CaseContext";
-import carouselArr from "./carouselArr";
 import CarouselSlide from "./CarouselSlide";
 
 interface ArrObj {
   img: string;
   alt: string;
+  title: string;
 }
 
 interface ListProps {
@@ -23,17 +23,38 @@ const CarouselList = ({ arr, currentSlide }: ListProps) => {
       return setActive(ind);
     }
   }
+
   return (
     <>
-      {arr.map((elem, i) => (
-        <SCarouselSlide
-          active={currentSlide === i}
-          onClick={() => handleClick(i)}
-          key={i}
-        >
-          <CarouselSlide img={elem.img} alt={elem.alt} />
-        </SCarouselSlide>
-      ))}
+      {arr.map((elem, i) => {
+        console.log(currentSlide);
+        if (currentSlide === i) {
+          return (
+            <>
+              <CarouselTitle current={currentSlide}>{elem.title}</CarouselTitle>
+              <SCarouselSlide
+                active={currentSlide === i}
+                onClick={() => handleClick(i)}
+                key={i}
+              >
+                <CarouselSlide img={elem.img} alt={elem.alt} />
+              </SCarouselSlide>
+            </>
+          );
+        }
+
+        return (
+          <>
+            <SCarouselSlide
+              active={currentSlide === i}
+              onClick={() => handleClick(i)}
+              key={i}
+            >
+              <CarouselSlide img={elem.img} alt={elem.alt} />
+            </SCarouselSlide>
+          </>
+        );
+      })}
     </>
   );
 };

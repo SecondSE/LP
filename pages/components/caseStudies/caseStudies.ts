@@ -1,4 +1,13 @@
-const caseStudies = [
+interface caseData {
+  title: string;
+  description1: string;
+  description2: string;
+  results: string;
+  resultList: string[];
+  images: string[];
+}
+
+const caseStudies: caseData[] = [
   {
     title: "SOUNDMINT LABS NFT.NYC LAUNCH",
     description1:
@@ -10,7 +19,6 @@ const caseStudies = [
       "200+ attendees",
       "1M+ social media mentions",
       "Press release from Forbes",
-      ,
     ],
     images: [
       "../../../assets/dj1.webp",
@@ -21,7 +29,7 @@ const caseStudies = [
   },
   {
     title: "THE NATE GIFT EXPRESS",
-    description:
+    description1:
       "The Gift Hunt was nate's - a NYC fintech startup - holiday campaign which included a pop-up retail store in the heart of SoHo.",
     description2:
       "Holiday wishlists were created within the nate app that were then brought to life within the storefront. Attendees were able to use their phones for a seamless, touchless, shopping experience.",
@@ -43,7 +51,7 @@ const caseStudies = [
   },
   {
     title: "THE NATE GIFT HUNT",
-    description:
+    description1:
       "The Gift Hunt was nate's - a NYC fintech startup - experiential launch activation celebrating all that Manhattan has to offer and powered by nate's universal shopping features.",
     description2:
       "Attendees explored 4 different locations throughout Manhattan, were treated to yummy bites along the way, and learned how to use nate's in-app features.",

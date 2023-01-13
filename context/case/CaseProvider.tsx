@@ -13,6 +13,7 @@ const CaseProvider = function ({ children }: ProviderProps) {
     caseReducer,
     {
       caseStudy: 0,
+      init: false,
     }
   );
 

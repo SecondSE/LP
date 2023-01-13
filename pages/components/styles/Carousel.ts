@@ -9,6 +9,10 @@ interface ICarouselProps {
   currentSlide: number;
 }
 
+interface TitleProps {
+  current: number;
+}
+
 export const SCarouselWrapper = styled.div`
   display: flex;
   position: relative;
@@ -23,14 +27,17 @@ export const SCarouselWrapper = styled.div`
 `;
 
 export const SCarouselSlide = styled.div<ICarouselSlide>`
+  position: relative;
   flex: 0 0 auto;
   opacity: ${(props) => (props.active ? 0.5 : 0)};
   transition: all 0.5s ease;
   width: 100%;
   height: 100%;
+  z-index: 0;
 `;
 
 export const SCarouselSlides = styled.div<ICarouselProps>`
+  position: relative;
   display: flex;
   ${(props) =>
     props.currentSlide &&
@@ -54,9 +61,21 @@ export const STextWrapper = styled.div`
 `;
 
 export const CarouselImage = styled(Image)`
+  position: relative;
   height: 400px;
   width: 100%;
   object-fit: cover;
+`;
+
+export const CarouselTitle = styled.h2<TitleProps>`
+  position: absolute;
+  top: 0;
+  left: ${(props) =>
+    props.current &&
+    css`
+      transform: translateX(-${props.current * 100}%);
+    `};
+  z-index: 1;
 `;
 
 export const SlideImageWrapper = styled.div`
@@ -67,8 +86,10 @@ export const SlideImageWrapper = styled.div`
 `;
 
 export const SlideImage = styled(Image)`
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 0;
 `;
 
 export const SlideText = styled.h3``;

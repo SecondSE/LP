@@ -7,6 +7,7 @@ function caseReducer(prevState: CaseTypes, { type, data }: Action): CaseTypes {
       return {
         ...prevState,
         caseStudy: data,
+        init: true,
       };
 
     default:
