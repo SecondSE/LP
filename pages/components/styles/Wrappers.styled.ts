@@ -79,10 +79,12 @@ export const ActionTextWrapper = styled.div`
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
+  padding: 0 1rem;
   align-items: center;
   font-family: ${({ theme }) => theme.mainFont};
+  ${mq("tablet", "min")} {
+    padding: 0 3rem;
+  }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
     width: 45%;

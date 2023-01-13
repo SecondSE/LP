@@ -28,7 +28,7 @@ export default function Hero() {
               <span className="experience">
                 brand experience agency connecting
               </span>
-              <span className="row bold">
+              <span className="bold">
                 PEOPLE, CULTURE, <span className="ampersand">&</span> YOUR BRAND
               </span>
             </StyledHero__Intro>
