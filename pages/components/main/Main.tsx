@@ -5,16 +5,19 @@ import Work from "../main/Work";
 import Contact from "../contact/Contact";
 import ClientHistory from "../clientHistory/ClientHistory";
 import AboutUs from "../aboutUs/AboutUs";
+import CaseProvider from "../../../context/case/CaseProvider";
 
 export default function Main() {
   return (
-    <StyledMain>
-      <Hero />
-      <Action />
-      <Work />
-      <AboutUs />
-      <ClientHistory />
-      <Contact />
-    </StyledMain>
+    <CaseProvider>
+      <StyledMain>
+        <Hero />
+        <Action />
+        <Work />
+        <AboutUs />
+        <ClientHistory />
+        <Contact />
+      </StyledMain>
+    </CaseProvider>
   );
 }

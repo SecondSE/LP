@@ -1,5 +1,6 @@
 export interface CaseTypes {
   caseStudy: number;
+  init: boolean;
   setActive?: (ind: number) => void;
 }
 

@@ -1,29 +1,42 @@
 import { useContext } from "react";
-import { SCarouselSlide } from "../styles/Carousel";
+import { SCarouselSlide, CarouselTitle } from "../styles/Carousel";
 import CaseContext from "../../../context/case/CaseContext";
-import caseStudies from "../caseStudies/caseStudies";
-import { StyledCaseContainer } from "../styles/CaseStudies";
+import CarouselSlide from "./CarouselSlide";
 
-interface ListProps {
-  currSlide: number;
+interface ArrObj {
+  img: string;
+  alt: string;
+  title: string;
 }
 
-const CarouselList = ({ currSlide }: ListProps) => {
-  const caseContext = useContext(CaseContext);
+interface ListProps {
+  arr: ArrObj[];
+  currentSlide: number;
+}
 
-  const { caseStudy, setActive } = caseContext;
+const CarouselList = ({ arr, currentSlide }: ListProps) => {
+  const caseContext = useContext(CaseContext);
+  const { setActive } = caseContext;
 
   function handleClick(ind: number) {
-    console.log(ind);
     if (setActive) {
       return setActive(ind);
     }
   }
+
   return (
     <>
-      {caseStudies.map((slide, i) => (
-        <SCarouselSlide onClick={() => handleClick(i)} key={i} />
-      ))}
+      {arr.map((elem, i) => {
+        return (
+          <SCarouselSlide
+            active={currentSlide === i}
+            onClick={() => handleClick(i)}
+            key={i}
+          >
+            <CarouselSlide img={elem.img} alt={elem.alt} />
+          </SCarouselSlide>
+        );
+      })}
     </>
   );
 };

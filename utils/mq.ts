@@ -19,6 +19,7 @@ const breakpoints = {
 
 function mq(device: string, bounds: string, mode = "portrait") {
   const bpArray = Object.keys(breakpoints).map(function bpValues(bpKey) {
+    //@ts-ignore
     return [bpKey, breakpoints[bpKey]];
   });
 
