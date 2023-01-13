@@ -35,7 +35,7 @@ const Carousel = () => {
   return (
     <>
       <SCarouselWrapper>
-        <CarouselTitle>{caseStudies[caseStudy].title}</CarouselTitle>
+        <CarouselTitle>{caseStudies[currentSlide].title}</CarouselTitle>
         <SCarouselSlides currentSlide={currentSlide}>
           <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
