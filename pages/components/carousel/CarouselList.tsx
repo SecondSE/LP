@@ -27,22 +27,6 @@ const CarouselList = ({ arr, currentSlide }: ListProps) => {
   return (
     <>
       {arr.map((elem, i) => {
-        console.log(currentSlide);
-        if (currentSlide === i) {
-          return (
-            <>
-              <CarouselTitle current={currentSlide}>{elem.title}</CarouselTitle>
-              <SCarouselSlide
-                active={currentSlide === i}
-                onClick={() => handleClick(i)}
-                key={i}
-              >
-                <CarouselSlide img={elem.img} alt={elem.alt} />
-              </SCarouselSlide>
-            </>
-          );
-        }
-
         return (
           <>
             <SCarouselSlide

@@ -9,10 +9,6 @@ interface ICarouselProps {
   currentSlide: number;
 }
 
-interface TitleProps {
-  current: number;
-}
-
 export const SCarouselWrapper = styled.div`
   display: flex;
   position: relative;
@@ -67,14 +63,10 @@ export const CarouselImage = styled(Image)`
   object-fit: cover;
 `;
 
-export const CarouselTitle = styled.h2<TitleProps>`
+export const CarouselTitle = styled.h2`
   position: absolute;
   top: 0;
-  left: ${(props) =>
-    props.current &&
-    css`
-      transform: translateX(-${props.current * 100}%);
-    `};
+  left: 0;
   z-index: 1;
 `;
 

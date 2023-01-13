@@ -1,9 +1,17 @@
-import { useState } from "react";
-import { SCarouselSlides, SCarouselWrapper } from "../styles/Carousel";
+import { useContext, useState } from "react";
+import {
+  CarouselTitle,
+  SCarouselSlides,
+  SCarouselWrapper,
+} from "../styles/Carousel";
 import CarouselList from "./CarouselList";
+import caseStudies from "../caseStudies/caseStudies";
 import carouselArr from "./carouselArr";
+import CaseContext from "../../../context/case/CaseContext";
 
 const Carousel = () => {
+  const { caseStudy } = useContext(CaseContext);
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleClick(dir: string) {
@@ -27,6 +35,7 @@ const Carousel = () => {
   return (
     <>
       <SCarouselWrapper>
+        <CarouselTitle>{caseStudies[caseStudy].title}</CarouselTitle>
         <SCarouselSlides currentSlide={currentSlide}>
           <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
