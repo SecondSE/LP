@@ -28,15 +28,13 @@ const CarouselList = ({ arr, currentSlide }: ListProps) => {
     <>
       {arr.map((elem, i) => {
         return (
-          <>
-            <SCarouselSlide
-              active={currentSlide === i}
-              onClick={() => handleClick(i)}
-              key={i}
-            >
-              <CarouselSlide img={elem.img} alt={elem.alt} />
-            </SCarouselSlide>
-          </>
+          <SCarouselSlide
+            active={currentSlide === i}
+            onClick={() => handleClick(i)}
+            key={i}
+          >
+            <CarouselSlide img={elem.img} alt={elem.alt} />
+          </SCarouselSlide>
         );
       })}
     </>

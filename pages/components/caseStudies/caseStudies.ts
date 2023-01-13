@@ -21,10 +21,10 @@ const caseStudies: caseData[] = [
       "Press release from Forbes",
     ],
     images: [
-      "../../../assets/dj1.webp",
-      "../../../assets/dj2.webp",
-      "../../../assets/green-doorway.webp",
-      "../../../assets/sanholo-stage.webp",
+      "/imgs/dj-1.webp",
+      "/imgs/dj-2.webp",
+      "/imgs/green-doorway.webp",
+      "/imgs/sanholo-stage.webp",
     ],
   },
   {
@@ -43,10 +43,10 @@ const caseStudies: caseData[] = [
       "Press release from BizBash & Variety",
     ],
     images: [
-      "../../../assets/nate-room.webp",
-      "../../../assets/nate-app.webp",
-      "../../../assets/nate-store.webp",
-      "../../../assets/nate-treats.webp",
+      "/imgs/nate-room.webp",
+      "/imgs/nate-app.webp",
+      "/imgs/nate-store.webp",
+      "/imgs/nate-treats.webp",
     ],
   },
   {
@@ -65,10 +65,10 @@ const caseStudies: caseData[] = [
       "Press release from BizBash",
     ],
     images: [
-      "../../../assets/nate-clue.webp",
-      "../../../assets/nate-hut.webp",
-      "../../../assets/nate-map.webp",
-      "../../../assets/nate-tv.webp",
+      "/imgs/nate-clue.webp",
+      "/imgs/nate-hut.webp",
+      "/imgs/nate-map.webp",
+      "/imgs/nate-tv.webp",
     ],
   },
 ];

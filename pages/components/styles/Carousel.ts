@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
+import mq from "../../../utils/mq";
 
 interface ICarouselSlide {
   active: boolean;
@@ -65,9 +66,24 @@ export const CarouselImage = styled(Image)`
 
 export const CarouselTitle = styled.h2`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 2%;
+  font-family: ${({ theme }) => theme.headFont2};
+
   z-index: 1;
+  ${mq("tiny", "min")} {
+    font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+    width: 100%;
+  }
+
+  ${mq("desktopS", "min")} {
+    font-size: clamp(1rem, 1.5vw + 1rem, 1.3rem);
+    width: 420px;
+  }
+
+  ${mq("customX", "min")} {
+    font-size: clamp(1rem, 1.5vw + 1rem, 2rem);
+  }
 `;
 
 export const SlideImageWrapper = styled.div`
