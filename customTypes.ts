@@ -2,6 +2,7 @@ export interface CaseTypes {
   caseStudy: number;
   init: boolean;
   setActive?: (ind: number) => void;
+  changeActive?: (curr: number) => void;
 }
 
 export interface Action {

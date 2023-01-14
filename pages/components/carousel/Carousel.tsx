@@ -10,7 +10,7 @@ import carouselArr from "./carouselArr";
 import CaseContext from "../../../context/case/CaseContext";
 
 const Carousel = () => {
-  const { caseStudy } = useContext(CaseContext);
+  const { changeActive, init } = useContext(CaseContext);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -23,13 +23,25 @@ const Carousel = () => {
     }
 
     if (sum === carouselArr.length) {
-      return setCurrentSlide(0);
+      setCurrentSlide(0);
+      if (changeActive && init) {
+        changeActive(0);
+      }
+      return;
     }
 
     if (sum === -1) {
-      return setCurrentSlide(carouselArr.length - 1);
+      setCurrentSlide(carouselArr.length - 1);
+      if (changeActive && init) {
+        changeActive(carouselArr.length - 1);
+      }
+      return;
     }
-    return setCurrentSlide(sum);
+    setCurrentSlide(sum);
+    if (changeActive && init) {
+      changeActive(sum);
+    }
+    return;
   }
 
   return (
