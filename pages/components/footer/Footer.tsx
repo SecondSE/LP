@@ -52,7 +52,7 @@ export default function Footer() {
           <section>
             <StyledSpanSection>
               <StyledSpan>EMAIL@secondsight.com</StyledSpan>
-              <StyledSpan>Connect with us on Social Media!</StyledSpan>
+              {/* <StyledSpan>Connect with us on Social Media!</StyledSpan> */}
             </StyledSpanSection>
 
             <StyledSocialMediaSection>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <LinkedInIcon />
               </IconWrapper>
 
-              <IconWrapper>
+              {/* <IconWrapper>
                 <StyledLink href="https://instagram.com"></StyledLink>
                 <InstagramIcon />
               </IconWrapper>
@@ -74,7 +74,7 @@ export default function Footer() {
               <IconWrapper>
                 <StyledLink href="https://instagram.com"></StyledLink>
                 <FacebookIcon />
-              </IconWrapper>
+              </IconWrapper> */}
             </StyledSocialMediaSection>
           </section>
         </StyledRightSection>
