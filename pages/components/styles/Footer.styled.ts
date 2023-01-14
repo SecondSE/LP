@@ -4,7 +4,6 @@ import mq from "../../../utils/mq";
 
 export const StyledFooter = styled.footer`
   border-top: 1px white solid;
-  border-bottom: 1px white solid;
 `;
 
 export const StyledFooterSection = styled.section`
@@ -16,6 +15,7 @@ export const StyledFooterSection = styled.section`
     flex-direction: column;
   }
   ${mq("custom1", "min")} {
+    padding: 0 1rem;
     flex-direction: row;
   } ;
 `;
@@ -32,6 +32,7 @@ export const StyledLeftSection = styled.section`
     width: 60%;
   }
   ${mq("custom1", "min")} {
+    padding-left: 1rem;
     width: 50%;
     text-align: left;
   } ;
@@ -70,7 +71,7 @@ export const LogoWrapper = styled.div`
     margin: 25px auto 15px auto;
   }
   ${mq("custom1", "min")} {
-    margin: 25px 0 0 0;
+    margin: 25px 0 15px 0;
   }
 `;
 
@@ -82,7 +83,7 @@ export const IconWrapper = styled.div`
 
 export const StyledSocialMediaSection = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
 `;
 
@@ -115,7 +116,7 @@ export const StyledCopyright = styled.span`
   display: inline-block;
   margin: 10px 0;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 `;
 
 export const StyledCopyrightDiv = styled.div`
@@ -126,7 +127,7 @@ export const StyledCopyrightDiv = styled.div`
 
 export const StyledParagraph = styled.p`
   font-family: ${({ theme }) => theme.mainFont};
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   max-width: 285px;
   min-width: 200px;
   margin-bottom: 15px;
@@ -135,7 +136,7 @@ export const StyledParagraph = styled.p`
 
 export const StyledSpan = styled.span`
   font-family: ${({ theme }) => theme.mainFont};
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: inline-block;
   margin-top: 20px;
 `;
