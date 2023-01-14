@@ -8,16 +8,19 @@ import {
   StyledInputNameSection,
   StyledInputSubmit,
   StyledInputAndLabelSection,
+  StyledThankYou,
 } from "../styles/Contact.styled";
+import { useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function Form() {
-  const [state, handleSubmit] = useForm("xlekdrav");
+  const [state, handleSubmit] = useForm("xnqweapp");
+  const contactForm = useRef(null);
 
   const handleContactRedirect = () => {
     setTimeout(() => {
       let homeURL = window.location.origin;
-      window.location.href = `${homeURL}/#Contact`;
+      window.location.href = `${homeURL}/#Home`;
     }, 2000);
   };
 
@@ -26,14 +29,19 @@ export default function Form() {
     return (
       <>
         <Form />
-        <p>Thank you for submitting</p>
+        <StyledThankYou>Thank you for your submission!</StyledThankYou>
       </>
     );
   }
 
   return (
     <>
-      <StyledForm onSubmit={handleSubmit} method="POST" id="contact-form">
+      <StyledForm
+        ref={contactForm}
+        onSubmit={handleSubmit}
+        method="POST"
+        id="contact-form"
+      >
         <StyledInputAndLabelSection>
           <StyledLabel>Name*</StyledLabel>
           <StyledInputNameSection>

@@ -29,6 +29,8 @@ export const StyledRightSection = styled.section`
 export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   ${mq("tiny", "min")} {
     width: 100%;
@@ -110,4 +112,9 @@ export const StyledH2 = styled.h2`
   font-family: ${({ theme }) => theme.headFont};
   margin-top: 20px;
   text-align: center;
+`;
+
+export const StyledThankYou = styled.div`
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(1rem, 5vw, 1.5rem);
 `;
