@@ -100,10 +100,10 @@ export const StyledOnlyNYImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 200px;
+    max-width: 200px;
   }
 `;
 export const StyledBBClubImage = styled(ImageSizing)`
@@ -119,10 +119,10 @@ export const StyledWhaleBoneImage = styled(ImageSizing)`
     width: 98%;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 200px;
+    max-width: 200px;
   }
 `;
 
@@ -133,10 +133,10 @@ export const StyledSoundMintImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 250px;
+    max-width: 250px;
   }
 `;
 export const StyledNateImage = styled(ImageSizing)`
@@ -145,9 +145,9 @@ export const StyledNateImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 240px;
+    max-width: 240px;
   }
   ${mq("custom2", "max")} {
-    width: 175px;
+    max-width: 175px;
   }
 `;
