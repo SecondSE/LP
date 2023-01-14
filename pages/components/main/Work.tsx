@@ -1,23 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useContext } from "react";
 import { WorkImageWrapper, WorkWrapper } from "../styles/Wrappers.styled";
 import {
   StyledWorkContainer,
   StyledWorkTitle,
   StyledWorkDescrip,
-  StyledWorkImage,
 } from "../styles/Main.styled";
-import soundMintCrowd from "../../../assets/soundmint-crowd.png";
 
 import Carousel from "../carousel/Carousel";
-import { SlideOne } from "../carousel/SlideOne";
-import { SlideTwo } from "../carousel/SlideTwo";
-import { SlideThree } from "../carousel/SlideThree";
-
-import Case from "../caseStudies/Case";
-import { StyledCaseContainer } from "../styles/CaseStudies";
-import CaseProvider from "../../../context/case/CaseProvider";
+import Case from "../carousel/Case";
+import CaseContext from "../../../context/case/CaseContext";
+import caseStudies from "../caseStudies/caseStudies";
 
 export default function Work() {
+  const caseContext = useContext(CaseContext);
+
+  const { caseStudy, init } = caseContext;
+
+  let item;
+
+  if (init) {
+    item = caseStudies[caseStudy];
+  }
+
   return (
     <WorkWrapper id="Work">
       <StyledWorkContainer>
@@ -35,16 +40,10 @@ export default function Work() {
             sees, creating shared moments with the people you're after.
           </p>
         </StyledWorkDescrip>
-        <CaseProvider>
-          <WorkImageWrapper>
-            <Carousel>
-              <SlideOne />
-              <SlideTwo />
-              <SlideThree />
-            </Carousel>
-            <StyledCaseContainer></StyledCaseContainer>
-          </WorkImageWrapper>
-        </CaseProvider>
+        <WorkImageWrapper>
+          <Carousel />
+        </WorkImageWrapper>
+        {init && <Case {...item} />}
       </StyledWorkContainer>
     </WorkWrapper>
   );

@@ -1,4 +1,13 @@
-const caseStudies = [
+interface caseData {
+  title: string;
+  description1: string;
+  description2: string;
+  results: string;
+  resultList: string[];
+  images: string[];
+}
+
+const caseStudies: caseData[] = [
   {
     title: "SOUNDMINT LABS NFT.NYC LAUNCH",
     description1:
@@ -10,18 +19,17 @@ const caseStudies = [
       "200+ attendees",
       "1M+ social media mentions",
       "Press release from Forbes",
-      ,
     ],
     images: [
-      "../../../assets/dj1.webp",
-      "../../../assets/dj2.webp",
-      "../../../assets/green-doorway.webp",
-      "../../../assets/sanholo-stage.webp",
+      "/imgs/dj-1.webp",
+      "/imgs/dj-2.webp",
+      "/imgs/green-doorway.webp",
+      "/imgs/sanholo-stage.webp",
     ],
   },
   {
     title: "THE NATE GIFT EXPRESS",
-    description:
+    description1:
       "The Gift Hunt was nate's - a NYC fintech startup - holiday campaign which included a pop-up retail store in the heart of SoHo.",
     description2:
       "Holiday wishlists were created within the nate app that were then brought to life within the storefront. Attendees were able to use their phones for a seamless, touchless, shopping experience.",
@@ -35,15 +43,15 @@ const caseStudies = [
       "Press release from BizBash & Variety",
     ],
     images: [
-      "../../../assets/nate-room.webp",
-      "../../../assets/nate-app.webp",
-      "../../../assets/nate-store.webp",
-      "../../../assets/nate-treats.webp",
+      "/imgs/nate-room.webp",
+      "/imgs/nate-app.webp",
+      "/imgs/nate-store.webp",
+      "/imgs/nate-treats.webp",
     ],
   },
   {
     title: "THE NATE GIFT HUNT",
-    description:
+    description1:
       "The Gift Hunt was nate's - a NYC fintech startup - experiential launch activation celebrating all that Manhattan has to offer and powered by nate's universal shopping features.",
     description2:
       "Attendees explored 4 different locations throughout Manhattan, were treated to yummy bites along the way, and learned how to use nate's in-app features.",
@@ -57,10 +65,10 @@ const caseStudies = [
       "Press release from BizBash",
     ],
     images: [
-      "../../../assets/nate-clue.webp",
-      "../../../assets/nate-hut.webp",
-      "../../../assets/nate-map.webp",
-      "../../../assets/nate-tv.webp",
+      "/imgs/nate-clue.webp",
+      "/imgs/nate-hut.webp",
+      "/imgs/nate-map.webp",
+      "/imgs/nate-tv.webp",
     ],
   },
 ];

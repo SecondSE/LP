@@ -1,13 +1,17 @@
-import { useState } from "react";
-import { SCarouselSlides, SCarouselWrapper } from "../styles/Carousel";
+import { useContext, useState } from "react";
+import {
+  CarouselTitle,
+  SCarouselSlides,
+  SCarouselWrapper,
+} from "../styles/Carousel";
 import CarouselList from "./CarouselList";
+import caseStudies from "../caseStudies/caseStudies";
+import carouselArr from "./carouselArr";
+import CaseContext from "../../../context/case/CaseContext";
 
-interface IProps {
-  children: JSX.Element[];
-}
+const Carousel = () => {
+  const { changeActive, init } = useContext(CaseContext);
 
-const Carousel = ({ children }: IProps) => {
-  // if useState is 0, activeSlide is [0] and Case is also [0]. then onClick on activeSlide[0] shows Case[0]
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleClick(dir: string) {
@@ -18,21 +22,34 @@ const Carousel = ({ children }: IProps) => {
       sum = currentSlide - 1;
     }
 
-    if (sum === children.length) {
-      return setCurrentSlide(0);
+    if (sum === carouselArr.length) {
+      setCurrentSlide(0);
+      if (changeActive && init) {
+        changeActive(0);
+      }
+      return;
     }
 
     if (sum === -1) {
-      return setCurrentSlide(children.length - 1);
+      setCurrentSlide(carouselArr.length - 1);
+      if (changeActive && init) {
+        changeActive(carouselArr.length - 1);
+      }
+      return;
     }
-    return setCurrentSlide(sum);
+    setCurrentSlide(sum);
+    if (changeActive && init) {
+      changeActive(sum);
+    }
+    return;
   }
 
   return (
     <>
       <SCarouselWrapper>
+        <CarouselTitle>{caseStudies[currentSlide].title}</CarouselTitle>
         <SCarouselSlides currentSlide={currentSlide}>
-          <CarouselList currSlide={currentSlide} />
+          <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
         <button onClick={() => handleClick("l")}>Left</button>
         <button onClick={() => handleClick("r")}>Right</button>
