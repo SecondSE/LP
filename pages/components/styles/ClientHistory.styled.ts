@@ -19,11 +19,12 @@ export const StyledUpperDiv = styled.div`
 export const StyledH1 = styled.h1`
   font-size: clamp(3.5rem, 6vw, 6rem);
   font-family: ${({ theme }) => theme.headFont};
+  padding: 0 1rem;
 
   ${mq("tiny", "min")} {
     display: none;
   }
-  ${mq("custom1", "min")} {
+  ${mq("custom4", "min")} {
     display: block;
     text-align: center;
     margin: 0 auto;
@@ -39,7 +40,7 @@ export const StyledMQTitle = styled.h1`
     text-align: center;
     margin: 0 1rem;
   }
-  ${mq("custom1", "min")} {
+  ${mq("custom4", "min")} {
     display: none;
   } ;
 `;
