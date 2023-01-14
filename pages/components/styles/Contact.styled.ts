@@ -92,9 +92,17 @@ export const StyledForm = styled.form`
   }
   ${mq("tiny", "min")} {
     margin: 0 1rem;
+    width: 100%;
   }
+
+  ${mq("tablet", "min")} {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   ${mq("custom1", "min")} {
-    margin: 0 3rem;
+    margin: 0 auto;
+    width: 600px;
   } ;
 `;
 export const StyledInputName = styled(StyledInput)`
