@@ -24,11 +24,19 @@ const CaseProvider = function ({ children }: ProviderProps) {
     });
   }
 
+  function changeActive(curr: number) {
+    return dispatch({
+      type: "CHANGE_SLIDE",
+      data: curr,
+    });
+  }
+
   return (
     <CaseContext.Provider
       value={{
         ...state,
         setActive: setActive,
+        changeActive: changeActive,
       }}
     >
       {children}
