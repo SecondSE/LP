@@ -127,7 +127,7 @@ export const StyledCopyrightDiv = styled.div`
 
 export const StyledParagraph = styled.p`
   font-family: ${({ theme }) => theme.mainFont};
-  font-size: 1.2rem;
+  font-size: clamp(16px, 4vw, 1.2rem);
   max-width: 285px;
   min-width: 200px;
   margin-bottom: 15px;
@@ -136,7 +136,7 @@ export const StyledParagraph = styled.p`
 
 export const StyledSpan = styled.span`
   font-family: ${({ theme }) => theme.mainFont};
-  font-size: 1.2rem;
+  font-size: clamp(16px, 4vw, 1.2rem);
   display: inline-block;
   margin-top: 20px;
 `;

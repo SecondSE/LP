@@ -62,6 +62,11 @@ export const StyledP = styled.p`
   }
 `;
 
+export const StyledSpan = styled.span`
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(16px, 4vw, 1.5rem);
+`;
+
 export const StyledLogoDiv = styled.div`
   ${mq("tiny", "min")} {
     margin: 0 auto;

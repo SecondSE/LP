@@ -6,6 +6,7 @@ import {
   StyledClientSection,
   StyledMQTitle,
 } from "../styles/ClientHistory.styled";
+import TextCarousel from "../TextCarousel/TextCarousel";
 import Logos from "./Logos";
 
 export default function ClientHistory() {
@@ -16,12 +17,7 @@ export default function ClientHistory() {
           <StyledH1>WE LOVE CLIENTS WE</StyledH1>
           <StyledH1>SEE EYE TO EYE WITH</StyledH1>
           <StyledMQTitle>WE LOVE CLIENTS WE SEE EYE TO EYE WITH</StyledMQTitle>
-          <StyledP>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque unde
-            veritatis doloribus? Totam nihil iste hic repellat, excepturi
-            reprehenderit, ipsa praesentium distinctio voluptas illo et animi
-            blanditiis odit minima ratione!
-          </StyledP>
+          <TextCarousel />
         </StyledUpperDiv>
         <Logos />
       </StyledDiv>
