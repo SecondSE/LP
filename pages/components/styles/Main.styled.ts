@@ -179,10 +179,11 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 245px;
-  height: 290px;
+  height: 240px;
   max-width: 334px;
   ${mq("tablet", "min")} {
     width: 300px;
+    height: 325px;
     max-width: 334px;
   }
   ${mq("desktopS", "min")} {
@@ -239,13 +240,10 @@ export const TraitsContainer = styled.div`
       font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
     }
     ${mq("desktopS", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.3rem);
-    }
-    ${mq("customX", "min")} {
       font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
     }
   }
-  ${mq("customX", "min")} {
+  ${mq("desktopS", "min")} {
     justify-content: center;
     top: 45px;
   }
