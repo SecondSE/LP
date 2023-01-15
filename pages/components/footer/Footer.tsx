@@ -29,22 +29,30 @@ export default function Footer() {
         <StyledLeftSection>
           <section>
             <LogoWrapper>
-              <StyledLink href={"/"}></StyledLink>
+              <StyledLink
+                aria-label="Link to send you back to the beginning of the website"
+                href={"/"}
+              ></StyledLink>
               <FillImage src={LogoImg} alt="This is the Logo of the site" />
             </LogoWrapper>
-            <StyledParagraph>
+            <StyledParagraph id="email-form">
               Enter your email to get occasional updates on new work, trends,
               and what we see happening in the brand world.
             </StyledParagraph>
             <StyledForm action="" method="get">
               <StyledInputEmail
+                aria-describedby="email-form"
                 type="email"
                 name="name"
                 id="name"
                 placeholder="Email Address"
                 required
               />
-              <StyledInputSubmit type="submit" value="Submit" />
+              <StyledInputSubmit
+                aria-label="Submit button to send email"
+                type="submit"
+                value="Submit"
+              />
             </StyledForm>
           </section>
         </StyledLeftSection>
@@ -57,7 +65,10 @@ export default function Footer() {
 
             <StyledSocialMediaSection>
               <IconWrapper>
-                <StyledLink href="https://www.linkedin.com/company/second-sight-experience/"></StyledLink>
+                <StyledLink
+                  aria-label="This link will redirect you to our linked in"
+                  href="https://www.linkedin.com/company/second-sight-experience/"
+                ></StyledLink>
                 <LinkedInIcon />
               </IconWrapper>
 
