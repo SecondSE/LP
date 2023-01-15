@@ -15,7 +15,7 @@ export default function AboutUs() {
     <AboutUsSection>
       <StyledMainDiv>
         <StyledUpperDiv>
-          <StyledH1>ABOUT US</StyledH1>
+          <StyledH1 id="about">ABOUT US</StyledH1>
           <StyledTextDiv>
             <StyledSubTextDiv>
               <StyledH3>WHO WE ARE</StyledH3>

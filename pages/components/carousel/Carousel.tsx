@@ -51,8 +51,18 @@ const Carousel = () => {
         <SCarouselSlides currentSlide={currentSlide}>
           <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
-        <button onClick={() => handleClick("l")}>Left</button>
-        <button onClick={() => handleClick("r")}>Right</button>
+        <button
+          aria-label="button to slide carousel to the left"
+          onClick={() => handleClick("l")}
+        >
+          Left
+        </button>
+        <button
+          aria-label="button to slide carousel to the right"
+          onClick={() => handleClick("r")}
+        >
+          Right
+        </button>
       </SCarouselWrapper>
     </>
   );

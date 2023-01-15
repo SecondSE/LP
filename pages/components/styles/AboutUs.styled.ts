@@ -13,6 +13,7 @@ export const StyledMainDiv = styled.div`
 `;
 
 export const StyledH1 = styled.h1`
+  position: relative;
   font-size: clamp(3.5rem, 6vw, 6rem);
   font-family: ${({ theme }) => theme.headFont};
   ${mq("tiny", "min")} {
