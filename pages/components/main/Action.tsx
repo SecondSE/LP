@@ -27,7 +27,7 @@ export default function Action() {
   return (
     <StyledAction id="Services">
       <ActionTextWrapper>
-        <StyledTitle>
+        <StyledTitle id="services">
           <h3>WHAT</h3>
           <h3>WE DO.</h3>
           <span>SEE WHAT WE CAN DO</span>
