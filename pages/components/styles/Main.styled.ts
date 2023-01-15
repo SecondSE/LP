@@ -179,6 +179,7 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 245px;
+  height: 290px;
   max-width: 334px;
   ${mq("tablet", "min")} {
     width: 300px;
@@ -208,6 +209,12 @@ export const ImageContainer = styled.div`
         font-size: clamp(1rem, 1.5vw + 1rem, 1.6rem);
       }
     }
+  }
+  & img {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
   }
 `;
 

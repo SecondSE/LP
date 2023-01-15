@@ -14,7 +14,6 @@ import {
   ActionImageWrapper,
 } from "../styles/Wrappers.styled";
 import Image from "next/image";
-import SMSign from "../../../assets/soundmint-sign.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -67,7 +66,11 @@ export default function Action() {
                 Logo Design
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/branding.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -92,7 +95,11 @@ export default function Action() {
                 Web3 & NFT Experiences
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/exp-marketing.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -114,7 +121,11 @@ export default function Action() {
                 Content Marketing
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/int-marketing.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -139,7 +150,11 @@ export default function Action() {
                 Product Development
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/webdev.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
         </ActionImageWrapper>
       </MaxActionImageWrapper>
