@@ -1,4 +1,8 @@
-import { MobileNavList, MobileNavListItem } from "../styles/Header.styled";
+import {
+  MobileNavList,
+  MobileNavListItem,
+  NavListLink,
+} from "../styles/Header.styled";
 import { MenuWrapper } from "../styles/Wrappers.styled";
 import { Link } from "react-scroll";
 
@@ -14,35 +18,33 @@ const NavLinks: React.FC<NavLinkProps> = function ({
   return (
     <MenuWrapper>
       <MobileNavList>
-        <MobileNavListItem>
-          <Link
-            to="Services"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            onClick={() => isMobile && closeMobileMenu()}
-          >
-            SERVICES
-          </Link>
-        </MobileNavListItem>
         <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-          WORK
+          SERVICES
+          <NavListLink
+            href="#services"
+            aria-label="navigation link to services section"
+          />
         </MobileNavListItem>
         <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
           ABOUT
+          <NavListLink
+            href="#about"
+            aria-label="navigation link to about section"
+          />
         </MobileNavListItem>
-        <MobileNavListItem>
-          <Link
-            to="Contact"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onClick={() => isMobile && closeMobileMenu()}
-          >
-            CONTACT
-          </Link>
+        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+          WORK
+          <NavListLink
+            href="#work"
+            aria-label="navigation link to work section"
+          />
+        </MobileNavListItem>
+        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+          CONTACT
+          <NavListLink
+            href="#contact"
+            aria-label="navigation link to contact section"
+          />
         </MobileNavListItem>
       </MobileNavList>
     </MenuWrapper>

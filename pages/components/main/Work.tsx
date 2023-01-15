@@ -26,7 +26,7 @@ export default function Work() {
   return (
     <WorkWrapper id="Work">
       <StyledWorkContainer>
-        <StyledWorkTitle>
+        <StyledWorkTitle id="work">
           <h2>WHAT'S BEEN</h2>
           <h2>DONE BEFORE.</h2>
         </StyledWorkTitle>

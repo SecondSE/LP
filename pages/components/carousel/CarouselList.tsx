@@ -29,11 +29,13 @@ const CarouselList = ({ arr, currentSlide }: ListProps) => {
       {arr.map((elem, i) => {
         return (
           <SCarouselSlide
+            role="button"
             active={currentSlide === i}
             onClick={() => handleClick(i)}
             key={i}
+            aria-describedby={`slide-${i}`}
           >
-            <CarouselSlide img={elem.img} alt={elem.alt} />
+            <CarouselSlide ind={i} img={elem.img} alt={elem.alt} />
           </SCarouselSlide>
         );
       })}
