@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-// TODO: Place Holder text left margin.
-// TODO: Media Queries.
-
 export const StyledContactSection = styled.section`
   border-top: 1px solid white;
 `;
@@ -24,17 +21,18 @@ export const StyledRightSection = styled.section`
   flex-direction: column;
   align-items: center;
   color: white;
+  margin-bottom: 25px;
 `;
 
 export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
+  width: 100%;
 
   ${mq("tiny", "min")} {
-    width: 100%;
   }
   ${mq("custom1", "min")} {
-    width: 100%;
+    padding: 0 1rem;
   } ;
 `;
 
@@ -70,7 +68,7 @@ export const StyledInput = styled.input`
   padding-left: 1rem;
 `;
 export const StyledTextArea = styled.textarea`
-  height: 120px;
+  height: 140px;
   background-color: transparent;
   color: white;
   font-size: clamp(14px, 4vw, 1.4rem);
@@ -87,7 +85,6 @@ export const StyledInputAndLabelSection = styled.section`
   align-items: space-between;
 `;
 export const StyledForm = styled.form`
-  width: 700px;
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(14px, 4vw, 1.4rem);
   & :: placeholder {
@@ -108,7 +105,7 @@ export const StyledForm = styled.form`
 
   ${mq("custom1", "min")} {
     margin: 0 auto;
-    width: 600px;
+    width: 700px;
   } ;
 `;
 export const StyledInputName = styled(StyledInput)`

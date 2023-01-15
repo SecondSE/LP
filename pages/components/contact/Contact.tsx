@@ -19,7 +19,7 @@ export default function Contact() {
         <StyledRightSection>
           <StyledH1>LET'S TALK</StyledH1>
           <StyledH2>NEW BUSINESS</StyledH2>
-          <h2>nick@secondsight.com</h2>
+          {/* <h2>nick@secondsight.com</h2> */}
         </StyledRightSection>
       </StyledDiv>
     </StyledContactSection>
