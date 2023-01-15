@@ -57,8 +57,12 @@ export const HeroWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   height: 100vh;
   width: 100%;
+  & img {
+    height: 110vh;
+  }
 `;
 
 export const ActionTextWrapper = styled.div`

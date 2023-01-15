@@ -9,7 +9,13 @@ interface SlideProps {
 const CarouselSlide: React.FC<SlideProps> = function ({ ind, img, alt }) {
   return (
     <SlideImageWrapper>
-      <SlideImage id={`slide-${ind}`} src={img} alt={alt} fill={true} />
+      <SlideImage
+        style={{ objectFit: "cover" }}
+        id={`slide-${ind}`}
+        src={img}
+        alt={alt}
+        fill={true}
+      />
     </SlideImageWrapper>
   );
 };

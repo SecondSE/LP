@@ -1,11 +1,11 @@
 const carouselArr = [
   {
-    img: "/imgs/soundmint-crowd.png",
+    img: "/imgs/work/soundmint-crowd.webp",
     alt: "An image of a crowd of people for an event.",
     title: "SOUNDMINT LABS NFT.NYC LAUNCH",
   },
   {
-    img: "/imgs/nate-storefront.webp",
+    img: "/imgs/work/nate-storefront.webp",
     alt: "An image for a storefront.",
     title: "THE NATE GIFT EXPRESS",
   },

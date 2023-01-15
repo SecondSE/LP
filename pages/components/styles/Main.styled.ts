@@ -28,6 +28,7 @@ export const StyledLayer = styled.div`
     rgba(29, 29, 29, 27%) 89%,
     rgba(29, 29, 29, 98%) 98%
   );
+  z-index: 1;
 `;
 
 export const StyledImage = styled(Image)`
@@ -55,6 +56,7 @@ export const StyledHero = styled.section`
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 `;
 
 export const StyledHero__Intro = styled.div`

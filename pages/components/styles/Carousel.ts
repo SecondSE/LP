@@ -98,6 +98,10 @@ export const SlideImage = styled(Image)`
   width: 100%;
   height: 100%;
   z-index: 0;
+  filter: grayscale(1);
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 export const SlideText = styled.h3``;
