@@ -21,6 +21,7 @@ export const SCarouselWrapper = styled.div`
     bottom: 0;
     left: 50%;
   }
+  cursor: pointer;
 `;
 
 export const SCarouselSlide = styled.div<ICarouselSlide>`
