@@ -9,20 +9,6 @@ interface WrapperProps {
   bg: boolean;
 }
 
-// export const StyledHeader = styled.header<WrapperProps>`
-//   width: 100%;
-//   position: fixed;
-//   height: 80px;
-//   z-index: 1;
-//   margin-top: 1rem;
-//   font-family: ${({ theme }) => theme.headFont3};
-//   background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
-//   backdrop-filter: blur(5px);
-//   z-index: 3;
-//   transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
-//   transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
-// `;
-
 export const StyledHeader = styled.div<WrapperProps>`
   display: flex;
   justify-content: center;
@@ -33,6 +19,7 @@ export const StyledHeader = styled.div<WrapperProps>`
   ${mq("tablet", "min")} {
     justify-content: flex-start;
     padding: 0 3rem;
+    margin: 0 auto;
   }
 `;
 
@@ -44,6 +31,7 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledMobileNav = styled.nav`
+  padding-right: 0.5rem;
   ${mq("tablet", "min")} {
     display: none;
   }

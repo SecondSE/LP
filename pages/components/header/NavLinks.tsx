@@ -4,6 +4,7 @@ import {
   NavListLink,
 } from "../styles/Header.styled";
 import { MenuWrapper } from "../styles/Wrappers.styled";
+import { Link } from "react-scroll";
 
 interface NavLinkProps {
   isMobile: boolean;
@@ -17,6 +18,7 @@ const NavLinks: React.FC<NavLinkProps> = function ({
   return (
     <MenuWrapper>
       <MobileNavList>
+<<<<<<< HEAD
         <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
           SERVICES
           <NavListLink
@@ -30,6 +32,19 @@ const NavLinks: React.FC<NavLinkProps> = function ({
             href="#about"
             aria-label="navigation link to about section"
           />
+=======
+        <MobileNavListItem>
+          <Link
+            to="Services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={() => isMobile && closeMobileMenu()}
+          >
+            SERVICES
+          </Link>
+>>>>>>> origin/development
         </MobileNavListItem>
         <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
           WORK
@@ -39,11 +54,27 @@ const NavLinks: React.FC<NavLinkProps> = function ({
           />
         </MobileNavListItem>
         <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+<<<<<<< HEAD
           CONTACT
           <NavListLink
             href="#contact"
             aria-label="navigation link to contact section"
           />
+=======
+          ABOUT
+        </MobileNavListItem>
+        <MobileNavListItem>
+          <Link
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            onClick={() => isMobile && closeMobileMenu()}
+          >
+            CONTACT
+          </Link>
+>>>>>>> origin/development
         </MobileNavListItem>
       </MobileNavList>
     </MenuWrapper>

@@ -1,10 +1,10 @@
-import Link from "next/link";
 import {
   StyledDesktopNav,
   DesktopNavList,
   DesktopNavListItem,
   NavListLink,
 } from "../styles/Header.styled";
+import { Link } from "react-scroll";
 
 export default function DesktopNav() {
   return (
