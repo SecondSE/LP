@@ -15,6 +15,10 @@ export const StyledDiv = styled.div`
   margin: 30px auto;
   ${mq("tiny", "min")} {
   }
+
+  ${mq("desktopS", "min")} {
+    margin-bottom: 0;
+  }
   ${mq("custom1", "min")} {
   } ;
 `;

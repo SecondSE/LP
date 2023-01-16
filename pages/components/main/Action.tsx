@@ -18,6 +18,7 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionBorder from "../general/SectionBorder";
+import { TopBorder } from "../styles/General.styled";
 
 export default function Action() {
   useEffect(() => {
@@ -29,11 +30,13 @@ export default function Action() {
       <SectionBorder />
       <ActionTextWrapper>
         <StyledTitle id="services">
+          <TopBorder />
           <h3>WHAT</h3>
           <h3>WE DO.</h3>
           <span>SEE WHAT WE CAN DO</span>
         </StyledTitle>
         <DescriptionWrapper>
+          <TopBorder />
           <StyledDescrip>
             We see ourselves as the bridge between creativity and genius.
           </StyledDescrip>

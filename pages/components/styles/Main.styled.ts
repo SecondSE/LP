@@ -33,7 +33,7 @@ export const RelativeWrapper = styled.div`
 export const LeftBorder = styled.div`
   position: absolute;
   top: 0;
-  left: 1.5rem;
+  left: 3rem;
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -43,7 +43,7 @@ export const LeftBorder = styled.div`
 export const RightBorder = styled.div`
   position: absolute;
   top: 0;
-  right: 1.5rem;
+  right: 3rem;
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -78,7 +78,11 @@ export const HeroTextContainer = styled.div`
   gap: 17%;
   padding: 0 0.8rem;
   ${mq("tablet", "min")} {
-    padding: 0 3rem;
+    margin: 0 3rem;
+  }
+
+  ${mq("desktopS", "min")} {
+    padding-right: 7rem;
   }
 `;
 
@@ -151,13 +155,11 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
+  max-width: 1600px;
   z-index: 2;
   position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
-  }
-  ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
   }
 `;
 
@@ -170,7 +172,7 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
-    width: 95%;
+    width: 62%;
     align-items: flex-start;
   }
   & h3 {
@@ -283,8 +285,7 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 3rem;
 `;
 
 export const StyledWorkTitle = styled.div`
