@@ -78,7 +78,11 @@ export const HeroTextContainer = styled.div`
   gap: 17%;
   padding: 0 0.8rem;
   ${mq("tablet", "min")} {
-    padding: 0 4rem;
+    margin: 0 3rem;
+  }
+
+  ${mq("desktopS", "min")} {
+    padding-right: 7rem;
   }
 `;
 
@@ -151,13 +155,11 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
+  max-width: 1600px;
   z-index: 2;
   position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
-  }
-  ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
   }
 `;
 
@@ -170,7 +172,7 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
-    width: 95%;
+    width: 62%;
     align-items: flex-start;
   }
   & h3 {
