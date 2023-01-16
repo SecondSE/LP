@@ -18,11 +18,17 @@ export default function Logos() {
   return (
     <StyledLogoDiv>
       <StyledNateImage src={NateImg} alt="Nate Logo" />
-      <StyledTrapNationImage src={trapNationImg} alt="Trap Nation Logo" />
-      <StyledSoundMintImage src={soundMintImg} alt="SoundMint Logo" />
-      <StyledWhaleBoneImage src={whaleBoneImg} alt="WhaleBone Logo" />
-      <StyledBBClubImage src={bBClubImg} alt="Billionaire Boys Club Logo" />
-      <StyledOnlyNYImage src={onlyNYImg} alt="OnlyNY Logo" />
+      <StyledTrapNationImage src={trapNationImg} alt="A logo for Trap Nation" />
+      <StyledSoundMintImage
+        src={soundMintImg}
+        alt="A logo for SoundMint Logo"
+      />
+      <StyledWhaleBoneImage src={whaleBoneImg} alt="A logo for Whale Bone" />
+      <StyledBBClubImage
+        src={bBClubImg}
+        alt="A logo for Billionaire Boys Club"
+      />
+      <StyledOnlyNYImage src={onlyNYImg} alt="A logo for OnlyNY" />
     </StyledLogoDiv>
   );
 }

@@ -8,6 +8,7 @@ import {
   StyledInputNameSection,
   StyledInputSubmit,
   StyledInputAndLabelSection,
+<<<<<<< HEAD
   StyledThankYou,
 } from "../styles/Contact.styled";
 import { useRef } from "react";
@@ -48,10 +49,24 @@ export default function Form() {
             <StyledInputName
               id="name"
               name="name"
+=======
+} from "../styles/Contact.styled";
+
+export default function Form() {
+  return (
+    <>
+      <StyledForm action="" method="get" id="contact-form">
+        <StyledInputAndLabelSection>
+          <StyledLabel id="name">Name*</StyledLabel>
+          <StyledInputNameSection>
+            <StyledInputName
+              aria-labelledby="name"
+>>>>>>> development
               type="text"
               placeholder=" First Name"
               required
             />
+<<<<<<< HEAD
             <StyledInput
               id="name"
               name="name"
@@ -71,21 +86,47 @@ export default function Form() {
           <StyledInput
             id="email"
             name="email"
+=======
+            <StyledInput type="text" placeholder=" Last Name" required />
+          </StyledInputNameSection>
+        </StyledInputAndLabelSection>
+        <StyledInputAndLabelSection>
+          <StyledLabel id="phone">Phone Number*</StyledLabel>
+          <StyledInput
+            aria-labelledby="phone"
+            type="tel"
+            placeholder=" 555 555-555"
+            required
+          />
+        </StyledInputAndLabelSection>
+        <StyledInputAndLabelSection>
+          <StyledLabel id="email">Email Address*</StyledLabel>
+          <StyledInput
+            aria-labelledby="email"
+>>>>>>> development
             type="email"
             placeholder=" example@email.com"
             required
           />
         </StyledInputAndLabelSection>
         <StyledInputAndLabelSection>
+<<<<<<< HEAD
           <StyledLabel>Question/Comments*</StyledLabel>
           <StyledTextArea
             id="message"
             name="message"
             // form="contact-form"
+=======
+          <StyledLabel id="questions">Question/Comments*</StyledLabel>
+          <StyledTextArea
+            aria-labelledby="questions"
+            form="contact-form"
+>>>>>>> development
             placeholder=" Tell us what you're thinking"
             required
           />
         </StyledInputAndLabelSection>
+<<<<<<< HEAD
         <ValidationError
           prefix="Message"
           field="message"
@@ -96,6 +137,13 @@ export default function Form() {
             type="submit"
             value="SUBMIT"
             disabled={state.submitting}
+=======
+        <StyledInputSubmitSection>
+          <StyledInputSubmit
+            aria-label="Submit button"
+            type="submit"
+            value="SUBMIT"
+>>>>>>> development
           />
         </StyledInputSubmitSection>
       </StyledForm>

@@ -5,6 +5,16 @@ interface WrapperProps {
   bg: boolean;
 }
 
+export const MaxWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+
+  ${mq("desktopS", "min")} {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+`;
+
 export const MaxHeaderWrapper = styled.header<WrapperProps>`
   width: 100%;
   height: auto;

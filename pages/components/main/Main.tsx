@@ -1,4 +1,4 @@
-import { StyledMain, StyledImage } from "../styles/Main.styled";
+import { StyledMain } from "../styles/Main.styled";
 import Hero from "../main/Hero";
 import Action from "../main/Action";
 import Work from "../main/Work";
