@@ -67,8 +67,12 @@ export const HeroWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   height: 100vh;
   width: 100%;
+  & img {
+    height: 110vh;
+  }
 `;
 
 export const ActionTextWrapper = styled.div`
@@ -130,8 +134,12 @@ export const ActionImageWrapper = styled.div`
 `;
 
 export const WorkWrapper = styled.section`
+  padding-top: 2rem;
   width: 100%;
-  border-top: 1px solid white;
+  ${mq("desktopS", "min")} {
+    border-top: 1px solid white;
+    padding: 2rem 3rem 0 3rem;
+  }
 `;
 
 export const WorkImageWrapper = styled.div`
