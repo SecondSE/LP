@@ -18,6 +18,7 @@ import SMSign from "../../../assets/soundmint-sign.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SectionBorder from "../general/SectionBorder";
 
 export default function Action() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Action() {
 
   return (
     <StyledAction id="Services">
+      <SectionBorder />
       <ActionTextWrapper>
         <StyledTitle id="services">
           <h3>WHAT</h3>

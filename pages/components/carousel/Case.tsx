@@ -45,7 +45,7 @@ const Case: React.FC<CaseProps> = function ({
   return (
     <StyledCaseContainer init={init}>
       <TextWrapper>
-        <CaseTitle>{title}</CaseTitle>
+        <CaseTitle id="case">{title}</CaseTitle>
         <CaseText>{description1}</CaseText>
         <CaseText>{description2}</CaseText>
         <CaseHeader>{results}</CaseHeader>

@@ -1,3 +1,5 @@
+import SectionBorder from "../general/SectionBorder";
+
 import {
   StyledHero,
   StyledLayer,
@@ -8,7 +10,11 @@ import {
   StyledHero__End,
 } from "../styles/Main.styled";
 import sanHolo from "../../../assets/sanholo-sse.webp";
-import { HeroWrapper, ImageWrapper } from "../styles/Wrappers.styled";
+import {
+  HeroWrapper,
+  ImageWrapper,
+  MaxWrapper,
+} from "../styles/Wrappers.styled";
 export default function Hero() {
   return (
     <>
@@ -48,6 +54,7 @@ export default function Hero() {
               <span className="bold">EXPERENTIAL MARKETING</span>
             </StyledHero__End>
           </HeroTextContainer>
+          <SectionBorder />
         </HeroWrapper>
       </StyledHero>
     </>

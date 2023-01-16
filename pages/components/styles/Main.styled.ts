@@ -9,14 +9,45 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
-export const StyledSectionBorder = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
+export const BorderWrapper = styled.div`
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 `;
 
-export const SectionBorderLeft = styled.div`
+export const RelativeWrapper = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`;
+
+export const LeftBorder = styled.div`
   position: absolute;
+  top: 0;
+  left: 1.5rem;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  tranform-origin: top;
+`;
+
+export const RightBorder = styled.div`
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  tranform-origin: top;
 `;
 
 export const StyledLayer = styled.div`
