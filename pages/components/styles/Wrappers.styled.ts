@@ -84,7 +84,7 @@ export const ActionTextWrapper = styled.div`
   ${mq("desktopS", "min")} {
     flex-direction: row;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 4rem;
     z-index: 2;
   }
 `;

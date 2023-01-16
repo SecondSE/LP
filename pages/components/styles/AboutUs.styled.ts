@@ -9,7 +9,7 @@ export const AboutUsSection = styled.section`
 
 export const StyledMainDiv = styled.div`
   max-width: 1600px;
-  margin: auto;
+  margin: 0 3rem;
 `;
 
 export const StyledH1 = styled.h1`

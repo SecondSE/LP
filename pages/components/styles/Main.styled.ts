@@ -33,7 +33,7 @@ export const RelativeWrapper = styled.div`
 export const LeftBorder = styled.div`
   position: absolute;
   top: 0;
-  left: 1.5rem;
+  left: 3rem;
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -43,7 +43,7 @@ export const LeftBorder = styled.div`
 export const RightBorder = styled.div`
   position: absolute;
   top: 0;
-  right: 1.5rem;
+  right: 3rem;
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -78,7 +78,7 @@ export const HeroTextContainer = styled.div`
   gap: 17%;
   padding: 0 0.8rem;
   ${mq("tablet", "min")} {
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 `;
 
@@ -283,8 +283,7 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 3rem;
 `;
 
 export const StyledWorkTitle = styled.div`
