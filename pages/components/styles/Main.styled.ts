@@ -258,10 +258,35 @@ export const StyledWorkContainer = styled.div`
 
 export const StyledWorkTitle = styled.div`
   width: 100%;
+  padding: 0 1rem;
+  font-size: clamp(2rem, 7vw, 4.8rem);
+  font-family: ${({ theme }) => theme.headFont2};
+  text-align: center;
+  margin-top: 1rem;
+  & h2 {
+    margin-bottom: 1rem;
+  }
+  ${mq("desktopS", "min")} {
+    text-align: left;
+  }
 `;
 
 export const StyledWorkDescrip = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin: 0 auto;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  text-align: center;
+  & p {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  ${mq("desktopS", "min")} {
+    flex-direction: row;
+    text-align: left;
+  }
 `;
 
 export const StyledWorkImage = styled(Image)`

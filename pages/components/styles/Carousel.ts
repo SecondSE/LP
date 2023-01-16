@@ -99,6 +99,7 @@ export const SlideImage = styled(Image)`
   height: 100%;
   z-index: 0;
   filter: grayscale(1);
+  transition: filter 500ms ease-out;
   &:hover {
     filter: grayscale(0);
   }
