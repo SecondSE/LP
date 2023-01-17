@@ -20,7 +20,7 @@ import {
   StyledForm,
   StyledCopyrightDiv,
 } from "../styles/Footer.styled";
-import LogoImg from "../../../assets/sse-logo.png";
+import LogoImg from "../../../public/imgs/sse-logo.png";
 
 export default function Footer() {
   return (
