@@ -28,7 +28,12 @@ export const StyledH1 = styled.h1`
 
 export const StyledUpperDiv = styled.div`
   max-width: 1600px;
-  margin: 0 3rem;
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
+  }
+  ${mq("custom1", "min")} {
+    margin: 0 3rem;
+  } ;
 `;
 
 export const StyledLowerDiv = styled.div`
@@ -95,9 +100,11 @@ export const StyledBigImage = styled(Image)`
 `;
 
 export const StyledP = styled.p`
-  font-size: clamp(16px, 4vw, 1.5rem);
-  font-family: ${({ theme }) => theme.mainFont};
-  word-spacing: 0.25rem;
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   width: 100%;
   ${mq("tiny", "min")} {
     text-align: center;

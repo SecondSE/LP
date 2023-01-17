@@ -1,6 +1,10 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import testimonials from "./testimonials";
-import { StyledP, StyledSpan } from "../styles/ClientHistory.styled";
+import {
+  StyledPerson,
+  StyledTest,
+  StyledQuoteDiv,
+} from "../styles/ClientHistory.styled";
 
 export default function TextCarousel() {
   const [counter, setCounter] = useState(0);
@@ -31,9 +35,9 @@ export default function TextCarousel() {
   }, []);
 
   return (
-    <>
-      <StyledP>{testimonials[counter].statement}</StyledP>
-      <StyledSpan>{testimonials[counter].person}</StyledSpan>
-    </>
+    <StyledQuoteDiv>
+      <StyledTest>{testimonials[counter].statement}</StyledTest>
+      <StyledPerson>{testimonials[counter].person}</StyledPerson>
+    </StyledQuoteDiv>
   );
 }
