@@ -6,7 +6,7 @@ import GlobalContext from "../context/global/GlobalContext";
 const useResize = function () {
   const globalContext = useContext(GlobalContext);
 
-  const { device, memoChangeDevice } = globalContext;
+  const { memoChangeDevice } = globalContext;
 
   useEffect(() => {
     function resizeEvent(event: Event) {
