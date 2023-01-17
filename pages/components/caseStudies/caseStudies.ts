@@ -28,7 +28,7 @@ const caseStudies: caseData[] = [
     ],
   },
   {
-    title: "THE NATE GIFT EXPRESS",
+    title: "THE GIFT EXPRESS BY NATE",
     description1:
       "The Gift Hunt was nate's - a NYC fintech startup - holiday campaign which included a pop-up retail store in the heart of SoHo.",
     description2:
@@ -50,7 +50,7 @@ const caseStudies: caseData[] = [
     ],
   },
   {
-    title: "THE NATE GIFT HUNT",
+    title: "THE GIFT HUNT BY NATE",
     description1:
       "The Gift Hunt was nate's - a NYC fintech startup - experiential launch activation celebrating all that Manhattan has to offer and powered by nate's universal shopping features.",
     description2:

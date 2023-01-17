@@ -16,12 +16,23 @@ export const SCarouselWrapper = styled.div`
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  & button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
   cursor: pointer;
+  & .left {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 45%;
+    ${mq("tiny", "min")} {
+      left: 10px;
+    }
+  }
+  & .right {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 45%;
+    ${mq("tiny", "min")} {
+      right: 10px;
+    }
+  }
 `;
 
 export const SCarouselSlide = styled.div<ICarouselSlide>`
@@ -68,18 +79,17 @@ export const CarouselImage = styled(Image)`
 export const CarouselTitle = styled.h2`
   position: absolute;
   top: 10%;
-  left: 2%;
+  left: 5%;
   font-family: ${({ theme }) => theme.headFont2};
+  width: 206px;
 
   z-index: 1;
   ${mq("tiny", "min")} {
     font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
-    width: 100%;
   }
 
   ${mq("desktopS", "min")} {
     font-size: clamp(1rem, 1.5vw + 1rem, 1.3rem);
-    width: 420px;
   }
 
   ${mq("customX", "min")} {

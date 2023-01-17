@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/Ai";
 import {
   CarouselTitle,
   SCarouselSlides,
   SCarouselWrapper,
+  ButtonContainer,
 } from "../styles/Carousel";
 import CarouselList from "./CarouselList";
 import caseStudies from "../caseStudies/caseStudies";
@@ -51,18 +53,20 @@ const Carousel = () => {
         <SCarouselSlides currentSlide={currentSlide}>
           <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
-        <button
+        <AiOutlineArrowLeft
+          className="left"
           aria-label="button to slide carousel to the left"
           onClick={() => handleClick("l")}
         >
           Left
-        </button>
-        <button
+        </AiOutlineArrowLeft>
+        <AiOutlineArrowRight
+          className="right"
           aria-label="button to slide carousel to the right"
           onClick={() => handleClick("r")}
         >
           Right
-        </button>
+        </AiOutlineArrowRight>
       </SCarouselWrapper>
     </>
   );
