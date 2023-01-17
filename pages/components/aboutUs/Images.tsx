@@ -6,9 +6,9 @@ import {
   StyledSmallImageB,
   StyledBigImageDiv,
 } from "../styles/AboutUs.styled";
-import SoundMintImage from "../../../assets/SoundMintNeon.webp";
-import NateGiftHuntImage from "../../../assets/NateGiftHunt.webp";
-import WinnerWonderLandImage from "../../../assets/WinnerWonderland.webp";
+import SoundMintImage from "../../../public/imgs/aboutUs/SoundMintNeon.webp";
+import NateGiftHuntImage from "../../../public/imgs/aboutUs/NateGiftHunt.webp";
+import WinnerWonderLandImage from "../../../public/imgs/aboutUs/WinnerWonderland.webp";
 export default function Images() {
   return (
     <StyledLowerDiv>
