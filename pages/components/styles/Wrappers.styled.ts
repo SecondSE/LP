@@ -79,7 +79,7 @@ export const ActionTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 2rem 0;
+  margin-top: 2rem;
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
@@ -100,16 +100,17 @@ export const DescriptionWrapper = styled.div`
   }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
-    width: 32%;
-    padding: 2rem 0 2rem 2rem;
+    width: 37%;
+    padding: 2rem 3rem 2rem 2rem;
     text-align: left;
   }
 `;
 
 export const MaxActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
-    width: 91.6%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 3.1rem;
   }
 `;
 export const ActionImageWrapper = styled.div`
