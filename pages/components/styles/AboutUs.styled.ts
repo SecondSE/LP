@@ -26,18 +26,25 @@ export const StyledH1 = styled.h1`
   } ;
 `;
 
-export const StyledUpperDiv = styled.div``;
+export const StyledUpperDiv = styled.div`
+  max-width: 1600px;
+  margin: 0 3rem;
+`;
 
 export const StyledLowerDiv = styled.div`
-  border-top: 1px solid white;
   display: flex;
-  margin: auto;
+
   ${mq("tiny", "min")} {
     flex-direction: column;
+    width: 100%;
   }
   ${mq("custom1", "min")} {
     max-height: 33vw;
     flex-direction: row;
+  }
+  ${mq("desktopS", "min")} {
+    max-width: 1600px;
+    padding: 0 3rem;
   } ;
 `;
 
@@ -49,6 +56,7 @@ export const StyledSmallImage = styled(Image)`
 export const StyledSmallImageB = styled(Image)`
   height: 50%;
   width: 100%;
+  border-top: 1px solid white;
   ${mq("tiny", "min")} {
   }
   ${mq("custom1", "min")} {
@@ -80,7 +88,9 @@ export const StyledBigImageDiv = styled.div`
 
 export const StyledBigImage = styled(Image)`
   object-fit: contain;
-  height: 100%;
+  border-top: 1px solid white;
+
+  height: 99.5%;
   width: 100%;
 `;
 
