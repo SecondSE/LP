@@ -1,4 +1,4 @@
-import { useReducer, useCallback } from "react";
+import { useReducer, useCallback, useMemo } from "react";
 
 import { Reducer, AppType, Action } from "../../customTypes";
 import GlobalContext from "./GlobalContext";
@@ -13,19 +13,30 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     globalReducer,
     {
       device: "",
+      init: true,
       section1: true,
       section2: false,
       section3: false,
       section4: false,
+      memoInitDevice: () => {},
+      memoActivateAnim: () => {},
+      memoChangeDevice: () => {},
     }
   );
+
+  const memoActivateAnim = useMemo(() => activateAnim, []);
+
+  const memoInitDevice = useMemo(() => initDevice, []);
+
+  const memoChangeDevice = useMemo(() => changeDevice, []);
 
   return (
     <GlobalContext.Provider
       value={{
         ...state,
-        initDevice,
-        activateAnim,
+        memoInitDevice,
+        memoActivateAnim,
+        memoChangeDevice,
         dispatch,
       }}
     >
@@ -36,6 +47,13 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
   function initDevice(device: string) {
     return dispatch({
       type: "INIT_DEVICE",
+      data: device,
+    });
+  }
+
+  function changeDevice(device: string) {
+    return dispatch({
+      type: "CHANGE_DEVICE",
       data: device,
     });
   }
