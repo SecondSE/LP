@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
+import mq from "../../../utils/mq";
 
 export const TopBorder = styled.div`
   position: absolute;
@@ -9,6 +10,14 @@ export const TopBorder = styled.div`
   width: 100%;
   height: 1px;
   background-color: #fff;
+
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+  }
 `;
 
 export const BotBorder = styled.div`
@@ -18,6 +27,13 @@ export const BotBorder = styled.div`
   width: 100%;
   height: 1px;
   background-color: #fff;
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+  }
 `;
 
 export const LeftBorder = styled.div`
@@ -27,6 +43,13 @@ export const LeftBorder = styled.div`
   width: 1px;
   height: 100%;
   background-color: #fff;
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+  }
 `;
 
 export const RightBorder = styled.div`
@@ -36,6 +59,13 @@ export const RightBorder = styled.div`
   width: 1px;
   height: 100%;
   background-color: #fff;
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+  }
 `;
 
 export const StyledLink = styled(Link)`
