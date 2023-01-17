@@ -3,7 +3,6 @@ import {
   StyledH1,
   StyledUpperDiv,
   StyledTextDiv,
-  StyledMainDiv,
   StyledP,
   StyledH3,
   StyledSubTextDiv,
