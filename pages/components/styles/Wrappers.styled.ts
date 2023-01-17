@@ -83,7 +83,6 @@ export const ActionTextWrapper = styled.div`
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
-    margin: 0 3rem;
     z-index: 2;
   }
 `;

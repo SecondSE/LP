@@ -78,8 +78,7 @@ export const HeroTextContainer = styled.div`
   gap: 17%;
   padding: 0 0.8rem;
   ${mq("desktopS", "min")} {
-    margin: 0 3rem;
-    padding-right: 7rem;
+    padding: 0 4rem;
   }
 `;
 
@@ -169,6 +168,7 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
+    padding-left: 3rem;
     width: 62%;
     align-items: flex-start;
   }
