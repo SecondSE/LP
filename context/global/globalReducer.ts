@@ -12,7 +12,7 @@ const globalReducer = function (prevState: AppType, { type, data }: Action) {
     case ACTIVATE_ANIM:
       return {
         ...prevState,
-        [data]: true,
+        secCount: data,
       };
 
     case CHANGE_DEVICE:
