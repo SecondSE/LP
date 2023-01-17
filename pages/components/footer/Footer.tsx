@@ -57,7 +57,10 @@ export default function Footer() {
 
             <StyledSocialMediaSection>
               <IconWrapper>
-                <StyledLink href="https://www.linkedin.com/company/second-sight-experience/"></StyledLink>
+                <StyledLink
+                  href="https://www.linkedin.com/company/second-sight-experience/"
+                  target="_blank"
+                ></StyledLink>
                 <LinkedInIcon />
               </IconWrapper>
 

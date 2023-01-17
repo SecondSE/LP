@@ -19,11 +19,12 @@ export const StyledUpperDiv = styled.div`
 export const StyledH1 = styled.h1`
   font-size: clamp(3.5rem, 6vw, 6rem);
   font-family: ${({ theme }) => theme.headFont};
+  padding: 0 1rem;
 
   ${mq("tiny", "min")} {
     display: none;
   }
-  ${mq("custom1", "min")} {
+  ${mq("custom4", "min")} {
     display: block;
     text-align: center;
     margin: 0 auto;
@@ -39,7 +40,7 @@ export const StyledMQTitle = styled.h1`
     text-align: center;
     margin: 0 1rem;
   }
-  ${mq("custom1", "min")} {
+  ${mq("custom4", "min")} {
     display: none;
   } ;
 `;
@@ -59,6 +60,11 @@ export const StyledP = styled.p`
     margin: 40px auto;
     padding: 0 3rem;
   }
+`;
+
+export const StyledSpan = styled.span`
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(16px, 4vw, 1.5rem);
 `;
 
 export const StyledLogoDiv = styled.div`
@@ -100,10 +106,10 @@ export const StyledOnlyNYImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 200px;
+    max-width: 200px;
   }
 `;
 export const StyledBBClubImage = styled(ImageSizing)`
@@ -119,10 +125,10 @@ export const StyledWhaleBoneImage = styled(ImageSizing)`
     width: 98%;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 200px;
+    max-width: 200px;
   }
 `;
 
@@ -133,10 +139,10 @@ export const StyledSoundMintImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 300px;
+    max-width: 300px;
   }
   ${mq("custom2", "max")} {
-    width: 250px;
+    max-width: 250px;
   }
 `;
 export const StyledNateImage = styled(ImageSizing)`
@@ -145,9 +151,9 @@ export const StyledNateImage = styled(ImageSizing)`
     width: 250px;
   }
   ${mq("custom1", "min")} {
-    width: 240px;
+    max-width: 240px;
   }
   ${mq("custom2", "max")} {
-    width: 175px;
+    max-width: 175px;
   }
 `;

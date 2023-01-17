@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-// TODO: Place Holder text left margin.
-// TODO: Media Queries.
-
 export const StyledContactSection = styled.section`
   border-top: 1px solid white;
 `;
@@ -24,17 +21,18 @@ export const StyledRightSection = styled.section`
   flex-direction: column;
   align-items: center;
   color: white;
+  margin-bottom: 25px;
 `;
 
 export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
+  width: 100%;
 
   ${mq("tiny", "min")} {
-    width: 100%;
   }
   ${mq("custom1", "min")} {
-    width: 100%;
+    padding: 0 1rem;
   } ;
 `;
 
@@ -42,6 +40,7 @@ export const StyledInputNameSection = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: white;
 `;
 export const StyledInputSubmitSection = styled.section`
   display: flex;
@@ -61,16 +60,20 @@ export const StyledInputSubmit = styled.input`
 `;
 export const StyledInput = styled.input`
   background-color: transparent;
-  color: grey;
+  color: white;
+  font-size: clamp(14px, 4vw, 1.3rem);
   border: 1px white solid;
   height: 40px;
   width: 100%;
+  padding-left: 1rem;
 `;
 export const StyledTextArea = styled.textarea`
-  height: 120px;
+  height: 140px;
   background-color: transparent;
-  color: grey;
+  color: white;
+  font-size: clamp(14px, 4vw, 1.4rem);
   border: 1px white solid;
+  padding-left: 0.5rem;
 `;
 export const StyledLabel = styled.label`
   color: white;
@@ -82,13 +85,13 @@ export const StyledInputAndLabelSection = styled.section`
   align-items: space-between;
 `;
 export const StyledForm = styled.form`
-  width: 600px;
   font-family: ${({ theme }) => theme.mainFont};
-  font-size: clamp(12px, 4vw, 1.4rem);
+  font-size: clamp(14px, 4vw, 1.4rem);
   & :: placeholder {
     font-family: ${({ theme }) => theme.mainFont};
     font-size: clamp(1rem, 5vw, 1.5rem);
     padding-top: 0.5rem;
+    color: grey;
   }
   ${mq("tiny", "min")} {
     margin: 0 1rem;
@@ -102,7 +105,7 @@ export const StyledForm = styled.form`
 
   ${mq("custom1", "min")} {
     margin: 0 auto;
-    width: 600px;
+    width: 700px;
   } ;
 `;
 export const StyledInputName = styled(StyledInput)`
