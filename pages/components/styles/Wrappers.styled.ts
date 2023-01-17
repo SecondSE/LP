@@ -94,7 +94,9 @@ export const DescriptionWrapper = styled.div`
   padding: 0 1rem;
   align-items: center;
   text-align: center;
-  font-family: ${({ theme }) => theme.mainFont};
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   ${mq("tablet", "min")} {
     padding: 0 3rem;
   }
@@ -121,6 +123,12 @@ export const ActionImageWrapper = styled.div`
   max-width: 900px;
   margin: 0 auto;
   gap: 1rem;
+  position: relative;
+  & .action-border {
+    top: -3px;
+    left: -58px;
+    width: 108%;
+  }
   ${mq("desktopS", "min")} {
     gap: 0;
     margin: 0 auto;
@@ -135,8 +143,13 @@ export const ActionImageWrapper = styled.div`
 export const WorkWrapper = styled.section`
   padding-top: 2rem;
   width: 100%;
+  position: relative;
+  & .work-border {
+    top: 4px;
+    left: 24px;
+    width: 97%;
+  }
   ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
     padding: 2rem 3rem 0 3rem;
   }
 `;

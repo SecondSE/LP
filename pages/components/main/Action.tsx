@@ -48,6 +48,7 @@ export default function Action() {
       </ActionTextWrapper>
       <MaxActionImageWrapper>
         <ActionImageWrapper>
+          <TopBorder className="action-border" />
           <ImageContainer>
             <ColorLayer />
             <h3>BRANDING</h3>

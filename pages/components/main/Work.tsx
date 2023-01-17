@@ -16,6 +16,7 @@ import Case from "../carousel/Case";
 import CaseContext from "../../../context/case/CaseContext";
 import caseStudies from "../caseStudies/caseStudies";
 import SectionBorder from "../general/SectionBorder";
+import { TopBorder } from "../styles/General.styled";
 
 export default function Work() {
   const caseContext = useContext(CaseContext);
@@ -30,6 +31,7 @@ export default function Work() {
 
   return (
     <WorkWrapper id="sec-work">
+      <TopBorder className="work-border" />
       <SectionBorder />
       <MaxWrapper>
         <StyledWorkContainer>

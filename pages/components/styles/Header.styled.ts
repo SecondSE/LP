@@ -31,7 +31,6 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledMobileNav = styled.nav`
-  padding-right: 0.5rem;
   ${mq("tablet", "min")} {
     display: none;
   }
