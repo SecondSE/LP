@@ -18,10 +18,10 @@ export const StyledH1 = styled.h1`
   font-family: ${({ theme }) => theme.headFont};
   ${mq("tiny", "min")} {
     text-align: center;
-    margin: 30px 1rem 30px 1rem;
+    margin: 30px 0;
   }
   ${mq("custom1", "min")} {
-    margin: 30px 3rem 30px 3rem;
+    margin: 30px 3rem;
     text-align: left;
   } ;
 `;
