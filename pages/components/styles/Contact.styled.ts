@@ -31,13 +31,12 @@ export const StyledRightSection = styled.section`
 export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
 
   ${mq("tiny", "min")} {
   }
   ${mq("custom1", "min")} {
-    padding: 0 1rem;
   } ;
 `;
 
