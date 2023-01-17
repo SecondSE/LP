@@ -69,7 +69,7 @@ export const StyledSpan = styled.span`
 
 export const StyledLogoDiv = styled.div`
   ${mq("tiny", "min")} {
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     width: 90%;
     flex-direction: column;
@@ -104,12 +104,15 @@ export const StyledOnlyNYImage = styled(ImageSizing)`
   object-fit: contain;
   ${mq("tiny", "min")} {
     width: 250px;
+    height: auto;
   }
   ${mq("custom1", "min")} {
     max-width: 300px;
+    height: auto;
   }
   ${mq("custom2", "max")} {
     max-width: 200px;
+    height: auto;
   }
 `;
 export const StyledBBClubImage = styled(ImageSizing)`
@@ -123,37 +126,76 @@ export const StyledWhaleBoneImage = styled(ImageSizing)`
   object-fit: contain;
   ${mq("tiny", "min")} {
     width: 98%;
+    height: auto;
   }
   ${mq("custom1", "min")} {
     max-width: 300px;
+    height: auto;
   }
   ${mq("custom2", "max")} {
     max-width: 200px;
+    height: auto;
   }
 `;
 
-// sound mint logo has inline height styling at Logos.tsx
 export const StyledSoundMintImage = styled(ImageSizing)`
   object-fit: contain;
   ${mq("tiny", "min")} {
     width: 250px;
+    height: auto;
   }
   ${mq("custom1", "min")} {
     max-width: 300px;
+    height: auto;
   }
   ${mq("custom2", "max")} {
     max-width: 250px;
+    height: auto;
   }
 `;
 export const StyledNateImage = styled(ImageSizing)`
   object-fit: contain;
   ${mq("tiny", "min")} {
     width: 250px;
+    height: auto;
   }
   ${mq("custom1", "min")} {
     max-width: 240px;
+    height: auto;
   }
   ${mq("custom2", "max")} {
     max-width: 175px;
+    height: auto;
   }
+`;
+
+export const StyledQuoteDiv = styled.div`
+  max-width: 1000px;
+  ${mq("tiny", "min")} {
+    margin: 20px 2rem;
+  }
+  ${mq("custom1", "min")} {
+    margin: 40px auto;
+    padding: 0 2rem;
+  }
+`;
+
+export const StyledPerson = styled.span`
+  display: block;
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 15px;
+`;
+
+export const StyledTest = styled.p`
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-align: left;
 `;
