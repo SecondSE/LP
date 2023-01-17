@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/Ai";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {
   CarouselTitle,
   SCarouselSlides,
   SCarouselWrapper,
-  ButtonContainer,
 } from "../styles/Carousel";
 import CarouselList from "./CarouselList";
 import caseStudies from "../caseStudies/caseStudies";
