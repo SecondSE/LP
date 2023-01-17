@@ -18,6 +18,7 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
       section2: false,
       section3: false,
       section4: false,
+      section5: false,
       memoInitDevice: () => {},
       memoActivateAnim: () => {},
       memoChangeDevice: () => {},

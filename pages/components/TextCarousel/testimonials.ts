@@ -3,7 +3,7 @@ interface TestimonialData {
   person: string;
 }
 
-const Testimonials: TestimonialData[] = [
+const testimonials: TestimonialData[] = [
   {
     statement:
       "Without Second Sight, we would not have been able to pull off one of the most viewed TikTok campaigns of all time. They were a pivotal element to get us more than 7B views on #MakeSomeoneSmile",
@@ -21,4 +21,4 @@ const Testimonials: TestimonialData[] = [
   },
 ];
 
-export default Testimonials;
+export default testimonials;

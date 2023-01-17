@@ -29,7 +29,7 @@ export default function Work() {
   }
 
   return (
-    <WorkWrapper id="Work">
+    <WorkWrapper id="sec-work">
       <SectionBorder />
       <MaxWrapper>
         <StyledWorkContainer>

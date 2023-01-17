@@ -10,7 +10,7 @@ import Form from "./Form";
 
 export default function Contact() {
   return (
-    <StyledContactSection id="Contact">
+    <StyledContactSection id="sec-contact">
       <StyledDiv>
         <StyledLeftSection>
           <Form />

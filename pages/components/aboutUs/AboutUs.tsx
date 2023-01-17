@@ -13,7 +13,7 @@ import Images from "./Images";
 
 export default function AboutUs() {
   return (
-    <AboutUsSection id="About">
+    <AboutUsSection id="sec-about">
       <MaxWrapper>
         <StyledMainDiv>
           <StyledUpperDiv>

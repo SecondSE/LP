@@ -15,6 +15,7 @@ export interface AppType {
   section2: boolean;
   section3: boolean;
   section4: boolean;
+  section5: boolean;
   memoInitDevice: InitFunc | ArgString;
   memoActivateAnim: InitFunc | ArgString;
   memoChangeDevice: InitFunc | ArgString;

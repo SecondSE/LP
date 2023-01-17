@@ -8,6 +8,7 @@ export const GlobalContext = createContext<AppType>({
   section2: false,
   section3: false,
   section4: false,
+  section5: false,
   memoInitDevice: () => {},
   memoActivateAnim: () => {},
   memoChangeDevice: () => {},
