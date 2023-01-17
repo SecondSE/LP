@@ -14,7 +14,9 @@ const useScroll = function () {
     };
   }, []);
 
-  function scrollEvent(event: Event) {}
+  function scrollEvent(event: Event) {
+    console.log("");
+  }
 };
 
 export default useScroll;
