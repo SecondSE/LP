@@ -4,7 +4,6 @@ import {
   CarouselTitle,
   SCarouselSlides,
   SCarouselWrapper,
-  ButtonContainer,
 } from "../styles/Carousel";
 import CarouselList from "./CarouselList";
 import caseStudies from "../caseStudies/caseStudies";
