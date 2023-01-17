@@ -14,10 +14,11 @@ import {
   ActionImageWrapper,
 } from "../styles/Wrappers.styled";
 import Image from "next/image";
-import SMSign from "../../../assets/soundmint-sign.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SectionBorder from "../general/SectionBorder";
+import { TopBorder } from "../styles/General.styled";
 
 export default function Action() {
   useEffect(() => {
@@ -26,13 +27,16 @@ export default function Action() {
 
   return (
     <StyledAction id="Services">
+      <SectionBorder />
       <ActionTextWrapper>
-        <StyledTitle>
+        <StyledTitle id="services">
+          <TopBorder />
           <h3>WHAT</h3>
           <h3>WE DO.</h3>
           <span>SEE WHAT WE CAN DO</span>
         </StyledTitle>
         <DescriptionWrapper>
+          <TopBorder />
           <StyledDescrip>
             We see ourselves as the bridge between creativity and genius.
           </StyledDescrip>
@@ -67,7 +71,11 @@ export default function Action() {
                 Logo Design
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/branding.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -92,7 +100,11 @@ export default function Action() {
                 Web3 & NFT Experiences
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/exp-marketing.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -114,7 +126,11 @@ export default function Action() {
                 Content Marketing
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/int-marketing.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
           <ImageContainer>
             <ColorLayer />
@@ -139,7 +155,11 @@ export default function Action() {
                 Product Development
               </span>
             </TraitsContainer>
-            <Image src={SMSign} alt="SoundMint Sign" />
+            <Image
+              fill={true}
+              src="/imgs/services/webdev.webp"
+              alt="Two girls at a Nate Photoshoot"
+            />
           </ImageContainer>
         </ActionImageWrapper>
       </MaxActionImageWrapper>

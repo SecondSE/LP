@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { SCarouselSlide, CarouselTitle } from "../styles/Carousel";
+import { useRouter } from "next/router";
+import { SCarouselSlide } from "../styles/Carousel";
 import CaseContext from "../../../context/case/CaseContext";
 import CarouselSlide from "./CarouselSlide";
 
@@ -15,13 +16,17 @@ interface ListProps {
 }
 
 const CarouselList = ({ arr, currentSlide }: ListProps) => {
+  const router = useRouter();
+
   const caseContext = useContext(CaseContext);
   const { setActive } = caseContext;
 
   function handleClick(ind: number) {
     if (setActive) {
-      return setActive(ind);
+      setActive(ind);
     }
+
+    return router.push("#case");
   }
 
   return (
@@ -29,11 +34,13 @@ const CarouselList = ({ arr, currentSlide }: ListProps) => {
       {arr.map((elem, i) => {
         return (
           <SCarouselSlide
+            role="button"
             active={currentSlide === i}
             onClick={() => handleClick(i)}
             key={i}
+            aria-describedby={`slide-${i}`}
           >
-            <CarouselSlide img={elem.img} alt={elem.alt} />
+            <CarouselSlide ind={i} img={elem.img} alt={elem.alt} />
           </SCarouselSlide>
         );
       })}

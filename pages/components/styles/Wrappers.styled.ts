@@ -5,6 +5,16 @@ interface WrapperProps {
   bg: boolean;
 }
 
+export const MaxWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+
+  ${mq("desktopS", "min")} {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+`;
+
 export const MaxHeaderWrapper = styled.header<WrapperProps>`
   width: 100%;
   height: auto;
@@ -57,8 +67,12 @@ export const HeroWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   height: 100vh;
   width: 100%;
+  & img {
+    height: 110vh;
+  }
 `;
 
 export const ActionTextWrapper = styled.div`
@@ -69,13 +83,13 @@ export const ActionTextWrapper = styled.div`
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
-    margin: 0 auto;
-    padding: 0 3rem;
+    margin: 0 3rem;
     z-index: 2;
   }
 `;
 
 export const DescriptionWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
@@ -87,7 +101,7 @@ export const DescriptionWrapper = styled.div`
   }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
-    width: 45%;
+    width: 32%;
     padding: 2rem 0 2rem 2rem;
     text-align: left;
   }
@@ -95,7 +109,8 @@ export const DescriptionWrapper = styled.div`
 
 export const MaxActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
-    width: 100%;
+    width: 94%;
+    margin: 0 auto;
     border-top: 1px solid white;
   }
 `;
@@ -110,7 +125,6 @@ export const ActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
     gap: 0;
     margin: 0 auto;
-    padding: 0 3rem;
     max-width: 1600px;
   }
   & img {
@@ -120,8 +134,12 @@ export const ActionImageWrapper = styled.div`
 `;
 
 export const WorkWrapper = styled.section`
+  padding-top: 2rem;
   width: 100%;
-  border-top: 1px solid white;
+  ${mq("desktopS", "min")} {
+    border-top: 1px solid white;
+    padding: 2rem 3rem 0 3rem;
+  }
 `;
 
 export const WorkImageWrapper = styled.div`

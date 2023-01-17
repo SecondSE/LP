@@ -9,14 +9,45 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
-export const StyledSectionBorder = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
+export const BorderWrapper = styled.div`
+  ${mq("tiny", "min")} {
+    display: none;
+  }
+
+  ${mq("desktopS", "min")} {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 `;
 
-export const SectionBorderLeft = styled.div`
+export const RelativeWrapper = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`;
+
+export const LeftBorder = styled.div`
   position: absolute;
+  top: 0;
+  left: 3rem;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  tranform-origin: top;
+`;
+
+export const RightBorder = styled.div`
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  tranform-origin: top;
 `;
 
 export const StyledLayer = styled.div`
@@ -28,6 +59,7 @@ export const StyledLayer = styled.div`
     rgba(29, 29, 29, 27%) 89%,
     rgba(29, 29, 29, 98%) 98%
   );
+  z-index: 1;
 `;
 
 export const StyledImage = styled(Image)`
@@ -46,7 +78,11 @@ export const HeroTextContainer = styled.div`
   gap: 17%;
   padding: 0 0.8rem;
   ${mq("tablet", "min")} {
-    padding: 0 3rem;
+    margin: 0 3rem;
+  }
+
+  ${mq("desktopS", "min")} {
+    padding-right: 7rem;
   }
 `;
 
@@ -55,6 +91,7 @@ export const StyledHero = styled.section`
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 `;
 
 export const StyledHero__Intro = styled.div`
@@ -118,13 +155,11 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
+  max-width: 1600px;
   z-index: 2;
   position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
-  }
-  ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
   }
 `;
 
@@ -137,7 +172,7 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
-    width: 95%;
+    width: 62%;
     align-items: flex-start;
   }
   & h3 {
@@ -179,9 +214,11 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 245px;
+  height: 240px;
   max-width: 334px;
   ${mq("tablet", "min")} {
     width: 300px;
+    height: 325px;
     max-width: 334px;
   }
   ${mq("desktopS", "min")} {
@@ -209,6 +246,12 @@ export const ImageContainer = styled.div`
       }
     }
   }
+  & img {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
 `;
 
 export const TraitsContainer = styled.div`
@@ -232,29 +275,50 @@ export const TraitsContainer = styled.div`
       font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
     }
     ${mq("desktopS", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.3rem);
-    }
-    ${mq("customX", "min")} {
       font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
     }
   }
-  ${mq("customX", "min")} {
+  ${mq("desktopS", "min")} {
     justify-content: center;
     top: 45px;
   }
 `;
 
 export const StyledWorkContainer = styled.div`
-  max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 3rem;
 `;
 
 export const StyledWorkTitle = styled.div`
   width: 100%;
+  padding: 0 1rem;
+  font-size: clamp(2rem, 7vw, 4.8rem);
+  font-family: ${({ theme }) => theme.headFont2};
+  text-align: center;
+  margin-top: 1rem;
+  & h2 {
+    margin-bottom: 1rem;
+  }
+  ${mq("desktopS", "min")} {
+    text-align: left;
+  }
 `;
 
 export const StyledWorkDescrip = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin: 0 auto;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  text-align: center;
+  & p {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  ${mq("desktopS", "min")} {
+    flex-direction: row;
+    text-align: left;
+  }
 `;
 
 export const StyledWorkImage = styled(Image)`

@@ -25,10 +25,10 @@ export default function Header() {
     };
   }, []);
   return (
-    <MaxHeaderWrapper bg={colorChange}>
+    <MaxHeaderWrapper id="Home" bg={colorChange}>
       <StyledHeader bg={colorChange}>
         <LogoWrapper>
-          <Link href={"/"}></Link>
+          <Link href={"/"} aria-label="This is the logo of the site"></Link>
           <StyledImage src={LogoImg} alt="This is the Logo of the site" />
         </LogoWrapper>
         <MobileNav />

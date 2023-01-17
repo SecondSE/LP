@@ -12,6 +12,10 @@ export const StyledDiv = styled.div`
   margin: 30px auto;
   ${mq("tiny", "min")} {
   }
+
+  ${mq("desktopS", "min")} {
+    margin-bottom: 0;
+  }
   ${mq("custom1", "min")} {
   } ;
 `;
@@ -27,7 +31,8 @@ export const StyledRightSection = styled.section`
 export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
 
   ${mq("tiny", "min")} {
   }
@@ -121,4 +126,9 @@ export const StyledH2 = styled.h2`
   font-family: ${({ theme }) => theme.headFont};
   margin-top: 20px;
   text-align: center;
+`;
+
+export const StyledThankYou = styled.div`
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(1rem, 5vw, 1.5rem);
 `;

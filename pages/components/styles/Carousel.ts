@@ -21,6 +21,7 @@ export const SCarouselWrapper = styled.div`
     bottom: 0;
     left: 50%;
   }
+  cursor: pointer;
 `;
 
 export const SCarouselSlide = styled.div<ICarouselSlide>`
@@ -98,6 +99,11 @@ export const SlideImage = styled(Image)`
   width: 100%;
   height: 100%;
   z-index: 0;
+  filter: grayscale(1);
+  transition: filter 500ms ease-out;
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 export const SlideText = styled.h3``;

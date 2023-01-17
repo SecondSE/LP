@@ -17,7 +17,7 @@ export default function Contact() {
         </StyledLeftSection>
 
         <StyledRightSection>
-          <StyledH1>LET'S TALK</StyledH1>
+          <StyledH1 id="contact">LET&apos;S TALK</StyledH1>
           <StyledH2>NEW BUSINESS</StyledH2>
           {/* <h2>nick@secondsight.com</h2> */}
         </StyledRightSection>
