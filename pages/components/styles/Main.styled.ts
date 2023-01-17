@@ -168,8 +168,8 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
-    padding-left: 3rem;
-    width: 62%;
+    padding-left: 6rem;
+    width: 63%;
     align-items: flex-start;
   }
   & h3 {
