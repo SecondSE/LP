@@ -7,12 +7,12 @@ const carouselArr = [
   {
     img: "/imgs/work/nate-storefront.webp",
     alt: "An image for a storefront.",
-    title: "THE NATE GIFT EXPRESS",
+    title: "THE GIFT EXPRESS BY NATE",
   },
   {
-    img: "/imgs/natehunt-roof.webp",
+    img: "/imgs/work/gift-hunt.webp",
     alt: "An image of a roof top, it is clickable.",
-    title: "THE NATE GIFT HUNT",
+    title: "THE GIFT HUNT BY NATE",
   },
 ];
 
