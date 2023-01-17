@@ -4,7 +4,6 @@ const GlobalStyle = createGlobalStyle`
 :root {
  -ms-overflow-style: none; /* IE and Edge */
  scrollbar-width: none; /* Firefox */
- scroll-behavior: smooth;
 }
 
 :root::-webkit-scrollbar {

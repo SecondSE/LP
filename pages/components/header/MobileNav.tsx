@@ -10,23 +10,10 @@ import { useState } from "react";
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
-  const hamburgerIcon = (
-    <StyledHamburger
-      role="button"
-      tabIndex={0}
-      aria-label="Button to open navigation menu"
-      onClick={() => setOpen(!open)}
-    />
-  );
+  //can pass HandleClick() as prop
+  const hamburgerIcon = <StyledHamburger onClick={() => setOpen(!open)} />;
 
-  const closeIcon = (
-    <StyledClose
-      role="button"
-      tabIndex={0}
-      aria-label="Button to close navigation menu"
-      onClick={() => setOpen(!open)}
-    />
-  );
+  const closeIcon = <StyledClose onClick={() => setOpen(!open)} />;
 
   const closeMobileMenu = () => setOpen(false);
 

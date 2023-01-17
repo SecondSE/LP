@@ -1,34 +1,27 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-interface WrapperProps {
-  bg: boolean;
-}
-
 export const MaxWrapper = styled.div`
   width: 100%;
   height: 100%;
-
-  ${mq("desktopS", "min")} {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
+  position: absolute;
+  margin-top: 1rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: -1;
 `;
 
-export const MaxHeaderWrapper = styled.header<WrapperProps>`
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  position: fixed;
-  border-top: ${({ bg }) => (bg ? "0" : "1px solid white")};
-  border-bottom: ${({ bg }) => (bg ? "0" : "1px solid white")};
-  font-family: ${({ theme }) => theme.headFont3};
-  background-color: ${({ bg }) => (bg ? "rgba(29,29,29,0.8)" : "transparent")};
-  backdrop-filter: blur(5px);
-  z-index: 3;
-  transition-duration: ${({ bg }) => (bg ? "1s" : "1s")};
-  transition-property: transform;
-  transform: ${({ bg }) => (bg ? "translatey(-1rem)" : "1rem")};
+export const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 0 auto;
+  height: 100%;
+  max-width: 1600px;
+  ${mq("tablet", "min")} {
+    justify-content: flex-start;
+    padding: 0 3rem;
+  }
 `;
 
 export const LogoWrapper = styled.div`
@@ -52,9 +45,9 @@ export const HamburgerWrapper = styled.div`
 
 export const MenuWrapper = styled.div`
   width: 100vw;
-  height: calc(3rem + 100vh);
+  height: 100vh;
   position: absolute;
-  top: -1.5rem;
+  top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
 `;
@@ -67,12 +60,14 @@ export const HeroWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  & img {
-    height: 110vh;
-  }
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(29, 29, 29, 1) 59%
+  );
 `;
 
 export const ActionTextWrapper = styled.div`
@@ -83,37 +78,25 @@ export const ActionTextWrapper = styled.div`
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
-    margin: 0 3rem;
-    z-index: 2;
+    margin: 0 auto;
+    padding: 0 3rem;
   }
 `;
 
 export const DescriptionWrapper = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  width: 90%;
+  margin: 0 auto;
   align-items: center;
-  text-align: center;
   font-family: ${({ theme }) => theme.mainFont};
-  ${mq("tablet", "min")} {
-    padding: 0 3rem;
-  }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
-    width: 32%;
+    width: 45%;
     padding: 2rem 0 2rem 2rem;
-    text-align: left;
   }
 `;
 
-export const MaxActionImageWrapper = styled.div`
-  ${mq("desktopS", "min")} {
-    width: 94%;
-    margin: 0 auto;
-    border-top: 1px solid white;
-  }
-`;
 export const ActionImageWrapper = styled.div`
   height: auto;
   display: flex;
@@ -124,25 +107,12 @@ export const ActionImageWrapper = styled.div`
   gap: 1rem;
   ${mq("desktopS", "min")} {
     gap: 0;
-    margin: 0 auto;
-    max-width: 1600px;
+    margin: 0;
+    padding: 0 3rem;
+    max-width: 100%;
   }
   & img {
     width: 100%;
     height: 100%;
   }
-`;
-
-export const WorkWrapper = styled.section`
-  padding-top: 2rem;
-  width: 100%;
-  ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
-    padding: 2rem 3rem 0 3rem;
-  }
-`;
-
-export const WorkImageWrapper = styled.div`
-  width: 100%;
-  height: 500px;
 `;

@@ -1,10 +1,10 @@
-import { sfACHeavy, fgLight, fgBold, fgThin, sfACMedium } from "./fonts";
+import { sfACHeavy, fgLight, fgBold, fgThin, sfACBold } from "./fonts";
 
 const typography = {
   mainFont: fgLight.style.fontFamily,
   headFont: sfACHeavy.style.fontFamily,
   headFont2: fgBold.style.fontFamily,
-  headFont3: sfACMedium.style.fontFamily,
+  headFont3: sfACBold.style.fontFamily,
   thinFont: fgThin.style.fontFamily,
   caption: "0.8rem",
   regSize: "1.19rem",

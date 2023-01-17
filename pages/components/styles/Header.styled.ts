@@ -3,24 +3,13 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../../utils/mq";
-import Link from "next/link";
 
-interface WrapperProps {
-  bg: boolean;
-}
-
-export const StyledHeader = styled.div<WrapperProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const StyledHeader = styled.header`
+  width: 100%;
+  position: fixed;
   height: 70px;
-  max-width: 1600px;
-
-  ${mq("tablet", "min")} {
-    justify-content: flex-start;
-    padding: 0 3rem;
-    margin: 0 auto;
-  }
+  z-index: 1;
+  font-family: ${({ theme }) => theme.headFont};
 `;
 
 export const StyledImage = styled(Image)`
@@ -31,7 +20,6 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledMobileNav = styled.nav`
-  padding-right: 0.5rem;
   ${mq("tablet", "min")} {
     display: none;
   }
@@ -50,21 +38,20 @@ export const StyledDesktopNav = styled.nav`
 export const MobileNavList = styled.ul`
   font-size: 2rem;
   list-style-type: none;
-  height: calc(3rem + 100vh);
+  height: 100vh;
   width: 50%;
   position: absolute;
-  top: -1.5rem;
+  top: 0;
   right: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.bgColor};
+  background-color: darkgray;
 `;
 
 export const MobileNavListItem = styled.li`
-  position: relative;
   margin-bottom: 3rem;
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
@@ -88,20 +75,9 @@ export const DesktopNavList = styled.ul`
 `;
 
 export const DesktopNavListItem = styled.li`
-  position: relative;
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
   }
-`;
-
-export const NavListLink = styled(Link)`
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
 `;
 
 export const StyledHamburger = styled(RxHamburgerMenu)`
