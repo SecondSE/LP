@@ -221,7 +221,6 @@ export const ImageContainer = styled.div`
   ${mq("desktopS", "min")} {
     width: 25%;
     max-width: 25%;
-    border-left: 2px solid white;
   }
   & h3 {
     position: absolute;

@@ -108,9 +108,8 @@ export const DescriptionWrapper = styled.div`
 
 export const MaxActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
-    width: 94%;
+    width: 91.6%;
     margin: 0 auto;
-    border-top: 1px solid white;
   }
 `;
 export const ActionImageWrapper = styled.div`
