@@ -1,15 +1,15 @@
 import { useReducer } from "react";
 import CaseContext from "./CaseContext";
-import { CaseTypes } from "../../customTypes";
+import { CaseTypes, Reducer } from "../../customTypes";
 import caseReducer from "./caseReducer";
-import { CaseReducer, Action } from "../../customTypes";
+import { Action } from "../../customTypes";
 
 interface ProviderProps {
   children: JSX.Element;
 }
 
 const CaseProvider = function ({ children }: ProviderProps) {
-  const [state, dispatch] = useReducer<CaseReducer<CaseTypes, Action>>(
+  const [state, dispatch] = useReducer<Reducer<CaseTypes, Action>>(
     caseReducer,
     {
       caseStudy: 0,
@@ -35,8 +35,8 @@ const CaseProvider = function ({ children }: ProviderProps) {
     <CaseContext.Provider
       value={{
         ...state,
-        setActive: setActive,
-        changeActive: changeActive,
+        setActive,
+        changeActive,
       }}
     >
       {children}

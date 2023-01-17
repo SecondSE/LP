@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {
   CarouselTitle,
   SCarouselSlides,
@@ -51,18 +52,20 @@ const Carousel = () => {
         <SCarouselSlides currentSlide={currentSlide}>
           <CarouselList currentSlide={currentSlide} arr={carouselArr} />
         </SCarouselSlides>
-        <button
+        <AiOutlineArrowLeft
+          className="left"
           aria-label="button to slide carousel to the left"
           onClick={() => handleClick("l")}
         >
           Left
-        </button>
-        <button
+        </AiOutlineArrowLeft>
+        <AiOutlineArrowRight
+          className="right"
           aria-label="button to slide carousel to the right"
           onClick={() => handleClick("r")}
         >
           Right
-        </button>
+        </AiOutlineArrowRight>
       </SCarouselWrapper>
     </>
   );

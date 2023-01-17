@@ -77,12 +77,8 @@ export const HeroTextContainer = styled.div`
   width: 100%;
   gap: 17%;
   padding: 0 0.8rem;
-  ${mq("tablet", "min")} {
-    margin: 0 3rem;
-  }
-
   ${mq("desktopS", "min")} {
-    padding-right: 7rem;
+    padding: 0 4rem;
   }
 `;
 
@@ -172,6 +168,7 @@ export const StyledTitle = styled.div`
   align-items: center;
   font-family: ${({ theme }) => theme.headFont2};
   ${mq("desktopS", "min")} {
+    padding-left: 3rem;
     width: 62%;
     align-items: flex-start;
   }
@@ -224,7 +221,6 @@ export const ImageContainer = styled.div`
   ${mq("desktopS", "min")} {
     width: 25%;
     max-width: 25%;
-    border-left: 2px solid white;
   }
   & h3 {
     position: absolute;

@@ -20,7 +20,7 @@ import {
   StyledForm,
   StyledCopyrightDiv,
 } from "../styles/Footer.styled";
-import LogoImg from "../../../assets/sse-logo.png";
+import LogoImg from "../../../public/imgs/sse-logo.png";
 
 export default function Footer() {
   return (
@@ -66,8 +66,9 @@ export default function Footer() {
             <StyledSocialMediaSection>
               <IconWrapper>
                 <StyledLink
-                  aria-label="This link will redirect you to our linked in"
                   href="https://www.linkedin.com/company/second-sight-experience/"
+                  target="_blank"
+                  aria-label="This link will redirect you to our linked in"
                 ></StyledLink>
                 <LinkedInIcon />
               </IconWrapper>
