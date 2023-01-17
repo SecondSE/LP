@@ -5,6 +5,7 @@ const breakpoints = {
   phoneMed: "487",
   phoneLg: "530",
   custom1: "590",
+  custom4: "655",
   tablet: "768",
   custom3: "860",
   custom2: "890",
