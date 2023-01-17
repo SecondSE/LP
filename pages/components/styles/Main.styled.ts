@@ -259,13 +259,13 @@ export const TraitsContainer = styled.div`
   top: 25px;
   padding: 0 0.6rem;
   justify-content: flex-end;
-  font-family: ${({ theme }) => theme.thinFont};
+  font-family: ${({ theme }) => theme.mainFont};
   /* display: none; */
   & span {
     border-bottom: 1px solid white;
     margin-bottom: 0.7rem;
     ${mq("tiny", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.16rem);
     }
     ${mq("tablet", "min")} {
       font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
@@ -281,7 +281,10 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  margin: 0 3rem;
+  margin: 0 1rem;
+  ${mq("desktopS", "min")} {
+    margin: 0 3rem;
+  }
 `;
 
 export const StyledWorkTitle = styled.div`

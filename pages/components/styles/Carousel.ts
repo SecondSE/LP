@@ -43,6 +43,9 @@ export const SCarouselSlide = styled.div<ICarouselSlide>`
   width: 100%;
   height: 100%;
   z-index: 0;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const SCarouselSlides = styled.div<ICarouselProps>`

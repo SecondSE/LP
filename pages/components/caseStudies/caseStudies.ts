@@ -65,10 +65,10 @@ const caseStudies: caseData[] = [
       "Press release from BizBash",
     ],
     images: [
-      "/imgs/nate-clue.webp",
-      "/imgs/nate-hut.webp",
-      "/imgs/nate-map.webp",
-      "/imgs/nate-tv.webp",
+      "/imgs/hunt/nate-clue.webp",
+      "/imgs/hunt/nate-hut.webp",
+      "/imgs/hunt/nate-map.webp",
+      "/imgs/hunt/nate-tv 1.webp",
     ],
   },
 ];
