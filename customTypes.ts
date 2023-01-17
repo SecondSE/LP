@@ -10,19 +10,14 @@ export interface CaseTypes {
 
 export interface AppType {
   device: string;
-  init: boolean;
   section1: boolean;
   section2: boolean;
   section3: boolean;
   section4: boolean;
-  memoInitDevice: InitFunc | ArgString;
-  memoActivateAnim: InitFunc | ArgString;
-  memoChangeDevice: InitFunc | ArgString;
+  initDevice?: (device: string) => void;
+  activateAnim?: (section: string) => void;
   dispatch?: ContextDispatch;
 }
-
-type InitFunc = () => void;
-export type ArgString = (arg: string) => void;
 
 type ContextDispatch = Dispatch<Action>;
 

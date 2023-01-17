@@ -1,24 +1,20 @@
-import { useContext, useEffect, useMemo } from "react";
-import debounce from "lodash.debounce";
-
+import { useContext, useEffect } from "react";
 import GlobalContext from "../context/global/GlobalContext";
 
 const useScroll = function () {
   const globalContext = useContext(GlobalContext);
 
-  const { section1, section2, section3, section4, memoActivateAnim } =
-    globalContext;
+  const { section1, section2, section3, section4 } = globalContext;
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(scrollEvent, 500));
+    window.addEventListener("scroll", scrollEvent);
 
     return () => {
-      window.removeEventListener("scroll", debounce(scrollEvent, 500));
+      window.removeEventListener("scroll", scrollEvent);
     };
-    function scrollEvent(event: Event) {
-      console.log(window.scrollY);
-    }
-  }, [memoActivateAnim]);
+  }, []);
+
+  function scrollEvent(event: Event) {}
 };
 
 export default useScroll;
