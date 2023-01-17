@@ -22,7 +22,7 @@ export default function Hero() {
           priority
         />
       </ImageWrapper>
-      <StyledHero>
+      <StyledHero id="sec-hero">
         <HeroWrapper>
           <HeroTextContainer>
             <StyledHero__Intro>

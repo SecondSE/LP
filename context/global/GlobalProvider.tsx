@@ -14,10 +14,7 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     {
       device: "",
       init: true,
-      section1: true,
-      section2: false,
-      section3: false,
-      section4: false,
+      secCount: 0,
       memoInitDevice: () => {},
       memoActivateAnim: () => {},
       memoChangeDevice: () => {},
@@ -58,27 +55,11 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     });
   }
 
-  function activateAnim(section: string) {
-    if (section === "section1") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section1",
-      });
-    }
-
-    if (section === "section2") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section2",
-      });
-    }
-
-    if (section === "section3") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section3",
-      });
-    }
+  function activateAnim(section: number) {
+    return dispatch({
+      type: "ACTIVATE_ANIM",
+      data: section,
+    });
   }
 };
 

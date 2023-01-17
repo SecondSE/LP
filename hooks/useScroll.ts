@@ -6,19 +6,28 @@ import GlobalContext from "../context/global/GlobalContext";
 const useScroll = function () {
   const globalContext = useContext(GlobalContext);
 
-  const { section1, section2, section3, section4, memoActivateAnim } =
-    globalContext;
-
+  const { secCount, memoActivateAnim } = globalContext;
   useEffect(() => {
-    window.addEventListener("scroll", debounce(scrollEvent, 500));
+    window.addEventListener("scroll", scrollEvent);
 
     return () => {
-      window.removeEventListener("scroll", debounce(scrollEvent, 500));
+      window.removeEventListener("scroll", scrollEvent);
     };
     function scrollEvent(event: Event) {
-      console.log(window.scrollY);
+      const sections = document.querySelectorAll<HTMLElement>(
+        "section[id^='sec-']"
+      );
+      sections.forEach((node, idx) => {
+        if (isInViewport(node, idx)) {
+          memoActivateAnim(idx);
+        }
+      });
+      function isInViewport(element: HTMLElement, indx: number) {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= window.innerHeight;
+      }
     }
-  }, [memoActivateAnim]);
+  }, [memoActivateAnim, secCount]);
 };
 
 export default useScroll;

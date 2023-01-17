@@ -26,7 +26,7 @@ export default function Action() {
   }, []);
 
   return (
-    <StyledAction id="Services">
+    <StyledAction id="sec-services">
       <SectionBorder />
       <ActionTextWrapper>
         <StyledTitle id="services">

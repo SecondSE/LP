@@ -25,7 +25,7 @@ export default function Header() {
     };
   }, []);
   return (
-    <MaxHeaderWrapper id="Home" bg={colorChange}>
+    <MaxHeaderWrapper id="header" bg={colorChange}>
       <StyledHeader bg={colorChange}>
         <LogoWrapper>
           <Link href={"/"} aria-label="This is the logo of the site"></Link>
