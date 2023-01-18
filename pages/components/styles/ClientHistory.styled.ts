@@ -7,6 +7,8 @@ export const StyledClientSection = styled.section`
 `;
 
 export const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 1600px;
   margin: 30px auto 50px auto;
 `;
@@ -49,8 +51,8 @@ export const StyledMQTitle = styled.h3`
 
 export const StyledLogoDiv = styled.div`
   ${mq("tiny", "min")} {
+    display: none;
     margin: 50px auto;
-    display: flex;
     width: 90%;
     flex-direction: column;
     align-items: center;
@@ -151,6 +153,7 @@ export const StyledNateImage = styled(ImageSizing)`
 
 export const StyledQuoteDiv = styled.div`
   max-width: 1000px;
+  object-fit: contain;
   ${mq("tiny", "min")} {
     margin: 20px 2rem;
   }
@@ -169,7 +172,7 @@ export const StyledPerson = styled.span`
   line-height: 1.1;
   letter-spacing: 1px;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 20px;
 `;
 
 export const StyledTest = styled.p`
@@ -179,4 +182,20 @@ export const StyledTest = styled.p`
   line-height: 1.1;
   letter-spacing: 1px;
   text-align: left;
+`;
+
+export const StyledCarouselLogoDiv = styled.div`
+  ${mq("tiny", "min")} {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    height: 120px;
+  }
+  ${mq("custom1", "min")} {
+    display: none;
+  }
+`;
+
+export const StyledCarouselLogo = styled(Image)`
+  object-fit: contain;
 `;
