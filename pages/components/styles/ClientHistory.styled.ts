@@ -163,7 +163,8 @@ export const StyledQuoteDiv = styled.div`
 export const StyledPerson = styled.span`
   display: block;
   font-family: ${({ theme }) => theme.thinFont};
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  font-style: italic;
   word-spacing: 1px;
   line-height: 1.1;
   letter-spacing: 1px;
