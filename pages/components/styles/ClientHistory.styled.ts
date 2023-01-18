@@ -16,55 +16,35 @@ export const StyledUpperDiv = styled.div`
     margin: 0 auto:
 `;
 
-export const StyledH1 = styled.h1`
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  font-family: ${({ theme }) => theme.headFont};
-  padding: 0 1rem;
+export const StyledH3 = styled.h3`
+  font-size: clamp(4.22rem, 17vw, 8rem);
+  font-family: ${({ theme }) => theme.headFont3};
+  margin: 0 3rem;
 
   ${mq("tiny", "min")} {
     display: none;
   }
-  ${mq("custom4", "min")} {
+  ${mq("custom5", "min")} {
     display: block;
     text-align: center;
-    margin: 0 auto;
   } ;
 `;
 
-export const StyledMQTitle = styled.h1`
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  font-family: ${({ theme }) => theme.headFont};
+export const StyledMQTitle = styled.h3`
+  font-size: clamp(3.22rem, 17vw, 8rem);
+  font-family: ${({ theme }) => theme.headFont3};
 
   ${mq("tiny", "min")} {
     display: block;
     text-align: center;
     margin: 0 1rem;
   }
-  ${mq("custom4", "min")} {
+  ${mq("desktopS", "min")} {
+    margin 0 3rem;
+  } 
+  ${mq("custom5", "min")} {
     display: none;
   } ;
-`;
-
-export const StyledP = styled.p`
-  font-family: ${({ theme }) => theme.mainFont};
-  font-size: clamp(16px, 4vw, 1.5rem);
-
-  ${mq("tiny", "min")} {
-    text-align: center;
-    margin: 20px 1rem 30px 1rem;
-    word-spacing: 0.25rem;
-  }
-  ${mq("custom1", "min")} {
-    text-align: center;
-    max-width: 750px;
-    margin: 40px auto;
-    padding: 0 3rem;
-  }
-`;
-
-export const StyledSpan = styled.span`
-  font-family: ${({ theme }) => theme.mainFont};
-  font-size: clamp(16px, 4vw, 1.5rem);
 `;
 
 export const StyledLogoDiv = styled.div`

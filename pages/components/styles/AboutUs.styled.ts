@@ -27,10 +27,11 @@ export const StyledH3 = styled.h3`
 
 export const StyledUpperDiv = styled.div`
   max-width: 1600px;
-  margin: 0 1rem;
   ${mq("tiny", "min")} {
+    margin: 0 1rem;
   }
-  ${mq("custom1", "min")} {
+  ${mq("desktopS", "min")} {
+    margin: 0 3rem;
   } ;
 `;
 
@@ -132,24 +133,22 @@ export const StyledSubTextDiv = styled.div`
     width: 100%;
   }
   ${mq("custom3", "min")} {
-    width: 29%;
+    width: 31%;
   } ;
 `;
 
 export const StyledTextDiv = styled.div`
   display: flex;
+  margin: 0 1rem 40px 1rem;
 
   ${mq("tiny", "min")} {
     flex-direction: column;
-    margin: 0 1rem 40px 1rem;
   }
   ${mq("custom3", "min")} {
-    margin: 0 1rem 40px 1rem;
     flex-direction: row;
     justify-content: space-between;
   }
   ${mq("desktopS", "min")} {
-    margin: 0 3rem 40px 3rem;
     flex-direction: row;
     justify-content: space-between;
   } ;

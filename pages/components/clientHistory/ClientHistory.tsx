@@ -1,7 +1,7 @@
 import {
   StyledP,
   StyledDiv,
-  StyledH1,
+  StyledH3,
   StyledUpperDiv,
   StyledClientSection,
   StyledMQTitle,
@@ -14,8 +14,8 @@ export default function ClientHistory() {
     <StyledClientSection>
       <StyledDiv>
         <StyledUpperDiv>
-          <StyledH1>WE LOVE CLIENTS WE</StyledH1>
-          <StyledH1>SEE EYE TO EYE WITH</StyledH1>
+          <StyledH3>WE LOVE CLIENTS WE</StyledH3>
+          <StyledH3>SEE EYE TO EYE WITH</StyledH3>
           <StyledMQTitle>WE LOVE CLIENTS WE SEE EYE TO EYE WITH</StyledMQTitle>
           <TextCarousel />
         </StyledUpperDiv>
