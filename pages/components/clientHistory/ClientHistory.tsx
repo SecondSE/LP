@@ -1,5 +1,4 @@
 import {
-  StyledP,
   StyledDiv,
   StyledH3,
   StyledUpperDiv,
