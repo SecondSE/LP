@@ -52,7 +52,7 @@ export const StyledMQTitle = styled.h3`
 export const StyledLogoDiv = styled.div`
   ${mq("tiny", "min")} {
     display: none;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
     width: 90%;
     flex-direction: column;
     align-items: center;
@@ -158,8 +158,9 @@ export const StyledQuoteDiv = styled.div`
     margin: 20px 2rem;
   }
   ${mq("custom1", "min")} {
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
     padding: 0 2rem;
+    height: 225px;
   }
 `;
 
@@ -188,7 +189,7 @@ export const StyledCarouselLogoDiv = styled.div`
   ${mq("tiny", "min")} {
     display: flex;
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
     height: 120px;
   }
   ${mq("custom1", "min")} {
@@ -198,4 +199,6 @@ export const StyledCarouselLogoDiv = styled.div`
 
 export const StyledCarouselLogo = styled(Image)`
   object-fit: contain;
+  width: 80%;
+  height: auto;
 `;
