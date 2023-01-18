@@ -156,11 +156,53 @@ export const StyledQuoteDiv = styled.div`
   object-fit: contain;
   ${mq("tiny", "min")} {
     margin: 20px 2rem;
+    height: 348px;
+  }
+  ${mq("iphoneSE", "min")} {
+    margin: 20px 2rem;
+    height: 290px;
+  }
+  ${mq("small", "min")} {
+    margin: 20px 2rem;
+    height: 220px;
+  }
+  ${mq("phoneMed", "min")} {
+    margin: 20px 2rem;
+    height: 200px;
+  }
+  ${mq("phoneLg", "min")} {
+    margin: 20px 2rem;
+    height: 180px;
   }
   ${mq("custom1", "min")} {
     margin: 40px auto 0 auto;
     padding: 0 2rem;
-    height: 225px;
+    height: 150px;
+  }
+  ${mq("custom4", "min")} {
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    height: 145px;
+  }
+  ${mq("tablet", "min")} {
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    height: 180px;
+  }
+  ${mq("custom2", "min")} {
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    height: 190px;
+  }
+  ${mq("tabletLg", "min")} {
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    height: 230px;
+  }
+  ${mq("iPadPro", "min")} {
+    margin: 40px auto 0 auto;
+    padding: 0 2rem;
+    height: 250px;
   }
 `;
 
@@ -178,7 +220,7 @@ export const StyledPerson = styled.span`
 
 export const StyledTest = styled.p`
   font-family: ${({ theme }) => theme.thinFont};
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   word-spacing: 1px;
   line-height: 1.1;
   letter-spacing: 1px;
