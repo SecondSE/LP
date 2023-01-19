@@ -66,6 +66,7 @@ export const StyledInputSubmit = styled.input`
     background-color: #fff;
     border-radius: 3px;
     width: 100px;
+    transition: 0.4s;
   }
 `;
 
