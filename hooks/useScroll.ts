@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect } from "react";
 import debounce from "lodash.debounce";
 
 import GlobalContext from "../context/global/GlobalContext";
@@ -6,12 +6,16 @@ import GlobalContext from "../context/global/GlobalContext";
 const useScroll = function () {
   const globalContext = useContext(GlobalContext);
 
-  const { secCount, memoActivateAnim } = globalContext;
+  const { secCount, memoChangeSection, memoActivateAnim } = globalContext;
+
+  console.log(secCount);
   useEffect(() => {
-    window.addEventListener("scroll", scrollEvent);
+    const debouncer = debounce(scrollEvent, 100);
+
+    window.addEventListener("scroll", debouncer);
 
     return () => {
-      window.removeEventListener("scroll", scrollEvent);
+      window.removeEventListener("scroll", debouncer);
     };
     function scrollEvent(event: Event) {
       const sections = document.querySelectorAll<HTMLElement>(
@@ -19,15 +23,15 @@ const useScroll = function () {
       );
       sections.forEach((node, idx) => {
         if (isInViewport(node, idx)) {
-          memoActivateAnim(idx);
+          memoActivateAnim(secCount + 1);
         }
       });
       function isInViewport(element: HTMLElement, indx: number) {
         const rect = element.getBoundingClientRect();
-        return rect.top <= window.innerHeight;
+        return rect.top <= 0 && secCount <= indx;
       }
     }
-  }, [memoActivateAnim, secCount]);
+  }, [memoChangeSection, memoActivateAnim, secCount]);
 };
 
 export default useScroll;
