@@ -29,7 +29,7 @@ export default function TextCarousel() {
       savedCallBack.current();
     }
 
-    const id = setInterval(tick, 2500);
+    const id = setInterval(tick, 1200);
     return () => clearInterval(id);
   }, []);
 

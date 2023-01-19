@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Image from "next/image";
 import mq from "../../../utils/mq";
 
@@ -150,10 +150,16 @@ export const StyledNateImage = styled(ImageSizing)`
     height: auto;
   }
 `;
-
 export const StyledQuoteDiv = styled.div`
   max-width: 1000px;
-  object-fit: contain;
+  &.fade-in {
+    transition: opacity 1s ease-in-out;
+  }
+  &.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
   ${mq("tiny", "min")} {
     margin: 20px 2rem;
     height: 348px;
