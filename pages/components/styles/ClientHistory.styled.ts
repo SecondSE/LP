@@ -234,6 +234,15 @@ export const StyledTest = styled.p`
 `;
 
 export const StyledCarouselLogoDiv = styled.div`
+  &.in {
+    opacity: 100%;
+    transition: opacity 2s ease-in-out;
+  }
+  &.out {
+    opacity: 0%;
+    transition: 1.5s ease-in-out;
+    transform: translateX(-100%);
+  }
   ${mq("tiny", "min")} {
     display: flex;
     justify-content: center;

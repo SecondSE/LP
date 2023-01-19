@@ -7,6 +7,7 @@ import {
 
 export default function TextCarousel() {
   const [counter, setCounter] = useState(0);
+  const [transProp, setTransProp] = useState({ trans: "in" });
   const savedCallBack = useRef<() => void>(() => {});
 
   function callback() {
@@ -26,15 +27,19 @@ export default function TextCarousel() {
 
   useEffect(() => {
     function tick() {
-      savedCallBack.current();
+      setTransProp({ trans: "out" });
+      setTimeout(() => {
+        savedCallBack.current();
+        setTransProp({ trans: "in" });
+      }, 1500);
     }
 
-    const id = setInterval(tick, 7000);
+    const id = setInterval(tick, 8000);
     return () => clearInterval(id);
   }, []);
 
   return (
-    <StyledCarouselLogoDiv>
+    <StyledCarouselLogoDiv className={transProp.trans}>
       <StyledCarouselLogo src={carouselLogos[counter].img} alt="Brand Logo" />
     </StyledCarouselLogoDiv>
   );
