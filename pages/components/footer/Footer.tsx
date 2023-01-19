@@ -1,5 +1,6 @@
 import { StyledLink, FillImage } from "../styles/General.styled";
 import {
+  EmailIcon,
   TwitterIcon,
   LinkedInIcon,
   InstagramIcon,
@@ -29,13 +30,6 @@ export default function Footer() {
       <StyledFooterSection>
         <StyledLeftSection>
           <section>
-            <LogoWrapper>
-              <StyledLink
-                aria-label="Link to send you back to the beginning of the website"
-                href={"/"}
-              ></StyledLink>
-              <FillImage src={LogoImg} alt="This is the Logo of the site" />
-            </LogoWrapper>
             <StyledParagraph id="email-form">
               Enter your email to get occasional updates on new work, trends,
               and what we see happening in the brand world.
@@ -58,23 +52,34 @@ export default function Footer() {
           </section>
         </StyledLeftSection>
         <StyledRightSection>
-          <section>
-            <StyledSpanSection>
-              <StyledSpan>EMAIL@secondsight.com</StyledSpan>
-              {/* <StyledSpan>Connect with us on Social Media!</StyledSpan> */}
-            </StyledSpanSection>
-
-            <StyledSocialMediaSection>
-              <IconWrapper>
-                <StyledLink
-                  href="https://www.linkedin.com/company/second-sight-experience/"
-                  target="_blank"
-                  aria-label="This link will redirect you to our linked in"
-                ></StyledLink>
-                <LinkedInIcon />
-              </IconWrapper>
-
-              {/* <IconWrapper>
+          <LogoWrapper>
+            <StyledLink
+              aria-label="Link to send you back to the beginning of the website"
+              href={"/"}
+            ></StyledLink>
+            <FillImage src={LogoImg} alt="This is the Logo of the site" />
+          </LogoWrapper>
+          <StyledSpanSection>
+            <StyledSpan>EMAIL@secondsight.com</StyledSpan>
+            {/* <StyledSpan>Connect with us on Social Media!</StyledSpan> */}
+          </StyledSpanSection>
+          <StyledSocialMediaSection>
+            <IconWrapper>
+              <StyledLink
+                href="mailto:nick@secondsight.com"
+                aria-label="This link will open your email client"
+              ></StyledLink>
+              <EmailIcon />
+            </IconWrapper>
+            <IconWrapper>
+              <StyledLink
+                href="https://www.linkedin.com/company/second-sight-experience/"
+                target="_blank"
+                aria-label="This link will redirect you to our linked in"
+              ></StyledLink>
+              <LinkedInIcon />
+            </IconWrapper>
+            {/* <IconWrapper>
                 <StyledLink href="https://instagram.com"></StyledLink>
                 <InstagramIcon />
               </IconWrapper>
@@ -88,8 +93,7 @@ export default function Footer() {
                 <StyledLink href="https://instagram.com"></StyledLink>
                 <FacebookIcon />
               </IconWrapper> */}
-            </StyledSocialMediaSection>
-          </section>
+          </StyledSocialMediaSection>
         </StyledRightSection>
       </StyledFooterSection>
       <StyledCopyrightDiv>

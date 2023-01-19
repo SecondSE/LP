@@ -32,7 +32,6 @@ export default function Form() {
             aria-labelledby="phone"
             type="tel"
             placeholder=" 555 555-555"
-            required
           />
         </StyledInputAndLabelSection>
         <StyledInputAndLabelSection>
