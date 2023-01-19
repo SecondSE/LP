@@ -28,32 +28,17 @@ export default function TextCarousel() {
 
   useEffect(() => {
     function tick() {
-      savedCallBack.current();
+      setFadeProp({ fade: "fade-out" });
+      setTimeout(() => {
+        savedCallBack.current();
+      }, 1000);
+      setTimeout(() => {
+        setFadeProp({ fade: "fade-in" });
+      }, 1000);
     }
-    const id = setInterval(tick, 11010);
+    const id = setInterval(tick, 10000);
     return () => clearInterval(id);
   }, []);
-
-  useEffect(() => {
-    const timeout = setInterval(() => {
-      if (fadeProp.fade === "fade-in") {
-        setFadeProp({
-          fade: "fade-out",
-        });
-      }
-    }, 10000);
-    return () => clearInterval(timeout);
-  }, [fadeProp]);
-  useEffect(() => {
-    const timeout = setInterval(() => {
-      if (fadeProp.fade === "fade-out") {
-        setFadeProp({
-          fade: "fade-in",
-        });
-      }
-    }, 1000);
-    return () => clearInterval(timeout);
-  }, [fadeProp]);
 
   return (
     <StyledQuoteDiv className={fadeProp.fade}>
