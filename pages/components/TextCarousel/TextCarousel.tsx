@@ -30,7 +30,7 @@ export default function TextCarousel() {
     function tick() {
       savedCallBack.current();
     }
-    const id = setInterval(tick, 11000);
+    const id = setInterval(tick, 11010);
     return () => clearInterval(id);
   }, []);
 
