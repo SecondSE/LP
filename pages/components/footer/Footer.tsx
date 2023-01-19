@@ -60,13 +60,13 @@ export default function Footer() {
             <FillImage src={LogoImg} alt="This is the Logo of the site" />
           </LogoWrapper>
           <StyledSpanSection>
-            <StyledSpan>EMAIL@secondsight.com</StyledSpan>
+            <StyledSpan>Hi@secondsightexperience.nyc</StyledSpan>
             {/* <StyledSpan>Connect with us on Social Media!</StyledSpan> */}
           </StyledSpanSection>
           <StyledSocialMediaSection>
             <IconWrapper>
               <StyledLink
-                href="mailto:nick@secondsight.com"
+                href="mailto:Hi@secondsightexperience.nyc"
                 aria-label="This link will open your email client"
               ></StyledLink>
               <EmailIcon />
