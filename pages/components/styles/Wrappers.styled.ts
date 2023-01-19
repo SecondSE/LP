@@ -50,15 +50,6 @@ export const HamburgerWrapper = styled.div`
   }
 `;
 
-export const MenuWrapper = styled.div`
-  width: 100vw;
-  height: calc(3rem + 100vh);
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-`;
-
 export const HeroWrapper = styled.div`
   max-width: 1600px;
   height: 99.9%;

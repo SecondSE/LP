@@ -166,13 +166,14 @@ export const StyledTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont3};
   ${mq("desktopS", "min")} {
     padding-left: 6rem;
     width: 63%;
     align-items: flex-start;
   }
   & h3 {
+    line-height: 1;
     font-size: clamp(4.22rem, 17vw, 8rem);
   }
   & span {
@@ -202,7 +203,7 @@ export const StyledDescrip = styled.div`
 export const ColorLayer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(29, 29, 29, 0.5);
+  background-color: rgba(29, 29, 29, 0.7);
   position: absolute;
 `;
 

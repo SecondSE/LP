@@ -32,6 +32,8 @@ export const StyledImage = styled(Image)`
 
 export const StyledMobileNav = styled.nav`
   ${mq("tablet", "min")} {
+    position: absolute;
+    right: 2%;
     display: none;
   }
 `;
@@ -50,9 +52,9 @@ export const MobileNavList = styled.ul`
   font-size: 2rem;
   list-style-type: none;
   height: calc(3rem + 100vh);
-  width: 50%;
+  width: calc(0.5rem + 100vw);
   position: absolute;
-  top: -1.5rem;
+  top: -2.5rem;
   right: 0;
   z-index: 1;
   display: flex;
