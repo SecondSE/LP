@@ -13,8 +13,9 @@ export interface AppType {
   init: boolean;
   secCount: number;
   memoInitDevice: InitFunc | ArgString;
-  memoActivateAnim: InitFunc | ArgNumber;
   memoChangeDevice: InitFunc | ArgString;
+  memoChangeSection: InitFunc | ArgNumber;
+  memoActivateAnim: InitFunc | ArgNumber;
   dispatch?: ContextDispatch;
 }
 

@@ -17,15 +17,18 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
       secCount: 0,
       memoInitDevice: () => {},
       memoActivateAnim: () => {},
+      memoChangeSection: () => {},
       memoChangeDevice: () => {},
     }
   );
 
-  const memoActivateAnim = useMemo(() => activateAnim, []);
-
   const memoInitDevice = useMemo(() => initDevice, []);
 
   const memoChangeDevice = useMemo(() => changeDevice, []);
+
+  const memoChangeSection = useMemo(() => changeSection, []);
+
+  const memoActivateAnim = useMemo(() => activateAnim, []);
 
   return (
     <GlobalContext.Provider
@@ -33,6 +36,7 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
         ...state,
         memoInitDevice,
         memoActivateAnim,
+        memoChangeSection,
         memoChangeDevice,
         dispatch,
       }}
@@ -52,6 +56,13 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     return dispatch({
       type: "CHANGE_DEVICE",
       data: device,
+    });
+  }
+
+  function changeSection(section: number) {
+    return dispatch({
+      type: "CHANGE_SECTION",
+      data: section,
     });
   }
 

@@ -6,8 +6,9 @@ export const GlobalContext = createContext<AppType>({
   init: true,
   secCount: 0,
   memoInitDevice: () => {},
-  memoActivateAnim: () => {},
   memoChangeDevice: () => {},
+  memoChangeSection: () => {},
+  memoActivateAnim: () => {},
 });
 
 export default GlobalContext;
