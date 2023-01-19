@@ -13,6 +13,7 @@ const breakpoints = {
   iPadPro: "1024",
   desktopS: "1200",
   customX: "1367",
+  custom5: "1337",
   desktopM: "1600",
   desktopL: "1920",
   desktopXL: "2560",

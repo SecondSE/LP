@@ -23,6 +23,7 @@ import {
 import LogoImg from "../../../public/imgs/sse-logo.png";
 
 export default function Footer() {
+  let year = new Date().getFullYear();
   return (
     <StyledFooter>
       <StyledFooterSection>
@@ -93,7 +94,7 @@ export default function Footer() {
       </StyledFooterSection>
       <StyledCopyrightDiv>
         <StyledCopyright>
-          &copy; Copyright 2022 SecondSight LLC.
+          &copy; Copyright {year} SecondSight LLC.
         </StyledCopyright>
       </StyledCopyrightDiv>
     </StyledFooter>

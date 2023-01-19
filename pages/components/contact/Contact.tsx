@@ -1,6 +1,6 @@
 import {
-  StyledH2,
-  StyledH1,
+  StyledH4,
+  StyledH3,
   StyledDiv,
   StyledLeftSection,
   StyledContactSection,
@@ -17,8 +17,8 @@ export default function Contact() {
         </StyledLeftSection>
 
         <StyledRightSection>
-          <StyledH1 id="contact">LET&apos;S TALK</StyledH1>
-          <StyledH2>NEW BUSINESS</StyledH2>
+          <StyledH3 id="contact">LET&apos;S TALK</StyledH3>
+          <StyledH4>NEW BUSINESS</StyledH4>
           {/* <h2>nick@secondsight.com</h2> */}
         </StyledRightSection>
       </StyledDiv>
