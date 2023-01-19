@@ -2,8 +2,9 @@ import {
   StyledDesktopNav,
   DesktopNavList,
   DesktopNavListItem,
-  NavListLink,
+  // NavListLink,
 } from "../styles/Header.styled";
+import { Link } from "react-scroll";
 
 export default function DesktopNav() {
   return (
@@ -11,31 +12,19 @@ export default function DesktopNav() {
       <DesktopNavList>
         <DesktopNavListItem>
           SERVICES
-          <NavListLink
-            href="#services"
-            aria-label="navigation link to services section"
-          />
-        </DesktopNavListItem>
-        <DesktopNavListItem>
-          ABOUT
-          <NavListLink
-            href="#about"
-            aria-label="navigation link to about section"
-          />
+          <Link to="sec-services" smooth={true} offset={-50} duration={500} />
         </DesktopNavListItem>
         <DesktopNavListItem>
           WORK
-          <NavListLink
-            href="#work"
-            aria-label="navigation link to work section"
-          />
+          <Link to="sec-work" smooth={true} offset={-50} duration={500} />
+        </DesktopNavListItem>
+        <DesktopNavListItem>
+          ABOUT
+          <Link to="sec-about" smooth={true} offset={-95} duration={500} />
         </DesktopNavListItem>
         <DesktopNavListItem>
           CONTACT
-          <NavListLink
-            href="#contact"
-            aria-label="navigation link to contact"
-          />
+          <Link to="sec-contact" smooth={true} offset={-150} duration={500} />
         </DesktopNavListItem>
       </DesktopNavList>
     </StyledDesktopNav>
