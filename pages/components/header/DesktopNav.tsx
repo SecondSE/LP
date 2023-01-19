@@ -4,7 +4,6 @@ import {
   DesktopNavListItem,
   NavListLink,
 } from "../styles/Header.styled";
-import { Link } from "react-scroll";
 
 export default function DesktopNav() {
   return (
