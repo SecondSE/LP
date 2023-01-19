@@ -31,8 +31,6 @@ export default function TextCarousel() {
       setFadeProp({ fade: "fade-out" });
       setTimeout(() => {
         savedCallBack.current();
-      }, 1000);
-      setTimeout(() => {
         setFadeProp({ fade: "fade-in" });
       }, 1000);
     }
