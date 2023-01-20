@@ -22,7 +22,7 @@ export const StyledHeader = styled.div<WrapperProps>`
     margin: 0 auto;
   }
 
-  ${({ theme }) => theme.showComp()}
+  ${({ theme }) => theme.showComp("show1")}
 `;
 
 export const StyledImage = styled(Image)`

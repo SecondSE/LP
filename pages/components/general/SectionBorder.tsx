@@ -30,7 +30,17 @@ const SectionBorder: React.FC<BorderProps> = function ({
     <BorderWrapper>
       <MaxWrapper>
         <RelativeWrapper>
-          {section !== 0 ? <TopBorder ref={tBorder} origin={originX} /> : null}
+          {section !== 0 ? (
+            <CSSTransition
+              nodeRef={tBorder}
+              in={toggle}
+              appear={toggle}
+              timeout={1000}
+              classNames="anim"
+            >
+              <TopBorder ref={tBorder} origin={originX} />
+            </CSSTransition>
+          ) : null}
           <CSSTransition
             nodeRef={lBorder}
             in={toggle}

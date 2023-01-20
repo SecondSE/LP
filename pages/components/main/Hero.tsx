@@ -38,7 +38,7 @@ export default function Hero() {
         <SectionBorder
           originX="left"
           originY="top"
-          toggle={secCount === 0}
+          toggle={secCount >= 0}
           section={0}
         />
         <HeroWrapper>

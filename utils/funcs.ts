@@ -18,7 +18,7 @@ const borderAnim = function (dirScale: string) {
 `;
 };
 
-const showComp = function () {
+const showComp = function (className: string) {
   return `
     &.show-appear,
     &.show-enter {
@@ -28,7 +28,7 @@ const showComp = function () {
     &.show-appear-active,
     &.show-enter-active {
       opacity: 1;
-      transition: opacity 600ms ease-out;
+      transition: all 600ms ease-out;
     }
 
     &.show-appear-done,

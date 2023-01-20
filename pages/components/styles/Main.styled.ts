@@ -138,6 +138,9 @@ export const StyledAction = styled.section`
   margin: 0 auto;
   z-index: 2;
   position: relative;
+
+  ${({ theme }) => theme.showComp("show")}
+
   ${mq("IPadPro", "min")} {
     flex-direction: column;
     align-items: center;
@@ -267,9 +270,8 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  margin: 0 1rem;
-  ${mq("desktopS", "min")} {
-    margin: 0 3rem;
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
   }
 `;
 

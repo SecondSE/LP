@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import GlobalContext from "../../../context/global/GlobalContext";
+import SectionBorder from "../general/SectionBorder";
 import {
   AboutUsSection,
   StyledH3,
@@ -11,8 +14,18 @@ import { MaxWrapper } from "../styles/Wrappers.styled";
 import Images from "./Images";
 
 export default function AboutUs() {
+  const globalContext = useContext(GlobalContext);
+
+  const { secCount } = globalContext;
+
   return (
     <AboutUsSection id="sec-about">
+      <SectionBorder
+        originX="left"
+        originY="top"
+        toggle={secCount >= 3}
+        section={3}
+      />
       <MaxWrapper>
         <StyledUpperDiv>
           <StyledH3 id="about">ABOUT US</StyledH3>
