@@ -73,9 +73,10 @@ export default function Action() {
               </span>
             </TraitsContainer>
             <Image
+              sizes="(min-width: 456px) 2vw, 100vw"
               fill={true}
               src="/imgs/services/branding.webp"
-              alt="Two girls at a Nate Photoshoot"
+              alt="Two women at a Nate Photoshoot"
             />
           </ImageContainer>
           <ImageContainer>
@@ -98,13 +99,14 @@ export default function Action() {
                 Virtual Event Production
               </span>
               <span data-aos-delay="3000" data-aos="zoom-in">
-                Web3 & NFT Experiences
+                Web3/NFT Experiences
               </span>
             </TraitsContainer>
             <Image
+              sizes="100vw"
               fill={true}
               src="/imgs/services/exp-marketing.webp"
-              alt="Two girls at a Nate Photoshoot"
+              alt="A shopper at the winter wonderland"
             />
           </ImageContainer>
           <ImageContainer>
