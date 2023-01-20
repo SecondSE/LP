@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import SectionBorder from "../general/SectionBorder";
@@ -16,6 +16,10 @@ import sanHolo from "../../../public/imgs/hero/sanholo.webp";
 import { HeroWrapper, ImageWrapper } from "../styles/Wrappers.styled";
 import GlobalContext from "../../../context/global/GlobalContext";
 export default function Hero() {
+  const iDiv = useRef<HTMLDivElement>(null);
+  const mDiv = useRef<HTMLDivElement>(null);
+  const eDiv = useRef<HTMLDivElement>(null);
+
   const globalContext = useContext(GlobalContext);
 
   const { secCount } = globalContext;
@@ -40,12 +44,13 @@ export default function Hero() {
         <HeroWrapper>
           <HeroTextContainer>
             <CSSTransition
+              nodeRef={iDiv}
               in={true}
               appear={true}
               timeout={600}
               classNames="move"
             >
-              <StyledHero__Intro>
+              <StyledHero__Intro ref={iDiv}>
                 <span className="row">Second Sight is a </span>
                 <span className="experience">
                   brand experience agency connecting
@@ -57,12 +62,13 @@ export default function Hero() {
               </StyledHero__Intro>
             </CSSTransition>
             <CSSTransition
+              nodeRef={mDiv}
               in={true}
               appear={true}
               timeout={600}
               classNames="move"
             >
-              <StyledHero__Middle>
+              <StyledHero__Middle ref={mDiv}>
                 <h1 className="title">
                   Based In<span className="bold"> MANHATTAN</span>
                 </h1>
@@ -72,12 +78,13 @@ export default function Hero() {
               </StyledHero__Middle>
             </CSSTransition>
             <CSSTransition
+              nodeRef={eDiv}
               in={true}
               appear={true}
               timeout={600}
               classNames="move"
             >
-              <StyledHero__End>
+              <StyledHero__End ref={eDiv}>
                 <span className="title">We specialize in</span>
                 <span className="bold">
                   BRAND STRATEGY <span className="ampersand">&</span>

@@ -1,7 +1,5 @@
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import { useContext } from "react";
-import GlobalContext from "../../../context/global/GlobalContext";
 import {
   BorderWrapper,
   LeftBorder,
@@ -25,26 +23,31 @@ const SectionBorder: React.FC<BorderProps> = function ({
   toggle,
   section,
 }) {
+  const lBorder = useRef<HTMLDivElement>(null);
+  const rBorder = useRef<HTMLDivElement>(null);
+  const tBorder = useRef<HTMLDivElement>(null);
   return (
     <BorderWrapper>
       <MaxWrapper>
         <RelativeWrapper>
-          {section !== 0 ? <TopBorder origin={originX} /> : null}
+          {section !== 0 ? <TopBorder ref={tBorder} origin={originX} /> : null}
           <CSSTransition
+            nodeRef={lBorder}
             in={toggle}
             appear={toggle}
             timeout={1000}
             classNames="anim"
           >
-            <LeftBorder origin={originY} />
+            <LeftBorder ref={lBorder} origin={originY} />
           </CSSTransition>
           <CSSTransition
+            nodeRef={rBorder}
             in={toggle}
             appear={toggle}
             timeout={1000}
             classNames="anim"
           >
-            <RightBorder origin={originY} />
+            <RightBorder ref={rBorder} origin={originY} />
           </CSSTransition>
         </RelativeWrapper>
       </MaxWrapper>

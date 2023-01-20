@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import {
   StyledAction,
   StyledTitle,
@@ -17,14 +17,26 @@ import Image from "next/image";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SectionBorder from "../general/SectionBorder";
+import GlobalContext from "../../../context/global/GlobalContext";
 
 export default function Action() {
+  const globalContext = useContext(GlobalContext);
+
+  const { secCount } = globalContext;
+
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
   }, []);
 
   return (
     <StyledAction id="sec-services">
+      <SectionBorder
+        originX="left"
+        originY="top"
+        toggle={secCount === 1}
+        section={1}
+      />
       <ActionTextWrapper>
         <StyledTitle id="services">
           <h3>WHAT</h3>
