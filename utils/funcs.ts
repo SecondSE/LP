@@ -28,7 +28,7 @@ const showComp = function () {
     &.show-appear-active,
     &.show-enter-active {
       opacity: 1;
-      transition: opacity 300ms ease-out;
+      transition: opacity 600ms ease-out;
     }
 
     &.show-appear-done,
