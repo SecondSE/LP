@@ -8,7 +8,6 @@ const useScroll = function () {
 
   const { secCount, memoChangeSection, memoActivateAnim } = globalContext;
 
-  console.log(secCount);
   useEffect(() => {
     const debouncer = debounce(scrollEvent, 100);
 
@@ -23,12 +22,14 @@ const useScroll = function () {
       );
       sections.forEach((node, idx) => {
         if (isInViewport(node, idx)) {
+          if (idx === 0) return;
           memoActivateAnim(secCount + 1);
         }
       });
       function isInViewport(element: HTMLElement, indx: number) {
         const rect = element.getBoundingClientRect();
         return rect.top <= 0 && secCount <= indx;
+        // return false;
       }
     }
   }, [memoChangeSection, memoActivateAnim, secCount]);

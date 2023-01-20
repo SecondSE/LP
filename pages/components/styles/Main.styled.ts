@@ -88,6 +88,8 @@ export const StyledHero__Intro = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__Middle = styled.div`
@@ -102,6 +104,8 @@ export const StyledHero__Middle = styled.div`
   & .bold {
     font-family: ${({ theme }) => theme.headFont3};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__End = styled.div`
@@ -122,6 +126,8 @@ export const StyledHero__End = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "300", "600")}
 `;
 
 export const StyledAction = styled.section`
@@ -132,6 +138,9 @@ export const StyledAction = styled.section`
   margin: 0 auto;
   z-index: 2;
   position: relative;
+
+  ${({ theme }) => theme.showComp("show")}
+
   ${mq("IPadPro", "min")} {
     flex-direction: column;
     align-items: center;
@@ -261,9 +270,8 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  margin: 0 1rem;
-  ${mq("desktopS", "min")} {
-    margin: 0 3rem;
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
   }
 `;
 

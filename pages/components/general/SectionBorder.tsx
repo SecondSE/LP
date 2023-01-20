@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import GlobalContext from "../../../context/global/GlobalContext";
+import { useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 import {
   BorderWrapper,
   LeftBorder,
@@ -11,21 +11,54 @@ import {
 import { MaxWrapper } from "../styles/Wrappers.styled";
 
 interface BorderProps {
-  tfrmOrigin: string;
+  toggle: boolean;
+  originX: string;
+  originY: string;
+  section: number;
 }
 
-const SectionBorder: React.FC<BorderProps> = function ({ tfrmOrigin }) {
-  const globalContext = useContext(GlobalContext);
-
-  const { secCount } = globalContext;
-
+const SectionBorder: React.FC<BorderProps> = function ({
+  originX = "right",
+  originY = "top",
+  toggle,
+  section,
+}) {
+  const lBorder = useRef<HTMLDivElement>(null);
+  const rBorder = useRef<HTMLDivElement>(null);
+  const tBorder = useRef<HTMLDivElement>(null);
   return (
     <BorderWrapper>
       <MaxWrapper>
         <RelativeWrapper>
-          <TopBorder className="test" />
-          <LeftBorder className="test" />
-          <RightBorder className="test" />
+          {section !== 0 ? (
+            <CSSTransition
+              nodeRef={tBorder}
+              in={toggle}
+              appear={toggle}
+              timeout={1000}
+              classNames="anim"
+            >
+              <TopBorder ref={tBorder} origin={originX} />
+            </CSSTransition>
+          ) : null}
+          <CSSTransition
+            nodeRef={lBorder}
+            in={toggle}
+            appear={toggle}
+            timeout={1000}
+            classNames="anim"
+          >
+            <LeftBorder ref={lBorder} origin={originY} />
+          </CSSTransition>
+          <CSSTransition
+            nodeRef={rBorder}
+            in={toggle}
+            appear={toggle}
+            timeout={1000}
+            classNames="anim"
+          >
+            <RightBorder ref={rBorder} origin={originY} />
+          </CSSTransition>
         </RelativeWrapper>
       </MaxWrapper>
     </BorderWrapper>
