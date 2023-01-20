@@ -54,18 +54,38 @@ const Case: React.FC<CaseProps> = function ({
       <ImagesWrapper>
         <ImgsDivision>
           <ImgWrapper>
-            <CaseImage src={images[0]} alt={""} fill={true} />
+            <CaseImage
+              src={images[0]}
+              alt={""}
+              fill={true}
+              sizes="(min-width: 320px) 50vw, 100vw"
+            />
           </ImgWrapper>
           <ImgWrapper>
-            <CaseImage src={images[1]} alt={""} fill={true} />
+            <CaseImage
+              src={images[1]}
+              alt={""}
+              fill={true}
+              sizes="(min-width: 320px) 50vw, 100vw"
+            />
           </ImgWrapper>
         </ImgsDivision>
         <ImgsDivision>
           <ImgWrapper>
-            <CaseImage src={images[2]} alt={""} fill={true} />
+            <CaseImage
+              src={images[2]}
+              alt={""}
+              fill={true}
+              sizes="(min-width: 320px) 50vw, 100vw"
+            />
           </ImgWrapper>
           <ImgWrapper>
-            <CaseImage src={images[3]} alt={""} fill={true} />
+            <CaseImage
+              src={images[3]}
+              alt={""}
+              fill={true}
+              sizes="(min-width: 320px) 50vw, 100vw"
+            />
           </ImgWrapper>
         </ImgsDivision>
       </ImagesWrapper>

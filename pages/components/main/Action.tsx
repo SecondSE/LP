@@ -73,7 +73,7 @@ export default function Action() {
               </span>
             </TraitsContainer>
             <Image
-              sizes="(min-width: 456px) 2vw, 100vw"
+              sizes="(min-width: 456px) 50vw, 100vw"
               fill={true}
               src="/imgs/services/branding.webp"
               alt="Two women at a Nate Photoshoot"
@@ -103,7 +103,7 @@ export default function Action() {
               </span>
             </TraitsContainer>
             <Image
-              sizes="100vw"
+              sizes="(min-width: 320px) 50vw, 100vw"
               fill={true}
               src="/imgs/services/exp-marketing.webp"
               alt="A shopper at the winter wonderland"
@@ -130,6 +130,7 @@ export default function Action() {
               </span>
             </TraitsContainer>
             <Image
+              sizes="(min-width: 320px) 50vw, 100vw"
               fill={true}
               src="/imgs/services/int-marketing.webp"
               alt="Two girls at a Nate Photoshoot"
@@ -159,6 +160,7 @@ export default function Action() {
               </span>
             </TraitsContainer>
             <Image
+              sizes="(min-width: 320px) 50vw, 100vw"
               fill={true}
               src="/imgs/services/webdev.webp"
               alt="Two girls at a Nate Photoshoot"
