@@ -88,6 +88,8 @@ export const StyledHero__Intro = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__Middle = styled.div`
@@ -102,6 +104,8 @@ export const StyledHero__Middle = styled.div`
   & .bold {
     font-family: ${({ theme }) => theme.headFont3};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__End = styled.div`
@@ -122,6 +126,8 @@ export const StyledHero__End = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "300", "600")}
 `;
 
 export const StyledAction = styled.section`

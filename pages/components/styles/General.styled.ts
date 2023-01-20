@@ -35,7 +35,7 @@ export const TopBorder = styled.div<BorderProps>`
   width: 100%;
   height: 1px;
   background-color: #fff;
-  transform-origin: ${(props) => props.origin};
+  transform-origin: center ${(props) => props.origin};
 
   ${mq("tiny", "min")} {
     display: none;
@@ -48,13 +48,15 @@ export const TopBorder = styled.div<BorderProps>`
   ${({ theme }) => theme.borderAnim("X")};
 `;
 
-export const BotBorder = styled.div`
+export const BotBorder = styled.div<BorderProps>`
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: #fff;
+  transform-origin: center ${(props) => props.origin};
+
   ${mq("tiny", "min")} {
     display: none;
   }
@@ -62,6 +64,8 @@ export const BotBorder = styled.div`
   ${mq("desktopS", "min")} {
     display: block;
   }
+
+  ${({ theme }) => theme.borderAnim("X")}
 `;
 
 export const LeftBorder = styled.div<BorderProps>`
@@ -73,6 +77,8 @@ export const LeftBorder = styled.div<BorderProps>`
   background-color: #fff;
   transform-origin: ${(props) => props.origin};
 
+  ${({ theme }) => theme.borderAnim("Y")}
+
   ${mq("tiny", "min")} {
     display: none;
   }
@@ -80,8 +86,6 @@ export const LeftBorder = styled.div<BorderProps>`
   ${mq("desktopS", "min")} {
     display: block;
   }
-
-  ${({ theme }) => theme.borderAnim("Y")}
 `;
 
 export const RightBorder = styled.div<BorderProps>`

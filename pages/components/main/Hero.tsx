@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import SectionBorder from "../general/SectionBorder";
 
@@ -30,33 +31,60 @@ export default function Hero() {
         />
       </ImageWrapper>
       <StyledHero id="sec-hero">
-        <SectionBorder tfrmOrigin="yo" />
+        <SectionBorder
+          originX="left"
+          originY="top"
+          toggle={secCount === 0}
+          section={0}
+        />
         <HeroWrapper>
           <HeroTextContainer>
-            <StyledHero__Intro>
-              <span className="row">Second Sight is a </span>
-              <span className="experience">
-                brand experience agency connecting
-              </span>
-              <span className="bold">
-                PEOPLE, CULTURE, <span className="ampersand">&</span> YOUR BRAND
-              </span>
-            </StyledHero__Intro>
-            <StyledHero__Middle>
-              <h1 className="title">
-                Based In<span className="bold"> MANHATTAN</span>
-              </h1>
-              <h1 className="title">
-                Creating Things<span className="bold"> GLOBALLY</span>
-              </h1>
-            </StyledHero__Middle>
-            <StyledHero__End>
-              <span className="title">We specialize in</span>
-              <span className="bold">
-                BRAND STRATEGY <span className="ampersand">&</span>
-              </span>
-              <span className="bold">EXPERENTIAL MARKETING</span>
-            </StyledHero__End>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={600}
+              classNames="move"
+            >
+              <StyledHero__Intro>
+                <span className="row">Second Sight is a </span>
+                <span className="experience">
+                  brand experience agency connecting
+                </span>
+                <span className="bold">
+                  PEOPLE, CULTURE, <span className="ampersand">&</span> YOUR
+                  BRAND
+                </span>
+              </StyledHero__Intro>
+            </CSSTransition>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={600}
+              classNames="move"
+            >
+              <StyledHero__Middle>
+                <h1 className="title">
+                  Based In<span className="bold"> MANHATTAN</span>
+                </h1>
+                <h1 className="title">
+                  Creating Things<span className="bold"> GLOBALLY</span>
+                </h1>
+              </StyledHero__Middle>
+            </CSSTransition>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={600}
+              classNames="move"
+            >
+              <StyledHero__End>
+                <span className="title">We specialize in</span>
+                <span className="bold">
+                  BRAND STRATEGY <span className="ampersand">&</span>
+                </span>
+                <span className="bold">EXPERENTIAL MARKETING</span>
+              </StyledHero__End>
+            </CSSTransition>
           </HeroTextContainer>
         </HeroWrapper>
       </StyledHero>

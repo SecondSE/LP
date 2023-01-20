@@ -17,5 +17,6 @@ declare module "styled-components" {
     head4: string;
     borderAnim: (dirScale: string) => string;
     showComp: () => string;
+    opaTranslate: (dir: string, pos: string, time: string) => string;
   }
 }
