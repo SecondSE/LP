@@ -17,7 +17,6 @@ import Image from "next/image";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SectionBorder from "../general/SectionBorder";
 import { TopBorder } from "../styles/General.styled";
 
 export default function Action() {
@@ -27,7 +26,6 @@ export default function Action() {
 
   return (
     <StyledAction id="sec-services">
-      <SectionBorder />
       <ActionTextWrapper>
         <StyledTitle id="services">
           <TopBorder />
