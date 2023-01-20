@@ -1,8 +1,4 @@
-import {
-  MobileNavList,
-  MobileNavListItem,
-  NavListLink,
-} from "../styles/Header.styled";
+import { MobileNavList, MobileNavListItem } from "../styles/Header.styled";
 import { Link } from "react-scroll";
 
 interface NavLinkProps {
@@ -16,32 +12,44 @@ const NavLinks: React.FC<NavLinkProps> = function ({
 }) {
   return (
     <MobileNavList>
-      <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+      <MobileNavListItem>
         SERVICES
-        <NavListLink
-          href="#services"
-          aria-label="navigation link to services section"
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-services"
+          smooth={true}
+          offset={-50}
+          duration={500}
         />
       </MobileNavListItem>
-      <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-        ABOUT
-        <NavListLink
-          href="#about"
-          aria-label="navigation link to about section"
-        />
-      </MobileNavListItem>
-      <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+      <MobileNavListItem>
         WORK
-        <NavListLink
-          href="#work"
-          aria-label="navigation link to work section"
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-work"
+          smooth={true}
+          offset={-50}
+          duration={500}
         />
       </MobileNavListItem>
-      <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
+      <MobileNavListItem>
+        ABOUT
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-about"
+          smooth={true}
+          offset={-80}
+          duration={500}
+        />
+      </MobileNavListItem>
+      <MobileNavListItem>
         CONTACT
-        <NavListLink
-          href="#contact"
-          aria-label="navigation link to contact section"
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-contact"
+          smooth={true}
+          offset={-95}
+          duration={500}
         />
       </MobileNavListItem>
     </MobileNavList>

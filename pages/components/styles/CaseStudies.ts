@@ -29,7 +29,7 @@ export const TextWrapper = styled.div`
   }
 
   ${mq("desktopS", "min")} {
-    width: 40%;
+    width: 48%;
   }
 `;
 
@@ -127,7 +127,7 @@ export const ImagesWrapper = styled.div`
   }
 
   ${mq("desktopS", "min")} {
-    width: 60%;
+    width: 48%;
   }
 `;
 

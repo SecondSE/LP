@@ -243,13 +243,12 @@ export const TraitsContainer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 91%;
+  height: 95%;
   width: 100%;
   top: 25px;
   padding: 0 0.6rem;
   justify-content: flex-end;
   font-family: ${({ theme }) => theme.mainFont};
-  /* display: none; */
   & span {
     border-bottom: 1px solid white;
     margin-bottom: 0.7rem;

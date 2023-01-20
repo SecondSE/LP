@@ -3,7 +3,7 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../../utils/mq";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 interface WrapperProps {
   bg: boolean;
@@ -72,6 +72,16 @@ export const MobileNavListItem = styled.li`
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
   }
+  & a {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
 `;
 
 export const DesktopNavList = styled.ul`
@@ -92,19 +102,20 @@ export const DesktopNavList = styled.ul`
 
 export const DesktopNavListItem = styled.li`
   position: relative;
+  z-index: 0;
+  & a {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
   }
-`;
-
-export const NavListLink = styled(Link)`
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
 `;
 
 export const StyledHamburger = styled(RxHamburgerMenu)`

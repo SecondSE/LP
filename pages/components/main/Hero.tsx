@@ -29,9 +29,10 @@ export default function Hero() {
       <ImageWrapper>
         <StyledLayer></StyledLayer>
         <StyledImage
+          priority
+          sizes="(min-width: 320px) 50vw, 100vw"
           src={sanHolo}
           alt="DJ San Holo performing at the SoundMint NFT event in New York City"
-          priority
         />
       </ImageWrapper>
       <StyledHero id="sec-hero">
