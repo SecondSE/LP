@@ -20,12 +20,7 @@ export default function AboutUs() {
 
   return (
     <AboutUsSection id="sec-about">
-      <SectionBorder
-        originX="left"
-        originY="top"
-        toggle={secCount >= 3}
-        section={3}
-      />
+      <SectionBorder originX="left" originY="top" toggle={true} section={3} />
       <MaxWrapper>
         <StyledUpperDiv>
           <StyledH3 id="about">ABOUT US</StyledH3>

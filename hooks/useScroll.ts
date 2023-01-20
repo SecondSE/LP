@@ -28,8 +28,7 @@ const useScroll = function () {
       });
       function isInViewport(element: HTMLElement, indx: number) {
         const rect = element.getBoundingClientRect();
-        return rect.top <= 0 && secCount <= indx;
-        // return false;
+        return rect.top <= 0;
       }
     }
   }, [memoChangeSection, memoActivateAnim, secCount]);

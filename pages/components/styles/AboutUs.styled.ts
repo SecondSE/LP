@@ -4,6 +4,7 @@ import mq from "../../../utils/mq";
 
 export const AboutUsSection = styled.section`
   color: white;
+  border-top: 1px solid white;
 `;
 
 export const StyledMainDiv = styled.div`
