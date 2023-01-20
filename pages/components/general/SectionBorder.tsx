@@ -1,19 +1,31 @@
+import { useContext } from "react";
+import GlobalContext from "../../../context/global/GlobalContext";
 import {
   BorderWrapper,
   LeftBorder,
   RelativeWrapper,
   RightBorder,
-} from "../styles/Main.styled";
+  TopBorder,
+} from "../styles/General.styled";
 
 import { MaxWrapper } from "../styles/Wrappers.styled";
 
-const SectionBorder: React.FC = function () {
+interface BorderProps {
+  tfrmOrigin: string;
+}
+
+const SectionBorder: React.FC<BorderProps> = function ({ tfrmOrigin }) {
+  const globalContext = useContext(GlobalContext);
+
+  const { secCount } = globalContext;
+
   return (
     <BorderWrapper>
       <MaxWrapper>
         <RelativeWrapper>
-          <LeftBorder />
-          <RightBorder />
+          <TopBorder className="test" />
+          <LeftBorder className="test" />
+          <RightBorder className="test" />
         </RelativeWrapper>
       </MaxWrapper>
     </BorderWrapper>

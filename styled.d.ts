@@ -15,5 +15,7 @@ declare module "styled-components" {
     head2: string;
     head3: string;
     head4: string;
+    borderAnim: (dirScale: string) => string;
+    showComp: () => string;
   }
 }

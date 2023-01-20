@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 import SectionBorder from "../general/SectionBorder";
 
 import {
@@ -11,7 +13,12 @@ import {
 } from "../styles/Main.styled";
 import sanHolo from "../../../public/imgs/hero/sanholo.webp";
 import { HeroWrapper, ImageWrapper } from "../styles/Wrappers.styled";
+import GlobalContext from "../../../context/global/GlobalContext";
 export default function Hero() {
+  const globalContext = useContext(GlobalContext);
+
+  const { secCount } = globalContext;
+
   return (
     <>
       <ImageWrapper>
@@ -23,6 +30,7 @@ export default function Hero() {
         />
       </ImageWrapper>
       <StyledHero id="sec-hero">
+        <SectionBorder tfrmOrigin="yo" />
         <HeroWrapper>
           <HeroTextContainer>
             <StyledHero__Intro>
@@ -50,7 +58,6 @@ export default function Hero() {
               <span className="bold">EXPERENTIAL MARKETING</span>
             </StyledHero__End>
           </HeroTextContainer>
-          <SectionBorder />
         </HeroWrapper>
       </StyledHero>
     </>

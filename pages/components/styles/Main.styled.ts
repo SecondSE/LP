@@ -9,27 +9,6 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
-export const BorderWrapper = styled.div`
-  ${mq("tiny", "min")} {
-    display: none;
-  }
-
-  ${mq("desktopS", "min")} {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-`;
-
-export const RelativeWrapper = styled.div`
-  position: relative;
-  height: 100%;
-  width: 100%;
-`;
-
 export const LeftBorder = styled.div`
   position: absolute;
   top: 0;
@@ -151,11 +130,11 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 1600px;
   z-index: 2;
   position: relative;
   ${mq("IPadPro", "min")} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
