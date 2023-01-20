@@ -14,7 +14,6 @@ const useResize = function () {
         memoChangeDevice("mobile");
       } else {
         memoChangeDevice("desktop");
-        console.log("m");
       }
     }
 

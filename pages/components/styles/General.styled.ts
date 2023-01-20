@@ -85,6 +85,11 @@ export const LeftBorder = styled.div<BorderProps>`
 
   ${mq("desktopS", "min")} {
     display: block;
+    margin-left: 1rem;
+  }
+
+  ${mq("customX", "min")} {
+    margin-left: 0;
   }
 `;
 
@@ -103,6 +108,11 @@ export const RightBorder = styled.div<BorderProps>`
 
   ${mq("desktopS", "min")} {
     display: block;
+    margin-right: 1rem;
+  }
+
+  ${mq("customX", "min")} {
+    margin-right: 0;
   }
 
   ${({ theme }) => theme.borderAnim("Y")}

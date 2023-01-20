@@ -41,12 +41,7 @@ export default function Action() {
       classNames="show"
     >
       <StyledAction ref={actionElem} id="sec-services">
-        <SectionBorder
-          originX="left"
-          originY="top"
-          toggle={false}
-          section={1}
-        />
+        <SectionBorder originX="left" originY="top" toggle={true} section={1} />
         <ActionTextWrapper>
           <StyledTitle id="services">
             <h3>WHAT</h3>
