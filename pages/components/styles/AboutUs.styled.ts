@@ -4,7 +4,6 @@ import mq from "../../../utils/mq";
 
 export const AboutUsSection = styled.section`
   color: white;
-  border-top: 1px solid white;
 `;
 
 export const StyledMainDiv = styled.div`
@@ -12,17 +11,16 @@ export const StyledMainDiv = styled.div`
   margin: 0 3rem;
 `;
 
-export const StyledH1 = styled.h1`
+export const StyledH3 = styled.h3`
   position: relative;
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  font-family: ${({ theme }) => theme.headFont};
+  font-size: clamp(4.22rem, 17vw, 8rem);
+  font-family: ${({ theme }) => theme.headFont3};
   ${mq("tiny", "min")} {
     text-align: center;
     margin: 30px 0;
   }
   ${mq("custom1", "min")} {
-    margin: 30px 3rem;
-    text-align: left;
+    text-align: center;
   } ;
 `;
 
@@ -31,7 +29,7 @@ export const StyledUpperDiv = styled.div`
   ${mq("tiny", "min")} {
     margin: 0 1rem;
   }
-  ${mq("custom1", "min")} {
+  ${mq("desktopS", "min")} {
     margin: 0 3rem;
   } ;
 `;
@@ -114,8 +112,8 @@ export const StyledP = styled.p`
   } ;
 `;
 
-export const StyledH3 = styled.h3`
-  font-size: clamp(1.5rem, 2vw, 2rem);
+export const StyledH4 = styled.h4`
+  font-size: clamp(2rem, 2vw, 3rem);
   font-family: ${({ theme }) => theme.headFont};
 
   ${mq("tiny", "min")} {
@@ -134,19 +132,22 @@ export const StyledSubTextDiv = styled.div`
     width: 100%;
   }
   ${mq("custom3", "min")} {
-    width: 29%;
+    width: 31%;
   } ;
 `;
 
 export const StyledTextDiv = styled.div`
   display: flex;
+  margin: 0 1rem 40px 1rem;
 
   ${mq("tiny", "min")} {
     flex-direction: column;
-    margin: 0 1rem 40px 1rem;
   }
   ${mq("custom3", "min")} {
-    margin: 0 3rem 40px 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  ${mq("desktopS", "min")} {
     flex-direction: row;
     justify-content: space-between;
   } ;

@@ -1,19 +1,18 @@
 import { useState, useCallback, useEffect, useRef } from "react";
-import testimonials from "./testimonials";
+import carouselLogos from "./carouselLogos";
 import {
-  StyledPerson,
-  StyledTest,
-  StyledQuoteDiv,
+  StyledCarouselLogoDiv,
+  StyledCarouselLogo,
 } from "../styles/ClientHistory.styled";
 
 export default function TextCarousel() {
   const [counter, setCounter] = useState(0);
-  const [fadeProp, setFadeProp] = useState({ fade: "fade-in" });
+  const [transProp, setTransProp] = useState({ trans: "in" });
   const savedCallBack = useRef<() => void>(() => {});
 
   function callback() {
     let sum = counter + 1;
-    if (sum < 3) {
+    if (sum < carouselLogos.length) {
       setCounter(sum);
     } else {
       setCounter(0);
@@ -28,20 +27,20 @@ export default function TextCarousel() {
 
   useEffect(() => {
     function tick() {
-      setFadeProp({ fade: "fade-out" });
+      setTransProp({ trans: "out" });
       setTimeout(() => {
         savedCallBack.current();
-        setFadeProp({ fade: "fade-in" });
-      }, 1000);
+        setTransProp({ trans: "in" });
+      }, 1500);
     }
-    const id = setInterval(tick, 10000);
+
+    const id = setInterval(tick, 8000);
     return () => clearInterval(id);
   }, []);
 
   return (
-    <StyledQuoteDiv className={fadeProp.fade}>
-      <StyledTest>{testimonials[counter].statement}</StyledTest>
-      <StyledPerson>{testimonials[counter].person}</StyledPerson>
-    </StyledQuoteDiv>
+    <StyledCarouselLogoDiv className={transProp.trans}>
+      <StyledCarouselLogo src={carouselLogos[counter].img} alt="Brand Logo" />
+    </StyledCarouselLogoDiv>
   );
 }

@@ -9,27 +9,6 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
-export const BorderWrapper = styled.div`
-  ${mq("tiny", "min")} {
-    display: none;
-  }
-
-  ${mq("desktopS", "min")} {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-`;
-
-export const RelativeWrapper = styled.div`
-  position: relative;
-  height: 100%;
-  width: 100%;
-`;
-
 export const LeftBorder = styled.div`
   position: absolute;
   top: 0;
@@ -109,6 +88,8 @@ export const StyledHero__Intro = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__Middle = styled.div`
@@ -123,6 +104,8 @@ export const StyledHero__Middle = styled.div`
   & .bold {
     font-family: ${({ theme }) => theme.headFont3};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__End = styled.div`
@@ -143,6 +126,8 @@ export const StyledHero__End = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "300", "600")}
 `;
 
 export const StyledAction = styled.section`
@@ -151,11 +136,14 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 1600px;
   z-index: 2;
   position: relative;
+
+  ${({ theme }) => theme.showComp("show")}
+
   ${mq("IPadPro", "min")} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -281,9 +269,8 @@ export const TraitsContainer = styled.div`
 `;
 
 export const StyledWorkContainer = styled.div`
-  margin: 0 1rem;
-  ${mq("desktopS", "min")} {
-    margin: 0 3rem;
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
   }
 `;
 

@@ -8,7 +8,6 @@ interface WrapperProps {
 export const MaxWrapper = styled.div`
   width: 100%;
   height: 100%;
-
   ${mq("desktopS", "min")} {
     max-width: 1600px;
     margin: 0 auto;
@@ -70,7 +69,6 @@ export const ActionTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 2rem;
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
@@ -102,8 +100,13 @@ export const DescriptionWrapper = styled.div`
 export const MaxActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
     width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 3.1rem;
+  }
+
+  ${mq("desktopM", "min")} {
+    padding: 0;
   }
 `;
 export const ActionImageWrapper = styled.div`
