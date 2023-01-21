@@ -84,6 +84,7 @@ export default function Action() {
                 </span>
               </TraitsContainer>
               <Image
+                sizes="(min-width: 320px) 50vw, 100vw"
                 fill={true}
                 src="/imgs/services/branding.webp"
                 alt="Two girls at a Nate Photoshoot"
@@ -113,9 +114,10 @@ export default function Action() {
                 </span>
               </TraitsContainer>
               <Image
+                sizes="(min-width: 320px) 50vw, 100vw"
                 fill={true}
                 src="/imgs/services/exp-marketing.webp"
-                alt="Two girls at a Nate Photoshoot"
+                alt="Shopper at Nate Gift Express"
               />
             </ImageContainer>
             <ImageContainer>
@@ -139,9 +141,10 @@ export default function Action() {
                 </span>
               </TraitsContainer>
               <Image
+                sizes="(min-width: 320px) 50vw, 100vw"
                 fill={true}
                 src="/imgs/services/int-marketing.webp"
-                alt="Two girls at a Nate Photoshoot"
+                alt="SoundMint neon sign"
               />
             </ImageContainer>
             <ImageContainer>
@@ -168,9 +171,10 @@ export default function Action() {
                 </span>
               </TraitsContainer>
               <Image
+                sizes="(min-width: 320px) 50vw, 100vw"
                 fill={true}
                 src="/imgs/services/webdev.webp"
-                alt="Two girls at a Nate Photoshoot"
+                alt="Candid photo of two people at the OnlyNY event"
               />
             </ImageContainer>
           </ActionImageWrapper>

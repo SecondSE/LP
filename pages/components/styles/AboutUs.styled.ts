@@ -14,15 +14,15 @@ export const StyledMainDiv = styled.div`
 
 export const StyledH3 = styled.h3`
   position: relative;
-  font-size: clamp(4.22rem, 17vw, 8rem);
+  font-size: clamp(4.22rem, 14vw, 8rem);
   font-family: ${({ theme }) => theme.headFont3};
   ${mq("tiny", "min")} {
     text-align: center;
     margin: 30px 0;
   }
-  ${mq("custom1", "min")} {
-    text-align: center;
-  } ;
+  ${mq("desktopS", "min")} {
+    text-align: left;
+  }
 `;
 
 export const StyledUpperDiv = styled.div`

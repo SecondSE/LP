@@ -144,7 +144,7 @@ export const WorkWrapper = styled.section`
     width: 97%;
   }
   ${mq("desktopS", "min")} {
-    padding: 2rem 3rem 0 3rem;
+    padding-top: 2rem;
   }
 `;
 
