@@ -17,6 +17,7 @@ export const SCarouselWrapper = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
+
   & .left {
     font-size: 1.5rem;
     position: absolute;
@@ -36,6 +37,10 @@ export const SCarouselWrapper = styled.div`
       background-color: rgb(0 0 0);
       border-radius: 30px;
     }
+  }
+
+  ${mq("desktopS", "min")} {
+    padding: 0 1.1rem;
   }
 `;
 

@@ -48,8 +48,8 @@ export const StyledLowerDiv = styled.div`
   }
   ${mq("desktopS", "min")} {
     max-width: 1600px;
-    padding: 0 3rem;
-  } ;
+    padding: 0 1.1rem;
+  }
 `;
 
 export const StyledSmallImage = styled(Image)`

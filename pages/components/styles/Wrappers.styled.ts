@@ -125,7 +125,7 @@ export const ActionImageWrapper = styled.div`
   }
   ${mq("desktopS", "min")} {
     gap: 0;
-    margin: 0 auto;
+    margin: 0 1.1rem;
     max-width: 1600px;
   }
   & img {
