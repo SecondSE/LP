@@ -1,10 +1,7 @@
 import { StyledLink, FillImage } from "../styles/General.styled";
 import {
   EmailIcon,
-  TwitterIcon,
   LinkedInIcon,
-  InstagramIcon,
-  FacebookIcon,
   StyledSpanSection,
   StyledSocialMediaSection,
   IconWrapper,
@@ -21,10 +18,55 @@ import {
   StyledForm,
   StyledCopyrightDiv,
 } from "../styles/Footer.styled";
+import { StyledFormSent } from "../styles/Contact.styled";
 import LogoImg from "../../../public/imgs/sse-logo.png";
+import { useForm } from "@formspree/react";
+import { useState, useEffect, FormEvent } from "react";
+import { useRef } from "react";
 
 export default function Footer() {
   let year = new Date().getFullYear();
+
+  const [state, handleSubmit, reset] = useForm("xwkjpaoa");
+  const [visibility, setVisibility] = useState({ visibility: "accept" });
+
+  const formElem = useRef<HTMLFormElement>(null);
+
+  const [inputs, setInputs] = useState({
+    email: "",
+  });
+
+  let { succeeded } = state;
+
+  const handleOnChange = (event: any) => {
+    // event.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const myHandleSubmit = async function (e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    await handleSubmit(inputs);
+
+    if (succeeded) {
+      setInputs({
+        email: "",
+      });
+    } else {
+      return; // create validation logic
+    }
+
+    setVisibility({ visibility: "visible" });
+    setTimeout(() => {
+      if (succeeded) {
+        reset();
+      }
+      setVisibility({ visibility: "accept" });
+    }, 5000);
+  };
+
   return (
     <StyledFooter>
       <StyledFooterSection>
@@ -34,16 +76,20 @@ export default function Footer() {
               Enter your email to get occasional updates on new work, trends,
               and what we see happening in the brand world.
             </StyledParagraph>
-            <StyledForm action="" method="get">
+            <StyledForm ref={formElem} onSubmit={(e) => myHandleSubmit(e)}>
               <StyledInputEmail
+                className={visibility.visibility}
                 aria-describedby="email-form"
                 type="email"
-                name="name"
+                name="email"
                 id="name"
+                value={inputs.email}
                 placeholder="Email Address"
+                onChange={handleOnChange}
                 required
               />
               <StyledInputSubmit
+                disabled={state.submitting}
                 aria-label="Submit button to send email"
                 type="submit"
                 value="Submit"
@@ -60,13 +106,13 @@ export default function Footer() {
             <FillImage src={LogoImg} alt="This is the Logo of the site" />
           </LogoWrapper>
           <StyledSpanSection>
-            <StyledSpan>Hi@secondsightexperience.nyc</StyledSpan>
+            <StyledSpan>hi@secondsightexperience.nyc</StyledSpan>
             {/* <StyledSpan>Connect with us on Social Media!</StyledSpan> */}
           </StyledSpanSection>
           <StyledSocialMediaSection>
             <IconWrapper>
               <StyledLink
-                href="mailto:Hi@secondsightexperience.nyc"
+                href="mailto:hi@secondsightexperience.nyc"
                 aria-label="This link will open your email client"
               ></StyledLink>
               <EmailIcon />

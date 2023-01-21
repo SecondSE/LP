@@ -98,23 +98,23 @@ export const LinkedInIcon = styled(FaLinkedin)`
   width: 100%;
 `;
 
-export const InstagramIcon = styled(FaInstagram)`
-  color: grey;
-  height: 100%;
-  width: 100%;
-`;
+// export const InstagramIcon = styled(FaInstagram)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
 
-export const TwitterIcon = styled(FaTwitter)`
-  color: grey;
-  height: 100%;
-  width: 100%;
-`;
+// export const TwitterIcon = styled(FaTwitter)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
 
-export const FacebookIcon = styled(FaFacebook)`
-  color: grey;
-  height: 100%;
-  width: 100%;
-`;
+// export const FacebookIcon = styled(FaFacebook)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
 export const EmailIcon = styled(FaEnvelope)`
   color: grey;
   height: 100%;
@@ -188,13 +188,18 @@ export const StyledInputEmail = styled.input`
   padding-left: 2%;
   border: none;
   height: 30px;
+  color: black;
   justify-content: start;
+  & .accept {
+    border: 10px solid green;
+    box-shadow: 0 0 10px green;
+  }
   ${mq("tiny", "min")} {
     width: 100%;
   }
   ${mq("custom1", "min")} {
     width: 75%;
-  } ;
+  }
 `;
 
 export const StyledForm = styled.form`
