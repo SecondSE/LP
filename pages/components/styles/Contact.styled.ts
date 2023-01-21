@@ -2,7 +2,8 @@ import styled from "styled-components";
 import mq from "../../../utils/mq";
 
 export const StyledContactSection = styled.section`
-  border: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 `;
 
 export const StyledDiv = styled.div`
