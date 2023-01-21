@@ -142,3 +142,22 @@ export const StyledThankYou = styled.div`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(1rem, 5vw, 1.5rem);
 `;
+
+export const StyledFormSent = styled.div`
+  color: green;
+  font-size: 3rem;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.show {
+    display: inline-block;
+  }
+`;
+
+export const StyledFormDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
