@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import mq from "../../../utils/mq";
 
-export const StyledContactSection = styled.section``;
+export const StyledContactSection = styled.section`
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+`;
 
 export const StyledDiv = styled.div`
   display: flex;
@@ -138,4 +141,23 @@ export const StyledH4 = styled.h4`
 export const StyledThankYou = styled.div`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(1rem, 5vw, 1.5rem);
+`;
+
+export const StyledFormSent = styled.div`
+  color: green;
+  font-size: 3rem;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.show {
+    display: inline-block;
+  }
+`;
+
+export const StyledFormDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
