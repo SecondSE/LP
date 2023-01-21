@@ -40,7 +40,11 @@ export default function Header() {
         <StyledHeader ref={headElem} bg={colorChange}>
           <LogoWrapper>
             <Link href={"/"} aria-label="This is the logo of the site"></Link>
-            <StyledImage src={LogoImg} alt="This is the Logo of the site" />
+            <StyledImage
+              priority
+              src={LogoImg}
+              alt="This is the Logo of the site"
+            />
           </LogoWrapper>
           <MobileNav />
           <DesktopNav />
