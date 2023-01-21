@@ -19,6 +19,7 @@ export const BorderWrapper = styled.div`
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
   }
 `;
 
@@ -87,10 +88,6 @@ export const LeftBorder = styled.div<BorderProps>`
     display: block;
     margin-left: 1rem;
   }
-
-  ${mq("customX", "min")} {
-    margin-left: 0;
-  }
 `;
 
 export const RightBorder = styled.div<BorderProps>`
@@ -109,10 +106,6 @@ export const RightBorder = styled.div<BorderProps>`
   ${mq("desktopS", "min")} {
     display: block;
     margin-right: 1rem;
-  }
-
-  ${mq("customX", "min")} {
-    margin-right: 0;
   }
 
   ${({ theme }) => theme.borderAnim("Y")}
