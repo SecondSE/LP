@@ -183,7 +183,7 @@ export const StyledDescrip = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 1rem;
   font-family: ${({ theme }) => theme.thinFont};
 `;
@@ -247,7 +247,7 @@ export const TraitsContainer = styled.div`
   width: 100%;
   top: 25px;
   padding: 0 0.6rem;
-  justify-content: flex-end;
+  justify-content: center;
   font-family: ${({ theme }) => theme.mainFont};
   & span {
     border-bottom: 1px solid white;
@@ -256,22 +256,16 @@ export const TraitsContainer = styled.div`
       font-size: clamp(1rem, 1.5vw + 1rem, 1.16rem);
     }
     ${mq("tablet", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
-    }
-    ${mq("desktopS", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.47rem);
     }
   }
-  ${mq("desktopS", "min")} {
-    justify-content: center;
+  ${mq("tablet", "min")} {
     top: 45px;
   }
 `;
 
 export const StyledWorkContainer = styled.div`
-  ${mq("tiny", "min")} {
-    margin: 0 1rem;
-  }
+  width: 100%;
 `;
 
 export const StyledWorkTitle = styled.div`
@@ -286,6 +280,7 @@ export const StyledWorkTitle = styled.div`
   }
   ${mq("desktopS", "min")} {
     text-align: left;
+    padding: 0 2rem;
   }
 `;
 
@@ -294,9 +289,12 @@ export const StyledWorkDescrip = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-family: ${({ theme }) => theme.thinFont};
   text-align: center;
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   & p {
     padding: 0 1rem;
     margin-bottom: 1rem;
@@ -304,6 +302,7 @@ export const StyledWorkDescrip = styled.div`
   ${mq("desktopS", "min")} {
     flex-direction: row;
     text-align: left;
+    padding: 0 1rem;
   }
 `;
 
