@@ -18,8 +18,7 @@ import {
   StyledForm,
   StyledCopyrightDiv,
 } from "../styles/Footer.styled";
-import { StyledFormSent } from "../styles/Contact.styled";
-import LogoImg from "../../../public/imgs/sse-logo.png";
+import LogoImg from "../../public/imgs/sse-logo.png";
 import { useForm } from "@formspree/react";
 import { useState, useEffect, FormEvent } from "react";
 import { useRef } from "react";

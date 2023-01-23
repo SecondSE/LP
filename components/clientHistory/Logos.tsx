@@ -7,12 +7,12 @@ import {
   StyledNateImage,
   StyledLogoDiv,
 } from "../styles/ClientHistory.styled";
-import bBClubImg from "../../../public/imgs/clients/bBClub.svg";
-import NateImg from "../../../public/imgs/clients/Nate.png";
-import onlyNYImg from "../../../public/imgs/clients/onlyNY.png";
-import soundMintImg from "../../../public/imgs/clients/soundMint.png";
-import trapNationImg from "../../../public/imgs/clients/trapNation.png";
-import whaleBoneImg from "../../../public/imgs/clients/whaleBone.png";
+import bBClubImg from "../../public/imgs/clients/bBClub.svg";
+import NateImg from "../../public/imgs/clients/Nate.png";
+import onlyNYImg from "../../public/imgs/clients/onlyNY.png";
+import soundMintImg from "../../public/imgs/clients/soundMint.png";
+import trapNationImg from "../../public/imgs/clients/trapNation.png";
+import whaleBoneImg from "../../public/imgs/clients/whaleBone.png";
 
 export default function Logos() {
   return (

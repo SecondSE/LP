@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { StyledHeader, StyledImage } from "../styles/Header.styled";
 import { MaxHeaderWrapper, LogoWrapper } from "../styles/Wrappers.styled";
 //@ts-ignore
-import LogoImg from "../../../public/imgs/sse-logo.png";
+import LogoImg from "../../public/imgs/sse-logo.png";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 

@@ -12,7 +12,7 @@ import {
   StyledHero__Middle,
   StyledHero__End,
 } from "../styles/Main.styled";
-import sanHolo from "../../../public/imgs/hero/sanholo.webp";
+import sanHolo from "../../public/imgs/hero/sanholo.webp";
 import { HeroWrapper, ImageWrapper } from "../styles/Wrappers.styled";
 import GlobalContext from "../../context/global/GlobalContext";
 export default function Hero() {
