@@ -12,33 +12,44 @@ export const StyledMainDiv = styled.div`
   margin: 0 3rem;
 `;
 
-export const StyledH1 = styled.h1`
+export const StyledH3 = styled.h3`
   position: relative;
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  font-family: ${({ theme }) => theme.headFont};
+  font-size: clamp(4.22rem, 14vw, 8rem);
+  font-family: ${({ theme }) => theme.headFont3};
   ${mq("tiny", "min")} {
     text-align: center;
-    margin: 30px 1rem 30px 1rem;
+    margin: 30px 0;
   }
-  ${mq("custom1", "min")} {
-    margin: 30px 3rem 30px 3rem;
+  ${mq("desktopS", "min")} {
     text-align: left;
+  }
+`;
+
+export const StyledUpperDiv = styled.div`
+  max-width: 1600px;
+  ${mq("tiny", "min")} {
+    margin: 0 1rem;
+  }
+  ${mq("desktopS", "min")} {
+    margin: 0 3rem;
   } ;
 `;
 
-export const StyledUpperDiv = styled.div``;
-
 export const StyledLowerDiv = styled.div`
-  border-top: 1px solid white;
   display: flex;
-  margin: auto;
+
   ${mq("tiny", "min")} {
     flex-direction: column;
+    width: 100%;
   }
   ${mq("custom1", "min")} {
     max-height: 33vw;
     flex-direction: row;
-  } ;
+  }
+  ${mq("desktopS", "min")} {
+    max-width: 1600px;
+    padding: 0 1.1rem;
+  }
 `;
 
 export const StyledSmallImage = styled(Image)`
@@ -49,6 +60,7 @@ export const StyledSmallImage = styled(Image)`
 export const StyledSmallImageB = styled(Image)`
   height: 50%;
   width: 100%;
+  border-top: 1px solid white;
   ${mq("tiny", "min")} {
   }
   ${mq("custom1", "min")} {
@@ -80,14 +92,18 @@ export const StyledBigImageDiv = styled.div`
 
 export const StyledBigImage = styled(Image)`
   object-fit: contain;
-  height: 100%;
+  border-top: 1px solid white;
+
+  height: 99.5%;
   width: 100%;
 `;
 
 export const StyledP = styled.p`
-  font-size: clamp(16px, 4vw, 1.5rem);
-  font-family: ${({ theme }) => theme.mainFont};
-  word-spacing: 0.25rem;
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   width: 100%;
   ${mq("tiny", "min")} {
     text-align: center;
@@ -97,8 +113,8 @@ export const StyledP = styled.p`
   } ;
 `;
 
-export const StyledH3 = styled.h3`
-  font-size: clamp(1.5rem, 2vw, 2rem);
+export const StyledH4 = styled.h4`
+  font-size: clamp(2rem, 2vw, 3rem);
   font-family: ${({ theme }) => theme.headFont};
 
   ${mq("tiny", "min")} {
@@ -117,19 +133,22 @@ export const StyledSubTextDiv = styled.div`
     width: 100%;
   }
   ${mq("custom3", "min")} {
-    width: 29%;
+    width: 31%;
   } ;
 `;
 
 export const StyledTextDiv = styled.div`
   display: flex;
+  margin: 0 1rem 40px 1rem;
 
   ${mq("tiny", "min")} {
     flex-direction: column;
-    margin: 0 1rem 40px 1rem;
   }
   ${mq("custom3", "min")} {
-    margin: 0 3rem 40px 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  ${mq("desktopS", "min")} {
     flex-direction: row;
     justify-content: space-between;
   } ;

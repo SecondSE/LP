@@ -2,8 +2,10 @@ import styled from "styled-components";
 import mq from "../../../utils/mq";
 
 export const StyledContactSection = styled.section`
-  border-top: 1px solid white;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 `;
+
 export const StyledDiv = styled.div`
   display: flex;
   max-width: 1600px;
@@ -61,7 +63,15 @@ export const StyledInputSubmit = styled.input`
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
+  &:hover {
+    color: #1d1d1d;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 100px;
+    transition: 0.4s;
+  }
 `;
+
 export const StyledInput = styled.input`
   background-color: transparent;
   color: white;
@@ -69,7 +79,7 @@ export const StyledInput = styled.input`
   border: 1px white solid;
   height: 40px;
   width: 100%;
-  padding-left: 1rem;
+  padding-left: 2%;
 `;
 export const StyledTextArea = styled.textarea`
   height: 140px;
@@ -77,7 +87,7 @@ export const StyledTextArea = styled.textarea`
   color: white;
   font-size: clamp(14px, 4vw, 1.4rem);
   border: 1px white solid;
-  padding-left: 0.5rem;
+  padding-left: 2%;
 `;
 export const StyledLabel = styled.label`
   color: white;
@@ -115,19 +125,40 @@ export const StyledForm = styled.form`
 export const StyledInputName = styled(StyledInput)`
   margin-right: 20px;
 `;
-export const StyledH1 = styled.h1`
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  font-family: ${({ theme }) => theme.headFont};
+export const StyledH3 = styled.h3`
+  font-size: clamp(4.22rem, 17vw, 8rem);
+  font-family: ${({ theme }) => theme.headFont3};
   text-align: center;
+  margin: 0 1rem;
 `;
-export const StyledH2 = styled.h2`
-  font-size: clamp(2rem, 6vw, 2rem);
-  font-family: ${({ theme }) => theme.headFont};
-  margin-top: 20px;
+export const StyledH4 = styled.h4`
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-family: ${({ theme }) => theme.headFont3};
+  margin: 20px 1rem 0 1rem;
   text-align: center;
 `;
 
 export const StyledThankYou = styled.div`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(1rem, 5vw, 1.5rem);
+`;
+
+export const StyledFormSent = styled.div`
+  color: white;
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(1rem, 5vw, 1.5rem);
+
+  &.hidden {
+    display: none;
+  }
+
+  &.show {
+    display: inline-block;
+  }
+`;
+
+export const StyledFormDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

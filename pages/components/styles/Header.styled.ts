@@ -3,7 +3,7 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../../utils/mq";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 interface WrapperProps {
   bg: boolean;
@@ -21,6 +21,8 @@ export const StyledHeader = styled.div<WrapperProps>`
     padding: 0 3rem;
     margin: 0 auto;
   }
+
+  ${({ theme }) => theme.showComp("show1")}
 `;
 
 export const StyledImage = styled(Image)`
@@ -31,8 +33,9 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledMobileNav = styled.nav`
-  padding-right: 0.5rem;
   ${mq("tablet", "min")} {
+    position: absolute;
+    right: 2%;
     display: none;
   }
 `;
@@ -51,9 +54,9 @@ export const MobileNavList = styled.ul`
   font-size: 2rem;
   list-style-type: none;
   height: calc(3rem + 100vh);
-  width: 50%;
+  width: calc(0.5rem + 100vw);
   position: absolute;
-  top: -1.5rem;
+  top: -2.5rem;
   right: 0;
   z-index: 1;
   display: flex;
@@ -68,6 +71,16 @@ export const MobileNavListItem = styled.li`
   margin-bottom: 3rem;
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
+  }
+  & a {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
   }
 `;
 
@@ -89,19 +102,20 @@ export const DesktopNavList = styled.ul`
 
 export const DesktopNavListItem = styled.li`
   position: relative;
+  z-index: 0;
+  & a {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
   ${mq("tablet", "min")} {
     margin: 0 1rem 0 0;
   }
-`;
-
-export const NavListLink = styled(Link)`
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
 `;
 
 export const StyledHamburger = styled(RxHamburgerMenu)`

@@ -9,27 +9,6 @@ export const StyledMain = styled.main`
   position: relative;
 `;
 
-export const BorderWrapper = styled.div`
-  ${mq("tiny", "min")} {
-    display: none;
-  }
-
-  ${mq("desktopS", "min")} {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-`;
-
-export const RelativeWrapper = styled.div`
-  position: relative;
-  height: 100%;
-  width: 100%;
-`;
-
 export const LeftBorder = styled.div`
   position: absolute;
   top: 0;
@@ -109,6 +88,8 @@ export const StyledHero__Intro = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__Middle = styled.div`
@@ -123,6 +104,8 @@ export const StyledHero__Middle = styled.div`
   & .bold {
     font-family: ${({ theme }) => theme.headFont3};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
 `;
 
 export const StyledHero__End = styled.div`
@@ -143,6 +126,8 @@ export const StyledHero__End = styled.div`
   & .ampersand {
     font-family: ${({ theme }) => theme.thinFont};
   }
+
+  ${({ theme }) => theme.opaTranslate("X", "300", "600")}
 `;
 
 export const StyledAction = styled.section`
@@ -151,11 +136,14 @@ export const StyledAction = styled.section`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 1600px;
   z-index: 2;
   position: relative;
+
+  ${({ theme }) => theme.showComp("show")}
+
   ${mq("IPadPro", "min")} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -166,13 +154,14 @@ export const StyledTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont3};
   ${mq("desktopS", "min")} {
-    padding-left: 3rem;
-    width: 62%;
+    padding-left: 6rem;
+    width: 63%;
     align-items: flex-start;
   }
   & h3 {
+    line-height: 1;
     font-size: clamp(4.22rem, 17vw, 8rem);
   }
   & span {
@@ -194,7 +183,7 @@ export const StyledDescrip = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 1rem;
   font-family: ${({ theme }) => theme.thinFont};
 `;
@@ -202,7 +191,7 @@ export const StyledDescrip = styled.div`
 export const ColorLayer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(29, 29, 29, 0.5);
+  background-color: rgba(29, 29, 29, 0.7);
   position: absolute;
 `;
 
@@ -254,34 +243,29 @@ export const TraitsContainer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 91%;
+  height: 95%;
   width: 100%;
   top: 25px;
   padding: 0 0.6rem;
-  justify-content: flex-end;
-  font-family: ${({ theme }) => theme.thinFont};
-  /* display: none; */
+  justify-content: center;
+  font-family: ${({ theme }) => theme.mainFont};
   & span {
     border-bottom: 1px solid white;
     margin-bottom: 0.7rem;
     ${mq("tiny", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.16rem);
     }
     ${mq("tablet", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.4rem);
-    }
-    ${mq("desktopS", "min")} {
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+      font-size: clamp(1rem, 1.5vw + 1rem, 1.47rem);
     }
   }
-  ${mq("desktopS", "min")} {
-    justify-content: center;
+  ${mq("tablet", "min")} {
     top: 45px;
   }
 `;
 
 export const StyledWorkContainer = styled.div`
-  margin: 0 3rem;
+  width: 100%;
 `;
 
 export const StyledWorkTitle = styled.div`
@@ -296,6 +280,7 @@ export const StyledWorkTitle = styled.div`
   }
   ${mq("desktopS", "min")} {
     text-align: left;
+    padding: 0 2rem;
   }
 `;
 
@@ -304,9 +289,12 @@ export const StyledWorkDescrip = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-family: ${({ theme }) => theme.thinFont};
   text-align: center;
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   & p {
     padding: 0 1rem;
     margin-bottom: 1rem;
@@ -314,6 +302,7 @@ export const StyledWorkDescrip = styled.div`
   ${mq("desktopS", "min")} {
     flex-direction: row;
     text-align: left;
+    padding: 0 1rem;
   }
 `;
 

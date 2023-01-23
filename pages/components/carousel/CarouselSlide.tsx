@@ -15,6 +15,7 @@ const CarouselSlide: React.FC<SlideProps> = function ({ ind, img, alt }) {
         src={img}
         alt={alt}
         fill={true}
+        sizes="(min-width: 320px) 50vw, 100vw"
       />
     </SlideImageWrapper>
   );

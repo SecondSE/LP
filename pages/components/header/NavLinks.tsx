@@ -1,9 +1,4 @@
-import {
-  MobileNavList,
-  MobileNavListItem,
-  NavListLink,
-} from "../styles/Header.styled";
-import { MenuWrapper } from "../styles/Wrappers.styled";
+import { MobileNavList, MobileNavListItem } from "../styles/Header.styled";
 import { Link } from "react-scroll";
 
 interface NavLinkProps {
@@ -16,38 +11,48 @@ const NavLinks: React.FC<NavLinkProps> = function ({
   closeMobileMenu,
 }) {
   return (
-    <MenuWrapper>
-      <MobileNavList>
-        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-          SERVICES
-          <NavListLink
-            href="#services"
-            aria-label="navigation link to services section"
-          />
-        </MobileNavListItem>
-        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-          ABOUT
-          <NavListLink
-            href="#about"
-            aria-label="navigation link to about section"
-          />
-        </MobileNavListItem>
-        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-          WORK
-          <NavListLink
-            href="#work"
-            aria-label="navigation link to work section"
-          />
-        </MobileNavListItem>
-        <MobileNavListItem onClick={() => isMobile && closeMobileMenu()}>
-          CONTACT
-          <NavListLink
-            href="#contact"
-            aria-label="navigation link to contact section"
-          />
-        </MobileNavListItem>
-      </MobileNavList>
-    </MenuWrapper>
+    <MobileNavList>
+      <MobileNavListItem>
+        SERVICES
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-services"
+          smooth={true}
+          offset={-50}
+          duration={500}
+        />
+      </MobileNavListItem>
+      <MobileNavListItem>
+        WORK
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-work"
+          smooth={true}
+          offset={-50}
+          duration={500}
+        />
+      </MobileNavListItem>
+      <MobileNavListItem>
+        ABOUT
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-about"
+          smooth={true}
+          offset={-80}
+          duration={500}
+        />
+      </MobileNavListItem>
+      <MobileNavListItem>
+        CONTACT
+        <Link
+          onClick={() => isMobile && closeMobileMenu()}
+          to="sec-contact"
+          smooth={true}
+          offset={-95}
+          duration={500}
+        />
+      </MobileNavListItem>
+    </MobileNavList>
   );
 };
 export default NavLinks;

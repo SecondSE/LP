@@ -14,21 +14,21 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     {
       device: "",
       init: true,
-      section1: true,
-      section2: false,
-      section3: false,
-      section4: false,
+      secCount: 0,
       memoInitDevice: () => {},
       memoActivateAnim: () => {},
+      memoChangeSection: () => {},
       memoChangeDevice: () => {},
     }
   );
 
-  const memoActivateAnim = useMemo(() => activateAnim, []);
-
   const memoInitDevice = useMemo(() => initDevice, []);
 
   const memoChangeDevice = useMemo(() => changeDevice, []);
+
+  const memoChangeSection = useMemo(() => changeSection, []);
+
+  const memoActivateAnim = useMemo(() => activateAnim, []);
 
   return (
     <GlobalContext.Provider
@@ -36,6 +36,7 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
         ...state,
         memoInitDevice,
         memoActivateAnim,
+        memoChangeSection,
         memoChangeDevice,
         dispatch,
       }}
@@ -58,27 +59,18 @@ const GlobalProvider: React.FC<ProviderProps> = function ({ children }) {
     });
   }
 
-  function activateAnim(section: string) {
-    if (section === "section1") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section1",
-      });
-    }
+  function changeSection(section: number) {
+    return dispatch({
+      type: "CHANGE_SECTION",
+      data: section,
+    });
+  }
 
-    if (section === "section2") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section2",
-      });
-    }
-
-    if (section === "section3") {
-      return dispatch({
-        type: "ACTIVATE_ANIM",
-        data: "section3",
-      });
-    }
+  function activateAnim(section: number) {
+    return dispatch({
+      type: "ACTIVATE_ANIM",
+      data: section,
+    });
   }
 };
 

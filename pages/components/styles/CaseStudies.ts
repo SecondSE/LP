@@ -29,7 +29,7 @@ export const TextWrapper = styled.div`
   }
 
   ${mq("desktopS", "min")} {
-    width: 40%;
+    width: 48%;
   }
 `;
 
@@ -47,8 +47,8 @@ export const CaseTitle = styled.h2`
 
   ${mq("desktopS", "min")} {
     text-align: left;
-    margin: 1rem auto;
-    width: 70%;
+    /* margin: 1rem auto;
+    width: 70%; */
     font-size: ${({ theme }) => theme.head1};
   }
 `;
@@ -60,12 +60,11 @@ export const CaseText = styled.p`
     font-size: ${({ theme }) => theme.regSize};
     text-align: center;
     margin: 1.5rem auto;
-    width: 80%;
   }
 
   ${mq("tablet", "min")} {
     font-size: ${({ theme }) => theme.head3};
-    width: 70%;
+    width: 95%;
   }
 
   ${mq("desktopS", "min")} {
@@ -100,8 +99,8 @@ export const CaseList = styled.ul`
   ${mq("tiny", "min")} {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     margin: 1rem auto;
   }
 
@@ -114,9 +113,6 @@ export const CaseList = styled.ul`
 
 export const ListItem = styled.li`
   list-style: none;
-  ${mq("tiny", "min")} {
-    margin: 0 auto;
-  }
 
   ${mq("desktopS", "min")} {
     margin: 0;
@@ -131,7 +127,7 @@ export const ImagesWrapper = styled.div`
   }
 
   ${mq("desktopS", "min")} {
-    width: 60%;
+    width: 48%;
   }
 `;
 

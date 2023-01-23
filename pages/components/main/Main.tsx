@@ -14,7 +14,6 @@ export default function Main() {
   useLoad();
   useResize();
   useScroll();
-
   return (
     <CaseProvider>
       <StyledMain>

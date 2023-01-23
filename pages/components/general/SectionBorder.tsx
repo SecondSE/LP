@@ -1,19 +1,64 @@
+import { useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 import {
   BorderWrapper,
   LeftBorder,
   RelativeWrapper,
   RightBorder,
-} from "../styles/Main.styled";
+  TopBorder,
+} from "../styles/General.styled";
 
 import { MaxWrapper } from "../styles/Wrappers.styled";
 
-const SectionBorder: React.FC = function () {
+interface BorderProps {
+  toggle: boolean;
+  originX: string;
+  originY: string;
+  section: number;
+}
+
+const SectionBorder: React.FC<BorderProps> = function ({
+  originX = "right",
+  originY = "top",
+  toggle,
+  section,
+}) {
+  const lBorder = useRef<HTMLDivElement>(null);
+  const rBorder = useRef<HTMLDivElement>(null);
+  const tBorder = useRef<HTMLDivElement>(null);
   return (
     <BorderWrapper>
       <MaxWrapper>
         <RelativeWrapper>
-          <LeftBorder />
-          <RightBorder />
+          {section !== 0 ? (
+            <CSSTransition
+              nodeRef={tBorder}
+              in={toggle}
+              appear={toggle}
+              timeout={1000}
+              classNames="anim"
+            >
+              <TopBorder ref={tBorder} origin={originX} />
+            </CSSTransition>
+          ) : null}
+          <CSSTransition
+            nodeRef={lBorder}
+            in={toggle}
+            appear={toggle}
+            timeout={1000}
+            classNames="anim"
+          >
+            <LeftBorder ref={lBorder} origin={originY} />
+          </CSSTransition>
+          <CSSTransition
+            nodeRef={rBorder}
+            in={toggle}
+            appear={toggle}
+            timeout={1000}
+            classNames="anim"
+          >
+            <RightBorder ref={rBorder} origin={originY} />
+          </CSSTransition>
         </RelativeWrapper>
       </MaxWrapper>
     </BorderWrapper>

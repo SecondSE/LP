@@ -1,5 +1,10 @@
 import { Action, AppType } from "../../customTypes";
-import { ACTIVATE_ANIM, CHANGE_DEVICE, INIT_DEVICE } from "./types";
+import {
+  ACTIVATE_ANIM,
+  CHANGE_DEVICE,
+  CHANGE_SECTION,
+  INIT_DEVICE,
+} from "./types";
 
 const globalReducer = function (prevState: AppType, { type, data }: Action) {
   switch (type) {
@@ -9,12 +14,6 @@ const globalReducer = function (prevState: AppType, { type, data }: Action) {
         device: data,
         init: false,
       };
-    case ACTIVATE_ANIM:
-      return {
-        ...prevState,
-        [data]: true,
-      };
-
     case CHANGE_DEVICE:
       if (prevState.init) {
         return {
@@ -24,6 +23,16 @@ const globalReducer = function (prevState: AppType, { type, data }: Action) {
       return {
         ...prevState,
         device: data,
+      };
+    case CHANGE_SECTION:
+      return {
+        ...prevState,
+        secCount: data,
+      };
+    case ACTIVATE_ANIM:
+      return {
+        ...prevState,
+        secCount: data,
       };
 
     default:

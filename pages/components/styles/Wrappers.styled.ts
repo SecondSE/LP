@@ -8,7 +8,6 @@ interface WrapperProps {
 export const MaxWrapper = styled.div`
   width: 100%;
   height: 100%;
-
   ${mq("desktopS", "min")} {
     max-width: 1600px;
     margin: 0 auto;
@@ -50,15 +49,6 @@ export const HamburgerWrapper = styled.div`
   }
 `;
 
-export const MenuWrapper = styled.div`
-  width: 100vw;
-  height: calc(3rem + 100vh);
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-`;
-
 export const HeroWrapper = styled.div`
   max-width: 1600px;
   height: 99.9%;
@@ -79,7 +69,6 @@ export const ActionTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 2rem 0;
   max-width: 1600px;
   ${mq("desktopS", "min")} {
     flex-direction: row;
@@ -94,22 +83,30 @@ export const DescriptionWrapper = styled.div`
   padding: 0 1rem;
   align-items: center;
   text-align: center;
-  font-family: ${({ theme }) => theme.mainFont};
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   ${mq("tablet", "min")} {
     padding: 0 3rem;
   }
   ${mq("desktopS", "min")} {
     border-left: solid 1px white;
-    width: 32%;
-    padding: 2rem 0 2rem 2rem;
+    width: 37%;
+    padding: 2rem 3rem 2rem 2rem;
     text-align: left;
   }
 `;
 
 export const MaxActionImageWrapper = styled.div`
   ${mq("desktopS", "min")} {
-    width: 91.6%;
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
+    padding: 0 3.1rem;
+  }
+
+  ${mq("desktopM", "min")} {
+    padding: 0;
   }
 `;
 export const ActionImageWrapper = styled.div`
@@ -120,9 +117,15 @@ export const ActionImageWrapper = styled.div`
   max-width: 900px;
   margin: 0 auto;
   gap: 1rem;
+  position: relative;
+  & .action-border {
+    top: -3px;
+    left: -58px;
+    width: 108%;
+  }
   ${mq("desktopS", "min")} {
     gap: 0;
-    margin: 0 auto;
+    margin: 0 1.1rem;
     max-width: 1600px;
   }
   & img {
@@ -134,9 +137,14 @@ export const ActionImageWrapper = styled.div`
 export const WorkWrapper = styled.section`
   padding-top: 2rem;
   width: 100%;
+  position: relative;
+  & .work-border {
+    top: 4px;
+    left: 24px;
+    width: 97%;
+  }
   ${mq("desktopS", "min")} {
-    border-top: 1px solid white;
-    padding: 2rem 3rem 0 3rem;
+    padding-top: 2rem;
   }
 `;
 

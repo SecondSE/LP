@@ -17,10 +17,13 @@ export const SCarouselWrapper = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
+
   & .left {
     font-size: 1.5rem;
     position: absolute;
     bottom: 45%;
+    background-color: rgb(0 0 0);
+    border-radius: 30px;
     ${mq("tiny", "min")} {
       left: 10px;
     }
@@ -31,7 +34,13 @@ export const SCarouselWrapper = styled.div`
     bottom: 45%;
     ${mq("tiny", "min")} {
       right: 10px;
+      background-color: rgb(0 0 0);
+      border-radius: 30px;
     }
+  }
+
+  ${mq("desktopS", "min")} {
+    padding: 0 1.1rem;
   }
 `;
 
@@ -43,6 +52,9 @@ export const SCarouselSlide = styled.div<ICarouselSlide>`
   width: 100%;
   height: 100%;
   z-index: 0;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const SCarouselSlides = styled.div<ICarouselProps>`
@@ -81,7 +93,22 @@ export const CarouselTitle = styled.h2`
   top: 10%;
   left: 5%;
   font-family: ${({ theme }) => theme.headFont2};
-  width: 206px;
+  padding: 1rem;
+  background-color: black;
+  box-shadow: -12px 7px 2px #1d1d1d;
+  border-radius: 3px;
+  ${mq("tiny", "min")} {
+    width: 169px;
+  }
+  ${mq("phoneMed", "min")} {
+    width: 200px;
+  }
+  ${mq("tablet", "min")} {
+    width: 240px;
+  }
+  ${mq("desktopS", "min")} {
+    width: 260px;
+  }
 
   z-index: 1;
   ${mq("tiny", "min")} {

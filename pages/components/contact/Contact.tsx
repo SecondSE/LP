@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import GlobalContext from "../../../context/global/GlobalContext";
+import SectionBorder from "../general/SectionBorder";
 import {
-  StyledH2,
-  StyledH1,
+  StyledH4,
+  StyledH3,
   StyledDiv,
   StyledLeftSection,
   StyledContactSection,
@@ -9,16 +12,25 @@ import {
 import Form from "./Form";
 
 export default function Contact() {
+  const globalContext = useContext(GlobalContext);
+
+  const { secCount } = globalContext;
+
   return (
-    <StyledContactSection id="Contact">
+    <StyledContactSection id="sec-contact">
+      <SectionBorder
+        originX="left"
+        originY="top"
+        toggle={secCount >= 4}
+        section={0}
+      />
       <StyledDiv>
         <StyledLeftSection>
           <Form />
         </StyledLeftSection>
-
         <StyledRightSection>
-          <StyledH1 id="contact">LET&apos;S TALK</StyledH1>
-          <StyledH2>NEW BUSINESS</StyledH2>
+          <StyledH3 id="contact">LET&apos;S TALK</StyledH3>
+          <StyledH4>NEW BUSINESS</StyledH4>
           {/* <h2>nick@secondsight.com</h2> */}
         </StyledRightSection>
       </StyledDiv>

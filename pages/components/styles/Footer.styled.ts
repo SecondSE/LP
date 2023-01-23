@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+  FaEnvelope,
+} from "react-icons/fa";
 import mq from "../../../utils/mq";
 
 export const StyledFooter = styled.footer`
@@ -10,9 +16,9 @@ export const StyledFooterSection = styled.section`
   display: flex;
   height: auto;
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   ${mq("tiny", "min")} {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   ${mq("custom1", "min")} {
     padding: 0 1rem;
@@ -43,11 +49,10 @@ export const StyledRightSection = styled.section`
   flex-direction: column;
   align-items: center;
   ${mq("tiny", "min")} {
-    margin: auto;
+    margin: 0 1rem 20px 1rem;
   }
   ${mq("custom1", "min")} {
     width: 50%;
-    margin: 40px auto auto auto;
   } ;
 `;
 
@@ -55,7 +60,6 @@ export const StyledSpanSection = styled.section`
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: 20px;
   ${mq("tiny", "min")} {
     align-items: center;
   }
@@ -67,11 +71,10 @@ export const StyledSpanSection = styled.section`
 export const LogoWrapper = styled.div`
   position: relative;
   width: 160px;
+  height: 31px;
   ${mq("tiny", "min")} {
-    margin: 25px auto 15px auto;
   }
   ${mq("custom1", "min")} {
-    margin: 25px 0 15px 0;
   }
 `;
 
@@ -84,7 +87,9 @@ export const IconWrapper = styled.div`
 export const StyledSocialMediaSection = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  gap: 30px;
+  align-items: end;
+  width: 100%;
 `;
 
 export const LinkedInIcon = styled(FaLinkedin)`
@@ -93,22 +98,31 @@ export const LinkedInIcon = styled(FaLinkedin)`
   width: 100%;
 `;
 
-export const InstagramIcon = styled(FaInstagram)`
-  color: grey;
-  height: 100%;
-  width: 100%;
-`;
+// export const InstagramIcon = styled(FaInstagram)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
 
-export const TwitterIcon = styled(FaTwitter)`
-  color: grey;
-  height: 100%;
-  width: 100%;
-`;
+// export const TwitterIcon = styled(FaTwitter)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
 
-export const FacebookIcon = styled(FaFacebook)`
+// export const FacebookIcon = styled(FaFacebook)`
+//   color: grey;
+//   height: 100%;
+//   width: 100%;
+// `;
+export const EmailIcon = styled(FaEnvelope)`
   color: grey;
   height: 100%;
   width: 100%;
+  &:hover {
+    transition: 0.3s;
+    transform: translateY(-30%);
+  }
 `;
 
 export const StyledCopyright = styled.span`
@@ -126,8 +140,11 @@ export const StyledCopyrightDiv = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
-  font-family: ${({ theme }) => theme.mainFont};
-  font-size: clamp(16px, 4vw, 1.2rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(0.8em, 17vw, 1.2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   max-width: 285px;
   min-width: 200px;
   margin-bottom: 15px;
@@ -135,10 +152,13 @@ export const StyledParagraph = styled.p`
 `;
 
 export const StyledSpan = styled.span`
-  font-family: ${({ theme }) => theme.mainFont};
-  font-size: clamp(16px, 4vw, 1.2rem);
+  font-family: ${({ theme }) => theme.thinFont};
+  font-size: clamp(0.8em, 17vw, 1.2rem);
+  word-spacing: 1px;
+  line-height: 1.1;
+  letter-spacing: 1px;
   display: inline-block;
-  margin-top: 20px;
+  margin: 10px 0 10px 0;
 `;
 
 export const StyledInputSubmit = styled.input`
@@ -151,21 +171,36 @@ export const StyledInputSubmit = styled.input`
   font-size: 1rem;
   ${mq("custom1", "min")} {
     margin-left: 10px;
-  } ;
+  }
+  &:hover {
+    color: #1d1d1d;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 60px;
+    height: 30px;
+    transition: 0.4s;
+  }
 `;
 
 export const StyledInputEmail = styled.input`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(16px, 4vw, 1rem);
+  padding-left: 2%;
   border: none;
   height: 30px;
+  color: black;
   justify-content: start;
+  //need to use something like accept:focus
+  & .accept {
+    border: 10px solid green;
+    box-shadow: 0 0 10px green;
+  }
   ${mq("tiny", "min")} {
     width: 100%;
   }
   ${mq("custom1", "min")} {
     width: 75%;
-  } ;
+  }
 `;
 
 export const StyledForm = styled.form`
