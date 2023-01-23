@@ -190,6 +190,7 @@ export const StyledInputEmail = styled.input`
   height: 30px;
   color: black;
   justify-content: start;
+  //need to use something like accept:focus
   & .accept {
     border: 10px solid green;
     box-shadow: 0 0 10px green;

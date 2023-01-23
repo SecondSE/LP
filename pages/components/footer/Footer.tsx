@@ -27,7 +27,7 @@ import { useRef } from "react";
 export default function Footer() {
   let year = new Date().getFullYear();
 
-  const [state, handleSubmit, reset] = useForm("xwkjpaoa");
+  const [state, handleSubmit, reset] = useForm("xnqweapp");
   const [visibility, setVisibility] = useState({ visibility: "accept" });
 
   const formElem = useRef<HTMLFormElement>(null);

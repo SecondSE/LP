@@ -12,12 +12,13 @@ import {
   StyledFormSent,
   StyledFormDiv,
 } from "../styles/Contact.styled";
-
 import { useForm } from "@formspree/react";
 import { useState, useEffect, FormEvent } from "react";
 
 export default function Form() {
-  const [state, handleSubmit, reset] = useForm("xwkjpaoa");
+  const [state, handleSubmit, reset] = useForm(
+    process.env.NEXT_PUBLIC_FORM_TOKEN ?? "string"
+  );
   const [visibility, setVisibility] = useState({ visibility: "hidden" });
 
   const formElem = useRef<HTMLFormElement>(null);
@@ -137,7 +138,7 @@ export default function Form() {
         </StyledInputSubmitSection>
       </StyledForm>
       <StyledFormSent className={visibility.visibility}>
-        FORM SENT
+        Thank you for you submission!
       </StyledFormSent>
     </StyledFormDiv>
   );
