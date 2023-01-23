@@ -144,8 +144,9 @@ export const StyledThankYou = styled.div`
 `;
 
 export const StyledFormSent = styled.div`
-  color: green;
-  font-size: 3rem;
+  color: white;
+  font-family: ${({ theme }) => theme.mainFont};
+  font-size: clamp(1rem, 5vw, 1.5rem);
 
   &.hidden {
     display: none;
