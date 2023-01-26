@@ -3,7 +3,6 @@ import Image from "next/image";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import mq from "../../utils/mq";
-import { Link } from "react-scroll";
 
 interface WrapperProps {
   bg: boolean;
@@ -33,9 +32,13 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledMobileNav = styled.nav`
+  ${mq("tiny", "min")} {
+    position: absolute;
+    right: 15px;
+  }
   ${mq("tablet", "min")} {
     position: absolute;
-    right: 2%;
+    right: 3px;
     display: none;
   }
 `;
@@ -57,7 +60,7 @@ export const MobileNavList = styled.ul`
   width: calc(0.5rem + 100vw);
   position: absolute;
   top: -2.5rem;
-  right: 0;
+  right: -15px;
   z-index: 1;
   display: flex;
   flex-direction: column;

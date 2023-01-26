@@ -92,7 +92,7 @@ export default function Action() {
             </ImageContainer>
             <ImageContainer>
               <ColorLayer />
-              <h3>EXPERENTIAL MARKETING</h3>
+              <h3>EXPERIENTIAL MARKETING</h3>
               <TraitsContainer>
                 <span data-aos-delay="500" data-aos="zoom-in">
                   Experiental Activations
