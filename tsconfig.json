@@ -20,7 +20,7 @@
     "styled.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/components/styles/Wrappers"
+    "components/styles/Wrappers"
   ],
   "exclude": ["node_modules"]
 }
