@@ -34,11 +34,12 @@ export const StyledLeftSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 0 1rem;
 
   ${mq("tiny", "min")} {
+    padding: 0;
   }
   ${mq("custom1", "min")} {
+    padding: 0 1rem;
   } ;
 `;
 
@@ -101,6 +102,7 @@ export const StyledInputAndLabelSection = styled.section`
 export const StyledForm = styled.form`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(14px, 4vw, 1.4rem);
+  width: 100%;
   & :: placeholder {
     font-family: ${({ theme }) => theme.mainFont};
     font-size: clamp(1rem, 5vw, 1.5rem);
@@ -108,18 +110,12 @@ export const StyledForm = styled.form`
     color: grey;
   }
   ${mq("tiny", "min")} {
-    margin: 0 1rem;
-    width: 100%;
   }
 
   ${mq("tablet", "min")} {
-    margin: 0 auto;
-    width: 90%;
   }
 
   ${mq("custom1", "min")} {
-    margin: 0 auto;
-    width: 700px;
   } ;
 `;
 export const StyledInputName = styled(StyledInput)`
@@ -132,7 +128,7 @@ export const StyledH3 = styled.h3`
   margin: 0 1rem;
 `;
 export const StyledH4 = styled.h4`
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(1.5rem, 17vw, 4rem);
   font-family: ${({ theme }) => theme.headFont3};
   margin: 20px 1rem 0 1rem;
   text-align: center;
@@ -161,4 +157,10 @@ export const StyledFormDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 0 1rem;
+
+  ${mq("custom1", "min")} {
+    max-width: 700px;
+  } ;
 `;
