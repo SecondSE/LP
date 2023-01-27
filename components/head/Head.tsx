@@ -6,13 +6,12 @@ export default function MetaHead() {
     <Head>
       {/* default deets */}
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta charSet="utf-8" />
       <meta
-        property="og:description"
+        property="description"
         name="description"
         content="Second Sight is a brand experience agency connecting people culture and your brand."
-        key="ogdescription"
       />
-      <meta charSet="utf-8" />
       <meta
         property="og:url"
         content="https://secondsightexperience.nyc"
@@ -21,7 +20,7 @@ export default function MetaHead() {
       <meta
         property="og:image"
         content="https://user-images.githubusercontent.com/105324058/215006670-e80967e5-b6d0-47ee-b730-d4ac8ff85669.png"
-        key="image"
+        key="ogimage"
       />
       <meta
         property="og:site_name"
