@@ -18,7 +18,7 @@ export default function MetaHead() {
       />
       <meta
         property="og:image"
-        content="../../public/img/mobileLogo.png"
+        content="/../../public/img/mobileLogo.png"
         key="ogimage"
       />
       <meta
