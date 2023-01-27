@@ -18,7 +18,7 @@ export default function MetaHead() {
       />
       <meta
         property="og:image"
-        content="/../../public/img/mobileLogo.png"
+        content="https://user-images.githubusercontent.com/105324058/215006670-e80967e5-b6d0-47ee-b730-d4ac8ff85669.png"
         key="ogimage"
       />
       <meta
