@@ -27,7 +27,12 @@ export default function MetaHead() {
         key="ogsitename"
       />
       <meta property="og:title" content="Second Sight Experience" key="title" />
-      <title>2nd Sight Exp.</title>
+      <meta
+        name="twitter:image"
+        content="https://user-images.githubusercontent.com/105324058/215006670-e80967e5-b6d0-47ee-b730-d4ac8ff85669.png"
+      />
+
+      <title>2nd Sight Experience</title>
     </Head>
   );
 }
