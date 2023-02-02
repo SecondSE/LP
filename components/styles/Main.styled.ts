@@ -52,7 +52,7 @@ export const HeroTextContainer = styled.div`
   max-width: 1600px;
   position: absolute;
   top: 26%;
-  height: 46%;
+  height: 45%;
   width: 100%;
   gap: 17%;
   padding: 0 0.8rem;
