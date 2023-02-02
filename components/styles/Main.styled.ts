@@ -217,7 +217,7 @@ export const ImageContainer = styled.div`
     font-family: ${({ theme }) => theme.headFont2};
     ${mq("tiny", "min")} {
       width: 100%;
-      font-size: clamp(1rem, 1.5vw + 1rem, 1.1rem);
+      font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
     }
     ${mq("tablet", "min")} {
       width: 200px;
@@ -227,7 +227,7 @@ export const ImageContainer = styled.div`
     &.trait {
       font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
       ${mq("tablet", "min")} {
-        font-size: clamp(1rem, 1.5vw + 1rem, 1.6rem);
+        font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
       }
     }
   }
