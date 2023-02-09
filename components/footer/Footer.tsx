@@ -27,7 +27,7 @@ export default function Footer() {
   let year = new Date().getFullYear();
 
   const [state, handleSubmit, reset] = useForm("xnqweapp");
-  const [visibility, setVisibility] = useState({ visibility: "accept" });
+  const [border, setBorder] = useState({ border: "borderOff" });
 
   const formElem = useRef<HTMLFormElement>(null);
 
@@ -50,20 +50,14 @@ export default function Footer() {
     await handleSubmit(inputs);
 
     if (succeeded) {
-      setInputs({
-        email: "",
-      });
+      setBorder({ border: "borderOn" });
+      setInputs({ email: "" });
+      setTimeout(() => {
+        setBorder({ border: "borderOff" });
+      }, 2000);
     } else {
       return; // create validation logic
     }
-
-    setVisibility({ visibility: "visible" });
-    setTimeout(() => {
-      if (succeeded) {
-        reset();
-      }
-      setVisibility({ visibility: "accept" });
-    }, 5000);
   };
 
   return (
@@ -77,7 +71,7 @@ export default function Footer() {
             </StyledParagraph>
             <StyledForm ref={formElem} onSubmit={(e) => myHandleSubmit(e)}>
               <StyledInputEmail
-                className={visibility.visibility}
+                className={border.border}
                 aria-describedby="email-form"
                 type="email"
                 name="email"

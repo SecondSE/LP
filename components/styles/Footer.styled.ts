@@ -169,8 +169,10 @@ export const StyledInputSubmit = styled.input`
   background-color: transparent;
   font-weight: bold;
   font-size: 1rem;
+  ${mq("tiny", "min")} {
+    margin: 0 auto;
+  }
   ${mq("custom1", "min")} {
-    margin-left: 10px;
   }
   &:hover {
     color: #1d1d1d;
@@ -185,16 +187,21 @@ export const StyledInputSubmit = styled.input`
 export const StyledInputEmail = styled.input`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(16px, 4vw, 1rem);
+  font-weight: bold;
   padding-left: 2%;
-  border: none;
   height: 30px;
   color: black;
   justify-content: start;
-  //need to use something like accept:focus
-  & .accept {
-    border: 10px solid green;
-    box-shadow: 0 0 10px green;
+  letter-spacing: 2px;
+
+  &.borderOff {
+    border: none;
   }
+  &.borderOn {
+    border: solid 5px #66ff99;
+    border-radius: 3px;
+  }
+
   ${mq("tiny", "min")} {
     width: 100%;
   }
@@ -205,6 +212,7 @@ export const StyledInputEmail = styled.input`
 
 export const StyledForm = styled.form`
   display: flex;
+  gap: 10px;
   ${mq("tiny", "min")} {
     flex-direction: column;
     justify-content: center;
