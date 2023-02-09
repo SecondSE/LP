@@ -16,7 +16,7 @@ export const LeftBorder = styled.div`
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
-  tranform-origin: top;
+  transform-origin: top;
 `;
 
 export const RightBorder = styled.div`
@@ -26,7 +26,7 @@ export const RightBorder = styled.div`
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
-  tranform-origin: top;
+  transform-origin: top;
 `;
 
 export const StyledLayer = styled.div`
