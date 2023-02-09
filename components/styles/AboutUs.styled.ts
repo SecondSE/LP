@@ -115,7 +115,7 @@ export const StyledP = styled.p`
 
 export const StyledH4 = styled.h4`
   font-size: clamp(2rem, 2vw, 3rem);
-  font-family: ${({ theme }) => theme.headFont};
+  font-family: ${({ theme }) => theme.headFont3};
 
   ${mq("tiny", "min")} {
     margin-bottom: 1rem;

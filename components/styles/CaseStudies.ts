@@ -34,7 +34,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const CaseTitle = styled.h2`
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont3};
 
   ${mq("tiny", "min")} {
     text-align: center;
@@ -73,7 +73,7 @@ export const CaseText = styled.p`
 `;
 
 export const CaseHeader = styled.h3`
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont3};
 
   ${mq("tiny", "min")} {
     text-align: center;

@@ -92,7 +92,7 @@ export const CarouselTitle = styled.h2`
   position: absolute;
   top: 10%;
   left: 5%;
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont3};
   padding: 1rem;
   background-color: black;
   box-shadow: -12px 7px 2px #1d1d1d;

@@ -102,7 +102,7 @@ export const StyledHero__Middle = styled.div`
     font-weight: 400;
   }
   & .bold {
-    font-family: ${({ theme }) => theme.headFont3};
+    font-family: ${({ theme }) => theme.headFont};
   }
 
   ${({ theme }) => theme.opaTranslate("X", "-300", "600")}
@@ -154,7 +154,7 @@ export const StyledTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: ${({ theme }) => theme.headFont3};
+  font-family: ${({ theme }) => theme.headFont};
   ${mq("desktopS", "min")} {
     padding-left: 6rem;
     width: 63%;
@@ -214,7 +214,7 @@ export const ImageContainer = styled.div`
   & h3 {
     position: absolute;
     padding: 0.7rem 0 0.3rem 0.5rem;
-    font-family: ${({ theme }) => theme.headFont2};
+    font-family: ${({ theme }) => theme.headFont};
     ${mq("tiny", "min")} {
       width: 100%;
       font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
@@ -272,7 +272,7 @@ export const StyledWorkTitle = styled.div`
   width: 100%;
   padding: 0 1rem;
   font-size: clamp(2rem, 7vw, 4.8rem);
-  font-family: ${({ theme }) => theme.headFont2};
+  font-family: ${({ theme }) => theme.headFont};
   text-align: center;
   margin-top: 1rem;
   & h2 {
