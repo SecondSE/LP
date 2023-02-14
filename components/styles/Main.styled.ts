@@ -58,6 +58,7 @@ export const HeroTextContainer = styled.div`
   padding: 0 0.8rem;
   ${mq("desktopS", "min")} {
     padding: 0 4rem;
+    top: 14%;
   }
 `;
 
