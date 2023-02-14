@@ -6,7 +6,7 @@ declare module "styled-components" {
     txtColor: string;
     mainFont: string;
     headFont: string;
-    headFont2: string;
+    // headFont2: string;
     headFont3: string;
     thinFont: string;
     caption: string;

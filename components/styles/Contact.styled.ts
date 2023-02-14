@@ -103,7 +103,7 @@ export const StyledForm = styled.form`
   font-family: ${({ theme }) => theme.mainFont};
   font-size: clamp(14px, 4vw, 1.4rem);
   width: 100%;
-  & :: placeholder {
+  & ::placeholder {
     font-family: ${({ theme }) => theme.mainFont};
     font-size: clamp(1rem, 5vw, 1.5rem);
     padding-top: 0.5rem;
