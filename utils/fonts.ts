@@ -7,17 +7,17 @@ export const fgThin = localFont({
 export const fgLight = localFont({
   src: "../assets/fonts/FocusGrotesk-Light.woff",
 });
-export const fgRegular = localFont({
-  src: "../assets/fonts/FocusGrotesk-Regular.woff",
-});
+// export const fgRegular = localFont({
+//   src: "../assets/fonts/FocusGrotesk-Regular.woff",
+// });
 
-export const fgBold = localFont({
-  src: "../assets/fonts/FocusGrotesk-Bold.ttf",
-});
+// export const fgBold = localFont({
+//   src: "../assets/fonts/FocusGrotesk-Bold.ttf",
+// });
 
-export const fgHeavy = localFont({
-  src: "../assets/fonts/FocusGrotesk-Heavy.ttf",
-});
+// export const fgHeavy = localFont({
+//   src: "../assets/fonts/FocusGrotesk-Heavy.ttf",
+// });
 
 export const sfACHeavy = localFont({
   src: "../assets/fonts/SFArborcrestHeavy.woff",

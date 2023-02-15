@@ -41,7 +41,8 @@ export default function Header() {
           <LogoWrapper>
             <Link href={"/"} aria-label="This is the logo of the site"></Link>
             <StyledImage
-              priority
+              width={"110"}
+              height={"120"}
               src={LogoImg}
               alt="This is the Logo of the site"
             />

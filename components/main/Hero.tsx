@@ -33,6 +33,7 @@ export default function Hero() {
           sizes="(min-width: 320px) 50vw, 100vw"
           src={sanHolo}
           height={"110"}
+          width={"210"}
           alt="DJ San Holo performing at the SoundMint NFT event in New York City"
         />
       </ImageWrapper>
