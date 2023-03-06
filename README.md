@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SecondSE/LP">
-    <img src="./public/imgs/sse-logo.png" alt="Logo" width="200" height="80">
+    <img src="./public/imgs/sse-logo.png" alt="Logo" width="250" height="80">
   </a>
 
   <h3 align="center">Second Sight Experience</h3>
@@ -134,7 +134,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Multi-language Support
   - [ ] Spanish -->
 
-See the [open issues](https://github.com/Asalz20/pectusplus-blog/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/SecondSE/LP/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,8 +169,8 @@ Giving credit where credit is due! Thank you to:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/Asalz20/pectusplus-blog.svg?style=for-the-badge
-[license-url]: https://github.com/Asalz20/pectusplus-blog/blob/main/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/SecondSE/LP.svg?style=for-the-badge
+[license-url]: https://github.com/SecondSE/LP/issues
 [product-screenshot]: ./public/imgs/secondsight.png
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
