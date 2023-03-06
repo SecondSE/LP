@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SecondSE/LP">
-    <img src="./public/imgs/sse-logo.png" alt="Logo" width="80" height="80">
+    <img src="./public/imgs/sse-logo.png" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">Second Sight Experience</h3>
