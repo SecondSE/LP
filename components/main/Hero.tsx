@@ -92,7 +92,7 @@ export default function Hero() {
                 <span className="bold">
                   BRAND STRATEGY <span className="ampersand">&</span>
                 </span>
-                <span className="bold">EXPERENTIAL MARKETING</span>
+                <span className="bold">EXPERIENTIAL MARKETING</span>
               </StyledHero__End>
             </CSSTransition>
           </HeroTextContainer>
