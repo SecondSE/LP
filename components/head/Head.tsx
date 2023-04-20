@@ -28,7 +28,7 @@ export default function MetaHead() {
       />
       <meta property="og:title" content="Second Sight Experience" key="title" />
 
-      <title>2nd Sight Experience</title>
+      <title>Second Sight Experience</title>
     </Head>
   );
 }
